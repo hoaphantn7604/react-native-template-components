@@ -1,5 +1,5 @@
 {
-  "name": "react-native-template",
+  "name": "react-native-template-components",
   "title": "React Native Template Typescript",
   "version": "1.0.0",
   "description": "React Native UIKit",
@@ -8,8 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hoaphantn7604/react-native-template.git",
-    "baseUrl": "https://github.com/hoaphantn7604/react-native-template"
+    "url": "git+https://github.com/hoaphantn7604/react-native-template-components.git",
+    "baseUrl": "https://github.com/hoaphantn7604/react-native-template-components"
   },
   "keywords": [
     "react-native",
