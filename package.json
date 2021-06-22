@@ -1,0 +1,40 @@
+{
+  "name": "react-native-template",
+  "title": "React Native Template Typescript",
+  "version": "1.0.0",
+  "description": "React Native UIKit",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoaphantn7604/react-native-template.git",
+    "baseUrl": "https://github.com/hoaphantn7604/react-native-template"
+  },
+  "keywords": [
+    "react-native",
+    "template",
+    "boilerplate",
+    "typescript",
+    "checkbox-tree",
+    "tooltip-progress",
+    "step-progress",
+    "timer",
+    "countdown",
+    "dropdown",
+    "multi-select",
+    "input",
+    "zoom-view",
+    "modal",
+    "curtain-view",
+    "checkbox",
+    "radio-button"
+  ],
+  "author": {
+    "name": "Hoa Phan",
+    "email": "hoaphantn7604@gmail.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md"
+}
