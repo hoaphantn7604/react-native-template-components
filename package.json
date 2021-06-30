@@ -1,8 +1,8 @@
 {
   "name": "react-native-template-components",
-  "title": "React Native Template Typescript",
-  "version": "1.0.0",
-  "description": "React Native UIKit",
+  "title": "TODO",
+  "version": "1.0.1",
+  "description": "TODO",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,23 +12,7 @@
     "baseUrl": "https://github.com/hoaphantn7604/react-native-template-components"
   },
   "keywords": [
-    "react-native",
-    "template",
-    "boilerplate",
-    "typescript",
-    "checkbox-tree",
-    "tooltip-progress",
-    "step-progress",
-    "timer",
-    "countdown",
-    "dropdown",
-    "multi-select",
-    "input",
-    "zoom-view",
-    "modal",
-    "curtain-view",
-    "checkbox",
-    "radio-button"
+    "react-native"
   ],
   "author": {
     "name": "Hoa Phan",
