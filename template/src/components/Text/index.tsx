@@ -12,48 +12,27 @@ const defaultProps = {
 };
 
 const TextComponent: PropsText = props => {
-  const { numberOfLines, onPress, fontSize, bold, color, style, children } =
-    props;
+  const { fontSize, bold, color, style, children } = props;
 
   let FONTSIZE: number = 12;
   if (fontSize) {
     FONTSIZE = fontSize;
   }
-  if (onPress) {
-    return (
-      <TouchableWithoutFeedback onPress={onPress}>
-        <Text
-          {...props}
-          style={[
-            {
-              fontSize: fontScale(FONTSIZE),
-              color: !color ? COLORS.TEXT : color,
-            },
-            bold && { fontWeight: 'bold' },
-            style,
-          ]}
-          numberOfLines={numberOfLines}>
-          {children}
-        </Text>
-      </TouchableWithoutFeedback>
-    );
-  } else {
-    return (
-      <Text
-        {...props}
-        style={[
-          {
-            fontSize: fontScale(FONTSIZE),
-            color: !color ? COLORS.TEXT : color,
-          },
-          bold && { fontWeight: 'bold' },
-          style,
-        ]}
-        numberOfLines={numberOfLines}>
-        {children}
-      </Text>
-    );
-  }
+
+  return (
+    <Text
+      {...props}
+      style={[
+        {
+          fontSize: fontScale(FONTSIZE),
+          color: !color ? COLORS.TEXT : color,
+        },
+        bold && { fontWeight: 'bold' },
+        style,
+      ]}>
+      {children}
+    </Text>
+  );
 };
 
 TextComponent.defaultProps = defaultProps;
