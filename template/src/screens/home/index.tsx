@@ -60,6 +60,14 @@ const MainScreen: React.FC<Props> = _props => {
             navigate('SwipeView');
           }}
         />
+
+        <Button
+          style={styles.button}
+          title="TextInput"
+          onPress={() => {
+            navigate('TextInput');
+          }}
+        />
       </ScrollView>
     </View>
   );

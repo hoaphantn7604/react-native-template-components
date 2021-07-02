@@ -1,11 +1,10 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { useScale } from 'react-native-utils-toolkit';
+import { scale } from 'react-native-utils-scale';
 import { styles } from './styles';
 import { ButtonProps } from './type';
 import Text from '../Text';
 import { COLORS } from '../setup';
-const { scale } = useScale;
 
 const defaultProps = {
   bgColor: '',

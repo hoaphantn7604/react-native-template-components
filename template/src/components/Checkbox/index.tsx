@@ -1,11 +1,10 @@
 import React from 'react';
 import { TouchableWithoutFeedback, View, Image } from 'react-native';
 import { Checkbox } from './type';
-import { useScale } from 'react-native-utils-toolkit';
+import { scale, fontScale } from 'react-native-utils-scale';
 import { styles } from './styles';
 import Text from '../Text';
 
-const { scale, fontScale } = useScale;
 const checkbox_check = require('./icon/checkbox-check.png');
 const checkbox_uncheck = require('./icon/checkbox-uncheck.png');
 const radio_check = require('./icon/radio-check.png');

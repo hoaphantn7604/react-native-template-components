@@ -11,6 +11,7 @@ import TimerScreen from 'screens/home/components/timer';
 import CountdownScreen from 'screens/home/components/countdown';
 import SwipeViewScreen from 'screens/home/components/swipeView';
 import MultiSelectScreen from 'screens/home/components/multiselect';
+import TextInputScreen from 'screens/home/components/textInput';
 
 export const navigationRef: React.RefObject<NavigationContainerRef> =
   React.createRef();
@@ -31,6 +32,7 @@ function AppNavigator() {
         <Stack.Screen name="Timer" component={TimerScreen} />
         <Stack.Screen name="Countdown" component={CountdownScreen} />
         <Stack.Screen name="SwipeView" component={SwipeViewScreen} />
+        <Stack.Screen name="TextInput" component={TextInputScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

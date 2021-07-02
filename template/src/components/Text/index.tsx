@@ -1,9 +1,8 @@
 import React from 'react';
 import { Text, TouchableWithoutFeedback } from 'react-native';
-import { useScale } from 'react-native-utils-toolkit';
+import { fontScale } from 'react-native-utils-scale';
 import { PropsText } from './type';
 import { COLORS } from '../setup';
-const { fontScale } = useScale;
 
 const defaultProps = {
   style: {},
