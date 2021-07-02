@@ -1,11 +1,10 @@
 import { COLORS } from 'config';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { MultiSelect } from 'react-native-utils-components';
-import { useScale } from 'react-native-utils-toolkit';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import { MultiSelect } from 'react-native-element-dropdown';
+import { scale } from 'react-native-utils-scale';
 
-const { scale } = useScale;
 const data = [
   { label: 'Item 1', value: '1' },
   { label: 'Item 2', value: '2' },
@@ -40,7 +39,6 @@ const MultiSelectScreen: React.FC<Props> = _props => {
         data={data}
         labelField="label"
         valueField="value"
-        label="Title"
         placeholder="Select item"
         value={selected}
         onChange={item => {
@@ -54,7 +52,6 @@ const MultiSelectScreen: React.FC<Props> = _props => {
         data={data}
         labelField="label"
         valueField="value"
-        label="Title"
         placeholder="Select item"
         value={selected1}
         onChange={item => {
@@ -69,29 +66,18 @@ const MultiSelectScreen: React.FC<Props> = _props => {
             size={scale(20)}
           />
         )}
-        renderTickIcon={() => (
-          <AntDesign
-            style={styles.icon}
-            color="black"
-            name="checkcircleo"
-            size={scale(20)}
-          />
-        )}
       />
 
       <MultiSelect
         style={styles.dropdown}
         search
         searchPlaceholder="Search"
-        labelStyle={{ color: COLORS.SECONDARY }}
-        textStyle={{ color: COLORS.SECONDARY }}
-        selectedStyle={{ backgroundColor: '#DDDDDD', borderColor: '#DDDDDD' }}
+        selectedStyle={{ backgroundColor: 'white', borderColor: '#DDDDDD' }}
         selectedTextStyle={{ color: 'gray' }}
         iconColor={COLORS.SECONDARY}
         data={data}
         labelField="label"
         valueField="value"
-        label="Title"
         placeholder="Select item"
         value={selected2}
         renderLeftIcon={() => (
@@ -102,15 +88,6 @@ const MultiSelectScreen: React.FC<Props> = _props => {
             size={scale(20)}
           />
         )}
-        renderTickIcon={() => (
-          <AntDesign
-            style={styles.icon}
-            color={COLORS.SECONDARY}
-            name="checkcircleo"
-            size={scale(20)}
-          />
-        )}
-        renderHeader={_header}
         onChange={item => {
           setSelected2(item);
           console.log('selected', item);

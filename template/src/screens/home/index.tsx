@@ -2,8 +2,8 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import { CurtainView, Button } from 'react-native-utils-components';
 import { styles } from './styles';
+import { Button } from 'components';
 
 export interface Props {}
 
@@ -12,15 +12,12 @@ const MainScreen: React.FC<Props> = _props => {
 
   return (
     <View style={styles.container}>
-      <CurtainView position="top" style={styles.curtainView} maxHeight={300}>
-        <View style={styles.curtainContainer} />
-      </CurtainView>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Button
           style={styles.button}
-          title="Tree checkbox"
+          title="Checkbox Tree"
           onPress={() => {
-            navigate('Recursive');
+            navigate('CheckboxTree');
           }}
         />
 
@@ -42,14 +39,6 @@ const MainScreen: React.FC<Props> = _props => {
 
         <Button
           style={styles.button}
-          title="Progress"
-          onPress={() => {
-            navigate('Progress');
-          }}
-        />
-
-        <Button
-          style={styles.button}
           title="Dropdown"
           onPress={() => {
             navigate('Dropdown');
@@ -66,33 +55,9 @@ const MainScreen: React.FC<Props> = _props => {
 
         <Button
           style={styles.button}
-          title="TextInput"
+          title="SwipeView"
           onPress={() => {
-            navigate('TextInput');
-          }}
-        />
-
-        <Button
-          style={styles.button}
-          title="Modal"
-          onPress={() => {
-            navigate('Modal');
-          }}
-        />
-
-        <Button
-          style={styles.button}
-          title="CurtainView"
-          onPress={() => {
-            navigate('CurtainView');
-          }}
-        />
-
-        <Button
-          style={styles.button}
-          title="Checkbox"
-          onPress={() => {
-            navigate('Checkbox');
+            navigate('SwipeView');
           }}
         />
       </ScrollView>

@@ -1,11 +1,9 @@
 import { COLORS } from 'config';
 import React from 'react';
 import { StyleSheet, View, SafeAreaView } from 'react-native';
-import { CurtainView } from 'react-native-utils-components';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { useScale } from 'react-native-utils-toolkit';
-
-const { scale } = useScale;
+import SwipeView from 'react-native-vertical-swipe-view';
+import { scale } from 'react-native-utils-scale';
 
 export interface Props {
   name?: string;
@@ -30,20 +28,20 @@ const CurtainScreen: React.FC<Props> = _props => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <CurtainView
+      <SwipeView
         position="top"
-        style={styles.curtainView}
-        maxHeight={scale(300)}
+        style={styles.swipeView}
+        maxHeight={scale(200)}
         headerStyle={{ backgroundColor: 'transparent' }}
         renderHeader={_renderHeaderTop}>
         <View style={styles.curtainContainer} />
-      </CurtainView>
+      </SwipeView>
 
       <View style={{ flex: 1 }} />
 
-      <CurtainView
+      <SwipeView
         position="bottom"
-        style={styles.curtainView}
+        style={styles.swipeView}
         maxHeight={scale(200)}
         headerStyle={{ backgroundColor: 'transparent' }}
         renderHeader={_renderHeaderBottom}>
@@ -59,7 +57,7 @@ const CurtainScreen: React.FC<Props> = _props => {
             <AntDesign name="tagso" color="black" size={scale(40)} />
           </View>
         </View>
-      </CurtainView>
+      </SwipeView>
     </SafeAreaView>
   );
 };
@@ -70,7 +68,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  curtainView: {
+  swipeView: {
     width: '100%',
   },
   curtainContainer: {

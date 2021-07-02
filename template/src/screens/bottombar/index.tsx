@@ -1,13 +1,17 @@
 import { COLORS } from 'config';
 import React from 'react';
-import { Animated, StatusBar, TouchableOpacity, View, Alert } from 'react-native';
+import {
+  Animated,
+  StatusBar,
+  TouchableOpacity,
+  View,
+  Alert,
+} from 'react-native';
 import { CurvedBottomBar } from 'react-native-curved-bottom-bar';
-import { useScale } from 'react-native-utils-toolkit';
+import { scale } from 'react-native-utils-scale';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from 'screens/home';
 import { styles } from './styles';
-
-const { scale } = useScale;
 
 export interface Props {}
 

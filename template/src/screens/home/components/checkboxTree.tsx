@@ -1,9 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Hierarchy } from 'react-native-utils-components';
-import { useScale } from 'react-native-utils-toolkit';
-
-const { scale } = useScale;
+import CheckboxTree from 'react-native-checkbox-tree';
+import { scale } from 'react-native-utils-scale';
 
 export interface Props {
   name: string;
@@ -11,64 +9,64 @@ export interface Props {
 
 const recursiveData = [
   {
-    shopReportName: 'HCM1',
-    shopCode: '2MFHCM1',
+    shopReportName: 'Name 1',
+    shopCode: '00001',
     shopType: '2',
     shopId: 1,
-    shopName: 'MobiFone HCM1',
+    shopName: 'Name 1',
     childs: [
       {
-        shopReportName: 'LQTĐ',
-        shopCode: '2MFH10038',
+        shopReportName: 'Name 2',
+        shopCode: '00002',
         shopType: '3',
         shopId: 2,
-        shopName: 'MBF Liên Quận Thủ Đức: Q.TĐ, Q.2, Q9, Q.Bình Thạnh',
+        shopName: 'Name 2',
         childs: [
           {
-            shopReportName: 'Q.TĐức',
-            shopCode: 'HCM_TDU',
+            shopReportName: 'Name 3',
+            shopCode: '00003',
             shopType: '4',
             shopId: 3,
-            shopName: 'Q.Thủ Đức',
+            shopName: 'Name 3',
             childs: [
               {
-                shopReportName: 'Q.BThạnh',
-                shopCode: 'HCM_BTH',
+                shopReportName: 'Name 4',
+                shopCode: '00004',
                 shopType: '4',
                 shopId: 4,
-                shopName: 'Q.Bình Thạnh',
+                shopName: 'Name 4',
               },
               {
-                shopReportName: 'Q.02',
-                shopCode: 'HCM_002',
+                shopReportName: 'Name 5',
+                shopCode: '00005',
                 shopType: '4',
                 shopId: 5,
-                shopName: 'Q.02',
+                shopName: 'Name 5',
                 childs: [
                   {
-                    shopReportName: 'Q.09',
-                    shopCode: 'HCM_0099',
+                    shopReportName: 'Name 6',
+                    shopCode: '00006',
                     shopType: '4',
                     shopId: 7,
-                    shopName: 'Q.09',
+                    shopName: 'Name 6',
                     childs: [
                       {
-                        shopReportName: 'Q.09',
-                        shopCode: 'HCM_00999',
+                        shopReportName: 'Name 7',
+                        shopCode: '00007',
                         shopType: '4',
                         shopId: 7,
-                        shopName: 'Q.09',
+                        shopName: 'Name 7',
                       },
                     ],
                   },
                 ],
               },
               {
-                shopReportName: 'Q.09',
-                shopCode: 'HCM_0099999',
+                shopReportName: 'Name 8',
+                shopCode: '00008',
                 shopType: '4',
                 shopId: 8,
-                shopName: 'Q.09',
+                shopName: 'Name 8',
               },
             ],
           },
@@ -78,10 +76,10 @@ const recursiveData = [
   },
 ];
 
-const RecursiveScreen: React.FC<Props> = _props => {
+const CheckboxTreeScreen: React.FC<Props> = _props => {
   return (
     <View style={styles.container}>
-      <Hierarchy
+      <CheckboxTree
         data={recursiveData}
         textField="shopCode"
         childField="childs"
@@ -95,7 +93,7 @@ const RecursiveScreen: React.FC<Props> = _props => {
   );
 };
 
-export default RecursiveScreen;
+export default CheckboxTreeScreen;
 
 const styles = StyleSheet.create({
   container: {

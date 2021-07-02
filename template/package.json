@@ -10,20 +10,25 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": "^1.15.4",
+    "@react-native-async-storage/async-storage": "^1.15.5",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.5",
     "react": "17.0.2",
-    "react-native": "0.64.1",
+    "react-native": "0.64.2",
+    "react-native-checkbox-tree": "^1.0.3",
+    "react-native-curved-bottom-bar": "^1.0.2",
+    "react-native-element-dropdown": "^1.1.6",
+    "react-native-element-image": "^1.0.1",
+    "react-native-element-timer": "^1.0.2",
     "react-native-gesture-handler": "^1.10.3",
-    "react-native-reanimated": "^2.1.0",
+    "react-native-reanimated": "^2.2.0",
     "react-native-safe-area-context": "^3.2.0",
-    "react-native-screens": "^3.0.0",
+    "react-native-screens": "^3.4.0",
     "react-native-svg": "^12.1.1",
-    "react-native-utils-components": "^2.6.1",
-    "react-native-curved-bottom-bar": "^1.0.0",
+    "react-native-utils-scale": "^2.1.2",
     "react-native-utils-toolkit": "^1.1.6",
-    "react-native-vector-icons": "^8.1.0"
+    "react-native-vector-icons": "^8.1.0",
+    "react-native-vertical-swipe-view": "^1.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",

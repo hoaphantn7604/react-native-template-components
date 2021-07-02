@@ -1,11 +1,10 @@
 import { COLORS } from 'config';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Dropdown } from 'react-native-utils-components';
-import { useScale } from 'react-native-utils-toolkit';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import { Dropdown } from 'react-native-element-dropdown';
+import { scale } from 'react-native-utils-scale';
 
-const { scale } = useScale;
 const data = [
   { label: 'Item 1', value: '1' },
   { label: 'Item 2', value: '2' },
@@ -40,7 +39,6 @@ const DropdownScreen: React.FC<Props> = _props => {
         data={data}
         labelField="label"
         valueField="value"
-        label="Title"
         placeholder="Select item"
         value={dropdown}
         onChange={item => {
@@ -54,7 +52,6 @@ const DropdownScreen: React.FC<Props> = _props => {
         data={data}
         labelField="label"
         valueField="value"
-        label="Title"
         placeholder="Select item"
         value={dropdown1}
         onChange={item => {
@@ -69,29 +66,16 @@ const DropdownScreen: React.FC<Props> = _props => {
             size={scale(20)}
           />
         )}
-        renderTickIcon={() => (
-          <AntDesign
-            style={styles.icon}
-            color="black"
-            name="checkcircleo"
-            size={scale(20)}
-          />
-        )}
-        textError="Error"
       />
 
       <Dropdown
         style={styles.dropdown}
         search
         searchPlaceholder="Search"
-        labelStyle={{ color: COLORS.SECONDARY }}
-        textStyle={{ color: COLORS.SECONDARY }}
         iconColor={COLORS.SECONDARY}
-        textErrorStyle={{ color: COLORS.SECONDARY }}
         data={data}
         labelField="label"
         valueField="value"
-        label="Title"
         placeholder="Select item"
         value={dropdown2}
         renderLeftIcon={() => (
@@ -102,20 +86,10 @@ const DropdownScreen: React.FC<Props> = _props => {
             size={scale(20)}
           />
         )}
-        renderTickIcon={() => (
-          <AntDesign
-            style={styles.icon}
-            color={COLORS.SECONDARY}
-            name="checkcircleo"
-            size={scale(20)}
-          />
-        )}
-        renderHeader={_header}
         onChange={item => {
           setDropdown2(item);
           console.log('selected', item);
         }}
-        textError="Error"
       />
     </View>
   );

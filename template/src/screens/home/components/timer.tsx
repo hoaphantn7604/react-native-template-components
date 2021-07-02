@@ -1,9 +1,8 @@
 import React, { useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Button, Timer } from 'react-native-utils-components';
-import { useScale } from 'react-native-utils-toolkit';
-
-const { scale } = useScale;
+import { Button } from 'components';
+import { Timer } from 'react-native-element-timer';
+import { scale } from 'react-native-utils-scale';
 
 export interface Props {
   name: string;
