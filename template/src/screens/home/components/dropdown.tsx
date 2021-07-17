@@ -42,7 +42,7 @@ const DropdownScreen: React.FC<Props> = _props => {
         placeholder="Select item"
         value={dropdown}
         onChange={item => {
-          setDropdown(item);
+          setDropdown(item.value);
           console.log('selected', item);
         }}
       />
@@ -55,7 +55,7 @@ const DropdownScreen: React.FC<Props> = _props => {
         placeholder="Select item"
         value={dropdown1}
         onChange={item => {
-          setDropdown1(item);
+          setDropdown1(item.value);
           console.log('selected', item);
         }}
         renderLeftIcon={() => (
@@ -87,7 +87,7 @@ const DropdownScreen: React.FC<Props> = _props => {
           />
         )}
         onChange={item => {
-          setDropdown2(item);
+          setDropdown2(item.value);
           console.log('selected', item);
         }}
       />
