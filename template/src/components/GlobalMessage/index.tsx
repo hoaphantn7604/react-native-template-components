@@ -1,13 +1,7 @@
 import { Button, Text } from 'components';
 import React, { useImperativeHandle, useState } from 'react';
-import {
-  Modal,
-  StatusBar,
-  StyleSheet,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native';
-import { scale, isTablet, width } from 'react-native-utils-scale';
+import { Modal, StatusBar, TouchableWithoutFeedback, View } from 'react-native';
+import { styles } from './styles';
 
 export const globalMessageRef = React.createRef<any>();
 export const globalMessage = {
@@ -81,36 +75,3 @@ const GlobalMessage = React.forwardRef((props, ref) => {
 });
 
 export default GlobalMessage;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  main: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.6)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  boxContent: {
-    width: width / (isTablet ? 1.5 : 1.3),
-    backgroundColor: 'white',
-    borderRadius: 10,
-    alignItems: 'center',
-  },
-  content: {
-    alignItems: 'center',
-    padding: 16,
-    justifyContent: 'center',
-  },
-  title: {
-    marginVertical: scale(16),
-  },
-  message: {
-    marginBottom: scale(16),
-  },
-  button: {
-    width: scale(80),
-    height: scale(40),
-  },
-});

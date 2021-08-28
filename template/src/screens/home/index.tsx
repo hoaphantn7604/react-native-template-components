@@ -3,16 +3,29 @@ import React from 'react';
 import { View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { styles } from './styles';
-import { Button, globalLoading, globalMessage } from 'components';
+import { Button, globalLoading, globalMessage, Text } from 'components';
+import { useTranslation } from 'react-i18next';
+import { changeLanguage } from 'shared/language';
 
 export interface Props {}
 
 const MainScreen: React.FC<Props> = _props => {
   const { goBack, navigate } = useNavigation();
+  const { t } = useTranslation();
 
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
+        <Text fontSize={24}>{t('common:welcome')}</Text>
+
+        <Button
+          style={styles.button}
+          title="Switch Language"
+          onPress={() => {
+            changeLanguage('vi');
+          }}
+        />
+
         <Button
           style={styles.button}
           title="Checkbox Tree"

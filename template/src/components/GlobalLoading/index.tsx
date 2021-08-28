@@ -1,6 +1,7 @@
 import React, { useImperativeHandle, useState } from 'react';
 import { Modal, StatusBar, StyleSheet, View } from 'react-native';
 import { UIActivityIndicator } from 'react-native-indicators';
+import { styles } from './styles';
 
 export const globalLoadingRef = React.createRef<any>();
 
@@ -47,15 +48,3 @@ const GlobalLoading = React.forwardRef((props, ref) => {
 });
 
 export default GlobalLoading;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  main: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.6)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
