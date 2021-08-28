@@ -2,7 +2,7 @@ import {
   NavigationContainer,
   NavigationContainerRef,
 } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import MainScreen from 'screens/bottombar';
 import DropdownScreen from 'screens/home/components/dropdown';
@@ -13,9 +13,9 @@ import SwipeViewScreen from 'screens/home/components/swipeView';
 import MultiSelectScreen from 'screens/home/components/multiselect';
 import TextInputScreen from 'screens/home/components/textInput';
 
-export const navigationRef: React.RefObject<NavigationContainerRef> =
+export const navigationRef: React.RefObject<NavigationContainerRef<any>> =
   React.createRef();
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
   return (
