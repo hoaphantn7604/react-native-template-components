@@ -3,7 +3,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { styles } from './styles';
-import { Button } from 'components';
+import { Button, globalLoading, globalMessage } from 'components';
 
 export interface Props {}
 
@@ -66,6 +66,23 @@ const MainScreen: React.FC<Props> = _props => {
           title="TextInput"
           onPress={() => {
             navigate('TextInput');
+          }}
+        />
+        <Button
+          style={styles.button}
+          title="Global Loading"
+          onPress={() => {
+            globalLoading.show();
+            setTimeout(() => {
+              globalLoading.hide();
+            }, 1000);
+          }}
+        />
+        <Button
+          style={styles.button}
+          title="Global Message"
+          onPress={() => {
+            globalMessage.show('Title', 'Message');
           }}
         />
       </ScrollView>
