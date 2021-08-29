@@ -17,16 +17,14 @@
     "i18next": "^20.4.0",
     "react": "17.0.2",
     "react-i18next": "^11.11.4",
-    "react-native": "0.64.2",
+    "react-native": "0.65.1",
     "react-native-checkbox-tree": "^1.0.3",
     "react-native-curved-bottom-bar": "^1.0.2",
     "react-native-element-dropdown": "^1.1.6",
     "react-native-element-image": "^1.0.1",
     "react-native-element-textinput": "^0.1.3",
     "react-native-element-timer": "^1.0.2",
-    "react-native-gesture-handler": "^1.10.3",
     "react-native-indicators": "^0.17.0",
-    "react-native-reanimated": "^2.2.0",
     "react-native-safe-area-context": "^3.3.0",
     "react-native-screens": "^3.6.0",
     "react-native-svg": "^12.1.1",
@@ -42,6 +40,7 @@
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/d3-shape": "^2.0.0",
     "@types/react-native": "^0.64.5",
+    "react-native-codegen": "^0.0.7",
     "@types/react-native-vector-icons": "^6.4.6",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
@@ -58,7 +57,7 @@
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "/node_modules/(?!(@react-native|react-native|react-native-utils-components|react-native-curved-bottom-bar|react-native-vector-icons)/)"
+      "/node_modules/(?!(@react-native|react-native|react-native-curved-bottom-bar|react-native-indicators|react-native-vector-icons)/)"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/"
