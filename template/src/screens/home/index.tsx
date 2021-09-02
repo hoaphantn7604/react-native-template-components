@@ -5,6 +5,7 @@ import { styles } from './styles';
 import { Button, globalLoading, globalMessage, Text } from 'components';
 import { useTranslation } from 'react-i18next';
 import { changeLanguage } from 'shared/language';
+import { scale } from 'react-native-utils-scale';
 
 export interface Props {}
 
@@ -15,7 +16,11 @@ const MainScreen: React.FC<Props> = _props => {
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Text fontSize={24}>{t('common:welcome')}</Text>
+        <Text
+          style={{ marginVertical: scale(16), alignSelf: 'center' }}
+          fontSize={24}>
+          {t('common:welcome')}
+        </Text>
 
         <Button
           style={styles.button}

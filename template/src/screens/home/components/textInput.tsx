@@ -15,7 +15,6 @@ const TextInputScreen = _props => {
           onChangeText={text => {
             console.log(text);
           }}
-          numeric
           focusColor="red"
           textError="Please enter"
         />
@@ -23,10 +22,11 @@ const TextInputScreen = _props => {
         <TextInput
           style={{ marginTop: 20 }}
           containerStyle={styles.textinput}
-          label="Normal"
+          label="Password"
           placeholder="Placeholder"
           placeholderTextColor="gray"
           secureTextEntry
+          focusColor="red"
           onChangeText={text => {
             console.log(text);
           }}
