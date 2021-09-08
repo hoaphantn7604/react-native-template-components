@@ -1,8 +1,8 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import { styles } from './styles';
-import { Button, globalLoading, globalMessage, Text } from 'components';
+import { Button, globalLoading, globalMessage, Modal, Text } from 'components';
 import { useTranslation } from 'react-i18next';
 import { changeLanguage } from 'shared/language';
 import { scale } from 'react-native-utils-scale';
@@ -12,6 +12,7 @@ export interface Props {}
 const MainScreen: React.FC<Props> = _props => {
   const { goBack, navigate } = useNavigation();
   const { t } = useTranslation();
+  const [visible, setVisible] = useState(false);
 
   return (
     <View style={styles.container}>
@@ -102,7 +103,20 @@ const MainScreen: React.FC<Props> = _props => {
             globalMessage.show('Title', 'Message');
           }}
         />
+        <Button
+          style={styles.button}
+          title="Modal"
+          onPress={() => {
+            setVisible(true);
+          }}
+        />
       </ScrollView>
+      <Modal
+        visible={visible}
+        transparent
+        maxHeight={500}
+        onRequestClose={() => setVisible(false)}
+      />
     </View>
   );
 };

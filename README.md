@@ -11,3 +11,10 @@ Step 3: npx react-native init MyApp --template react-native-template-components
 Step 4: cd MyApp
 Step 5: npm run android or npm run ios
 ```
+
+### Demo
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/textinput/demo.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/checkboktree/demo.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/dropdown/demo.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/dropdown/demo2.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/swipeview/demo.gif)

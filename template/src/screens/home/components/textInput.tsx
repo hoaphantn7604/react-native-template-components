@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, SafeAreaView } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
 
 const TextInputScreen = _props => {
+  const [hashtag, setHashtag] = useState<string[]>([]);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
@@ -30,6 +31,20 @@ const TextInputScreen = _props => {
           onChangeText={text => {
             console.log(text);
           }}
+        />
+
+        <TextInput
+          style={{ marginTop: 20 }}
+          containerStyle={styles.textinput}
+          hashtagValue={hashtag}
+          onChangeHashtag={e => {
+            setHashtag(e);
+          }}
+          label="Hashtag"
+          placeholder="Hashtag..."
+          autoCorrect={false}
+          placeholderTextColor="gray"
+          focusColor="red"
         />
       </View>
     </SafeAreaView>
