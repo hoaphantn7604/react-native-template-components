@@ -14,7 +14,7 @@ Step 5: npm run android or npm run ios
 
 ### Demo
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/textinput/demo.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/checkboktree/demo.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/checkboxtree/demo.png)
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/dropdown/demo.png)
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/dropdown/demo2.png)
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/swipeview/demo.gif)
