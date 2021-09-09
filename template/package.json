@@ -19,7 +19,7 @@
     "react-i18next": "^11.11.4",
     "react-native": "0.65.1",
     "react-native-checkbox-tree": "^1.0.3",
-    "react-native-curved-bottom-bar": "^1.0.5",
+    "react-native-curved-bottom-bar": "^1.1.0",
     "react-native-element-dropdown": "^1.2.1",
     "react-native-element-image": "^1.0.2",
     "react-native-element-textinput": "^0.1.7",
