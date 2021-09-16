@@ -1,7 +1,7 @@
 {
   "name": "react-native-template-components",
   "title": "React Native UIKit",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "React Native UIKit",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,6 +15,7 @@
     "react-native",
     "elements",
     "components",
+    "template",
     "uikit"
   ],
   "author": {

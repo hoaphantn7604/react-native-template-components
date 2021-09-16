@@ -13,6 +13,8 @@ Step 5: npm run android or npm run ios
 ```
 
 ### Demo
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/login.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/register.png)
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo.png)
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/textinput/demo.png)
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/checkboxtree/demo.png)

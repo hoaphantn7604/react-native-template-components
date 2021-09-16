@@ -5,6 +5,9 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import MainScreen from 'screens/bottombar';
+import LoginScreen from 'screens/login';
+import RegisterScreen from 'screens/register';
+
 import DropdownScreen from 'screens/home/components/dropdown';
 import CheckboxTreeScreen from 'screens/home/components/checkboxTree';
 import TimerScreen from 'screens/home/components/timer';
@@ -20,10 +23,20 @@ const Stack = createNativeStackNavigator();
 function AppNavigator() {
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen
           name="Main"
           component={MainScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Register"
+          component={RegisterScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen name="Dropdown" component={DropdownScreen} />
