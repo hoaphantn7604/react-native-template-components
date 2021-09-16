@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
   },
   textinput: {
     borderBottomWidth: scale(0.5),
+    height: scale(50),
     borderBottomColor: 'gray',
   },
 });
