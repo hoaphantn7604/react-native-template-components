@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, SafeAreaView } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
+import { fontScale, scale } from 'react-native-utils-scale';
 
 const TextInputScreen = _props => {
   const [hashtag, setHashtag] = useState<string[]>([]);
@@ -8,8 +9,11 @@ const TextInputScreen = _props => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <TextInput
-          style={{ marginTop: 20 }}
+          style={{ marginTop: scale(20) }}
           containerStyle={styles.textinput}
+          inputStyle={{ fontSize: fontScale(16) }}
+          labelStyle={{ fontSize: fontScale(18) }}
+          textErrorStyle={{ fontSize: fontScale(16) }}
           label="Normal"
           placeholder="Placeholder"
           placeholderTextColor="gray"
@@ -21,8 +25,11 @@ const TextInputScreen = _props => {
         />
 
         <TextInput
-          style={{ marginTop: 20 }}
+          style={{ marginTop: scale(20) }}
           containerStyle={styles.textinput}
+          inputStyle={{ fontSize: fontScale(16) }}
+          labelStyle={{ fontSize: fontScale(18) }}
+          textErrorStyle={{ fontSize: fontScale(16) }}
           label="Password"
           placeholder="Placeholder"
           placeholderTextColor="gray"
@@ -34,8 +41,11 @@ const TextInputScreen = _props => {
         />
 
         <TextInput
-          style={{ marginTop: 20 }}
+          style={{ marginTop: scale(20) }}
           containerStyle={styles.textinput}
+          inputStyle={{ fontSize: fontScale(16) }}
+          labelStyle={{ fontSize: fontScale(18) }}
+          textErrorStyle={{ fontSize: fontScale(16) }}
           hashtagValue={hashtag}
           onChangeHashtag={e => {
             setHashtag(e);
@@ -56,10 +66,10 @@ export default TextInputScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: scale(20),
   },
   textinput: {
-    borderBottomWidth: 0.5,
+    borderBottomWidth: scale(0.5),
     borderBottomColor: 'gray',
   },
 });
