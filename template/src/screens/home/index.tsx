@@ -4,14 +4,16 @@ import { View, ScrollView } from 'react-native';
 import { styles } from './styles';
 import { Button, globalLoading, globalMessage, Modal, Text } from 'components';
 import { useTranslation } from 'react-i18next';
-import { changeLanguage } from 'shared/language';
 import { scale } from 'react-native-utils-scale';
+import { useDispatch } from 'react-redux';
+import { ChangeLanguage } from 'reduxCore/root/action';
 
 export interface Props {}
 
 const MainScreen: React.FC<Props> = _props => {
   const { goBack, navigate } = useNavigation();
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
 
   return (
@@ -27,7 +29,7 @@ const MainScreen: React.FC<Props> = _props => {
           style={styles.button}
           title="Switch Language"
           onPress={() => {
-            changeLanguage('vi');
+            dispatch(ChangeLanguage.get('vi'));
           }}
         />
 

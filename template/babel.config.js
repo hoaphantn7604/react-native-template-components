@@ -12,6 +12,7 @@ module.exports = {
           shared: './src/shared',
           config: './src/config',
           assets: './src/assets',
+          reduxCore: './src/reduxCore',
         },
       },
     ],
