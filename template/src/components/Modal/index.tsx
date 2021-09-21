@@ -1,10 +1,8 @@
 import React from 'react';
 import { Modal, View, TouchableWithoutFeedback } from 'react-native';
-import { useDetectDevice } from 'react-native-utils-toolkit';
+import { height as h } from 'react-native-utils-scale';
 import VerticalSwipeView from 'react-native-vertical-swipe-view';
 import { CModal } from './type';
-
-const { height: h } = useDetectDevice;
 
 const defaultProps = {
   visible: false,
