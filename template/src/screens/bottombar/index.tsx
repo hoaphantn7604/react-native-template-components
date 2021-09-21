@@ -1,11 +1,11 @@
 import { COLORS } from 'config';
 import React from 'react';
 import {
+  Alert,
   Animated,
   StatusBar,
   TouchableOpacity,
   View,
-  Alert,
 } from 'react-native';
 import { CurvedBottomBar } from 'react-native-curved-bottom-bar';
 import { scale } from 'react-native-utils-scale';
@@ -57,6 +57,7 @@ const MainScreen: React.FC<Props> = _props => {
         circleWidth={scale(55)}
         bgColor="white"
         initialRouteName="title1"
+        swipeEnabled
         renderCircle={() => (
           <Animated.View style={styles.btnCircle}>
             <TouchableOpacity
@@ -90,27 +91,21 @@ const MainScreen: React.FC<Props> = _props => {
         <CurvedBottomBar.Screen
           name="title2"
           component={() => (
-            <View
-              style={{ backgroundColor: COLORS.BACKGROUND_COLOR, flex: 1 }}
-            />
+            <View style={{ backgroundColor: COLORS.BACKGROUND, flex: 1 }} />
           )}
           position="left"
         />
         <CurvedBottomBar.Screen
           name="title3"
           component={() => (
-            <View
-              style={{ backgroundColor: COLORS.BACKGROUND_COLOR, flex: 1 }}
-            />
+            <View style={{ backgroundColor: COLORS.BACKGROUND, flex: 1 }} />
           )}
           position="right"
         />
         <CurvedBottomBar.Screen
           name="title4"
           component={() => (
-            <View
-              style={{ backgroundColor: COLORS.BACKGROUND_COLOR, flex: 1 }}
-            />
+            <View style={{ backgroundColor: COLORS.BACKGROUND, flex: 1 }} />
           )}
           position="right"
         />

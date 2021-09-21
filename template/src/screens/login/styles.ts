@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { scale } from 'react-native-utils-scale';
+import { fontScale, scale } from 'react-native-utils-scale';
 
 export const styles = StyleSheet.create({
   container: {
@@ -17,6 +17,9 @@ export const styles = StyleSheet.create({
     height: scale(50),
     borderBottomColor: 'gray',
   },
+  inputStyle: { fontSize: fontScale(16) },
+  labelStyle: { fontSize: fontScale(18) },
+  textErrorStyle: { fontSize: fontScale(16) },
   button: {
     marginTop: scale(32),
     borderWidth: scale(0.5),

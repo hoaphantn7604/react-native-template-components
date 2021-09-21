@@ -6,9 +6,9 @@ export type COLOR = {
   PRIMARY: string;
   SECONDARY: string;
   BUTTON: string;
-  BUTTON_TEXT_COLOR: string;
-  TEXT_COLOR: string;
-  BACKGROUND_COLOR: string;
+  BUTTON_TEXT: string;
+  TEXT: string;
+  BACKGROUND: string;
   HEADER_BG: string;
 };
 
@@ -16,9 +16,9 @@ const COLORS: COLOR = {
   PRIMARY: '#FF3030',
   SECONDARY: '#F4A460',
   BUTTON: 'black',
-  BUTTON_TEXT_COLOR: 'gray',
-  TEXT_COLOR: 'black',
-  BACKGROUND_COLOR: '#E8E8E8',
+  BUTTON_TEXT: 'gray',
+  TEXT: 'black',
+  BACKGROUND: '#E8E8E8',
   HEADER_BG: 'black',
 };
 

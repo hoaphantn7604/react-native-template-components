@@ -4,7 +4,7 @@ import { scale } from 'react-native-utils-scale';
 import { styles } from './styles';
 import { ButtonProps } from './type';
 import Text from '../Text';
-import { COLORS } from '../setup';
+import { COLORS } from 'config';
 
 const defaultProps = {
   bgColor: '',

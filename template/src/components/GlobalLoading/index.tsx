@@ -1,5 +1,5 @@
 import React, { useImperativeHandle, useState } from 'react';
-import { Modal, StatusBar, StyleSheet, View } from 'react-native';
+import { Modal, StatusBar, View } from 'react-native';
 import { UIActivityIndicator } from 'react-native-indicators';
 import { styles } from './styles';
 

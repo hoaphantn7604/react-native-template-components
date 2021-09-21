@@ -23,6 +23,7 @@ const TimerScreen: React.FC<Props> = _props => {
       <Button
         style={styles.button}
         title={'Start'}
+        border
         onPress={() => {
           timerRef.current.start();
         }}
@@ -30,6 +31,7 @@ const TimerScreen: React.FC<Props> = _props => {
       <Button
         style={styles.button}
         title={'Pause'}
+        border
         onPress={() => {
           timerRef.current.pause();
         }}
@@ -37,6 +39,7 @@ const TimerScreen: React.FC<Props> = _props => {
       <Button
         style={styles.button}
         title={'Resume'}
+        border
         onPress={() => {
           timerRef.current.resume();
         }}
@@ -44,6 +47,7 @@ const TimerScreen: React.FC<Props> = _props => {
       <Button
         style={styles.button}
         title={'Stop'}
+        border
         onPress={() => {
           timerRef.current.stop();
         }}

@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import React from 'react';
 import { View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
-import { fontScale, scale } from 'react-native-utils-scale';
+import { scale } from 'react-native-utils-scale';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { styles } from './styles';
 
@@ -67,9 +67,9 @@ const RegisterScrenn: React.FC<Props> = props => {
       <TextInput
         style={{ marginTop: scale(20) }}
         containerStyle={styles.textinput}
-        inputStyle={{ fontSize: fontScale(16) }}
-        labelStyle={{ fontSize: fontScale(18) }}
-        textErrorStyle={{ fontSize: fontScale(16) }}
+        inputStyle={styles.inputStyle}
+        labelStyle={styles.labelStyle}
+        textErrorStyle={styles.textErrorStyle}
         value={formik.values.fullname}
         onChangeText={formik.handleChange('fullname')}
         label="Full name"
@@ -82,9 +82,9 @@ const RegisterScrenn: React.FC<Props> = props => {
       <TextInput
         style={{ marginTop: scale(20) }}
         containerStyle={styles.textinput}
-        inputStyle={{ fontSize: fontScale(16) }}
-        labelStyle={{ fontSize: fontScale(18) }}
-        textErrorStyle={{ fontSize: fontScale(16) }}
+        inputStyle={styles.inputStyle}
+        labelStyle={styles.labelStyle}
+        textErrorStyle={styles.textErrorStyle}
         value={formik.values.username}
         onChangeText={formik.handleChange('username')}
         label="Username"
@@ -97,9 +97,9 @@ const RegisterScrenn: React.FC<Props> = props => {
       <TextInput
         style={{ marginTop: scale(50) }}
         containerStyle={styles.textinput}
-        inputStyle={{ fontSize: fontScale(16) }}
-        labelStyle={{ fontSize: fontScale(18) }}
-        textErrorStyle={{ fontSize: fontScale(16) }}
+        inputStyle={styles.inputStyle}
+        labelStyle={styles.labelStyle}
+        textErrorStyle={styles.textErrorStyle}
         value={formik.values.password}
         onChangeText={formik.handleChange('password')}
         label="Password"
@@ -113,9 +113,9 @@ const RegisterScrenn: React.FC<Props> = props => {
       <TextInput
         style={{ marginTop: scale(20) }}
         containerStyle={styles.textinput}
-        inputStyle={{ fontSize: fontScale(16) }}
-        labelStyle={{ fontSize: fontScale(18) }}
-        textErrorStyle={{ fontSize: fontScale(16) }}
+        inputStyle={styles.inputStyle}
+        labelStyle={styles.labelStyle}
+        textErrorStyle={styles.textErrorStyle}
         value={formik.values.confirmPassword}
         onChangeText={formik.handleChange('confirmPassword')}
         label="Confirm Password"

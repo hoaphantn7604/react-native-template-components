@@ -28,6 +28,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="Switch Language"
+          border
           onPress={() => {
             dispatch(ChangeLanguage.get('vi'));
           }}
@@ -36,6 +37,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="Checkbox Tree"
+          border
           onPress={() => {
             navigate('CheckboxTree');
           }}
@@ -44,6 +46,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="Timer"
+          border
           onPress={() => {
             navigate('Timer');
           }}
@@ -52,6 +55,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="Countdown"
+          border
           onPress={() => {
             navigate('Countdown');
           }}
@@ -60,6 +64,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="Dropdown"
+          border
           onPress={() => {
             navigate('Dropdown');
           }}
@@ -68,6 +73,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="MultiSelect"
+          border
           onPress={() => {
             navigate('MultiSelect');
           }}
@@ -76,6 +82,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="SwipeView"
+          border
           onPress={() => {
             navigate('SwipeView');
           }}
@@ -84,6 +91,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="TextInput"
+          border
           onPress={() => {
             navigate('TextInput');
           }}
@@ -91,6 +99,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="Global Loading"
+          border
           onPress={() => {
             globalLoading.show();
             setTimeout(() => {
@@ -101,6 +110,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="Global Message"
+          border
           onPress={() => {
             globalMessage.show('Title', 'Message');
           }}
@@ -108,6 +118,7 @@ const MainScreen: React.FC<Props> = _props => {
         <Button
           style={styles.button}
           title="Modal"
+          border
           onPress={() => {
             setVisible(true);
           }}

@@ -24,6 +24,7 @@ const CountdownScreen: React.FC<Props> = _props => {
       <Button
         style={styles.button}
         title={'Start'}
+        border
         onPress={() => {
           countdownRef.current.start();
         }}
@@ -31,6 +32,7 @@ const CountdownScreen: React.FC<Props> = _props => {
       <Button
         style={styles.button}
         title={'Pause'}
+        border
         onPress={() => {
           countdownRef.current.pause();
         }}
@@ -38,6 +40,7 @@ const CountdownScreen: React.FC<Props> = _props => {
       <Button
         style={styles.button}
         title={'Resume'}
+        border
         onPress={() => {
           countdownRef.current.resume();
         }}
@@ -45,6 +48,7 @@ const CountdownScreen: React.FC<Props> = _props => {
       <Button
         style={styles.button}
         title={'Stop'}
+        border
         onPress={() => {
           countdownRef.current.stop();
         }}

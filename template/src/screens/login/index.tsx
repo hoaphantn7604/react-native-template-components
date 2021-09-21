@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import React from 'react';
 import { View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
-import { fontScale, scale } from 'react-native-utils-scale';
+import { scale } from 'react-native-utils-scale';
 import { styles } from './styles';
 
 interface Props {}
@@ -44,9 +44,9 @@ const LoginScrenn: React.FC<Props> = props => {
       <TextInput
         style={{ marginTop: scale(20) }}
         containerStyle={styles.textinput}
-        inputStyle={{ fontSize: fontScale(16) }}
-        labelStyle={{ fontSize: fontScale(18) }}
-        textErrorStyle={{ fontSize: fontScale(16) }}
+        inputStyle={styles.inputStyle}
+        labelStyle={styles.labelStyle}
+        textErrorStyle={styles.textErrorStyle}
         value={formik.values.username}
         onChangeText={formik.handleChange('username')}
         label="Username"
@@ -59,9 +59,9 @@ const LoginScrenn: React.FC<Props> = props => {
       <TextInput
         style={{ marginTop: scale(20) }}
         containerStyle={styles.textinput}
-        inputStyle={{ fontSize: fontScale(16) }}
-        labelStyle={{ fontSize: fontScale(18) }}
-        textErrorStyle={{ fontSize: fontScale(16) }}
+        inputStyle={styles.inputStyle}
+        labelStyle={styles.labelStyle}
+        textErrorStyle={styles.textErrorStyle}
         value={formik.values.password}
         onChangeText={formik.handleChange('password')}
         label="Password"
