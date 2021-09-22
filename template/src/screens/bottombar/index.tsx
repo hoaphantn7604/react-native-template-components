@@ -11,6 +11,7 @@ import { CurvedBottomBar } from 'react-native-curved-bottom-bar';
 import { scale } from 'react-native-utils-scale';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from 'screens/home';
+import ProductScreen from 'screens/product';
 import { styles } from './styles';
 
 export interface Props {}
@@ -90,23 +91,7 @@ const MainScreen: React.FC<Props> = _props => {
         />
         <CurvedBottomBar.Screen
           name="title2"
-          component={() => (
-            <View style={{ backgroundColor: COLORS.BACKGROUND, flex: 1 }} />
-          )}
-          position="left"
-        />
-        <CurvedBottomBar.Screen
-          name="title3"
-          component={() => (
-            <View style={{ backgroundColor: COLORS.BACKGROUND, flex: 1 }} />
-          )}
-          position="right"
-        />
-        <CurvedBottomBar.Screen
-          name="title4"
-          component={() => (
-            <View style={{ backgroundColor: COLORS.BACKGROUND, flex: 1 }} />
-          )}
+          component={() => <ProductScreen />}
           position="right"
         />
       </CurvedBottomBar.Navigator>

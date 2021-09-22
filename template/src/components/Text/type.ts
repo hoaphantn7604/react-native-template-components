@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextProps, TextStyle } from 'react-native';
+import { TextProps } from 'react-native';
 interface Props extends TextProps {
   fontSize?: number | undefined;
   bold?: boolean;
