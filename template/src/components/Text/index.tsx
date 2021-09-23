@@ -14,7 +14,7 @@ const defaultProps = {
 const TextComponent: PropsText = props => {
   const { fontSize, bold, color, style, children } = props;
 
-  let FONTSIZE: number = 12;
+  let FONTSIZE: number = 14;
   if (fontSize) {
     FONTSIZE = fontSize;
   }

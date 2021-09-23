@@ -1,5 +1,5 @@
 import { FlatList, Text } from 'components';
-import React from 'react';
+import React, { useRef } from 'react';
 import { SafeAreaView, View } from 'react-native';
 import { Image } from 'react-native-element-image';
 import { scale, width } from 'react-native-utils-scale';
@@ -25,6 +25,13 @@ const ProductScreen: React.FC<Props> = props => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Text style={styles.text} bold fontSize={16}>
+        Horizontal
+      </Text>
+      <FlatList data={DATA} renderItem={_renderItem} horizontal />
+      <Text style={styles.text} bold fontSize={16}>
+        Vertical
+      </Text>
       <FlatList data={DATA} renderItem={_renderItem} numColumns={2} />
     </SafeAreaView>
   );
