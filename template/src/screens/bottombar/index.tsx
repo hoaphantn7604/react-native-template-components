@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core';
 import { COLORS } from 'config';
 import React from 'react';
 import {
@@ -11,7 +12,7 @@ import { CurvedBottomBar } from 'react-native-curved-bottom-bar';
 import { scale } from 'react-native-utils-scale';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from 'screens/home';
-import ProductScreen from 'screens/product';
+import SettingScreen from 'screens/setting';
 import { styles } from './styles';
 
 export interface Props {}
@@ -22,6 +23,8 @@ const defaultProps = {
 
 StatusBar.setBarStyle('dark-content');
 const MainScreen: React.FC<Props> = _props => {
+  const { navigate } = useNavigation();
+
   const _renderIcon = (routeName: string, selectTab: string) => {
     let icon = '';
 
@@ -30,13 +33,7 @@ const MainScreen: React.FC<Props> = _props => {
         icon = 'ios-home-outline';
         break;
       case 'title2':
-        icon = 'apps-outline';
-        break;
-      case 'title3':
-        icon = 'bar-chart-outline';
-        break;
-      case 'title4':
-        icon = 'person-outline';
+        icon = 'settings-outline';
         break;
     }
 
@@ -66,8 +63,8 @@ const MainScreen: React.FC<Props> = _props => {
                 flex: 1,
                 justifyContent: 'center',
               }}
-              onPress={() => Alert.alert('Click Button!')}>
-              <Ionicons name={'chatbubbles-outline'} size={scale(25)} />
+              onPress={() => Alert.alert('Click Action')}>
+              <Ionicons name={'apps'} size={scale(25)} />
             </TouchableOpacity>
           </Animated.View>
         )}
@@ -91,7 +88,7 @@ const MainScreen: React.FC<Props> = _props => {
         />
         <CurvedBottomBar.Screen
           name="title2"
-          component={() => <ProductScreen />}
+          component={() => <SettingScreen />}
           position="right"
         />
       </CurvedBottomBar.Navigator>

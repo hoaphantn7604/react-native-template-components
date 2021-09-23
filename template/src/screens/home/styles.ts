@@ -1,31 +1,25 @@
-import { COLORS } from 'config';
 import { StyleSheet } from 'react-native';
 import { scale } from 'react-native-utils-scale';
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: scale(50),
-    backgroundColor: COLORS.BACKGROUND,
+  container: { flex: 1 },
+  itemSlider: {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  main: {},
-  button: {
-    marginVertical: scale(5),
-    backgroundColor: 'white',
-    borderRadius: scale(24),
-    width: scale(200),
+  imgSlider: {
+    borderRadius: scale(8),
   },
-  curtainView: {
-    width: '100%',
-    marginBottom: 20,
-    position: 'absolute',
-    top: 0,
-    zIndex: 99,
+  item: {
+    padding: scale(8),
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  curtainContainer: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.4)',
+  img: {
+    borderRadius: scale(8),
+  },
+  text: {
+    marginVertical: scale(8),
+    alignSelf: 'center',
   },
 });

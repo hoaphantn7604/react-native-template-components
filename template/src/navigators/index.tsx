@@ -8,13 +8,13 @@ import MainScreen from 'screens/bottombar';
 import LoginScreen from 'screens/login';
 import RegisterScreen from 'screens/register';
 
-import DropdownScreen from 'screens/home/components/dropdown';
-import CheckboxTreeScreen from 'screens/home/components/checkboxTree';
-import TimerScreen from 'screens/home/components/timer';
-import CountdownScreen from 'screens/home/components/countdown';
-import SwipeViewScreen from 'screens/home/components/swipeView';
-import MultiSelectScreen from 'screens/home/components/multiselect';
-import TextInputScreen from 'screens/home/components/textInput';
+import DropdownScreen from 'screens/theme/dropdown';
+import CheckboxTreeScreen from 'screens/theme/checkboxTree';
+import TimerScreen from 'screens/theme/timer';
+import CountdownScreen from 'screens/theme/countdown';
+import SwipeViewScreen from 'screens/theme/swipeView';
+import MultiSelectScreen from 'screens/theme/multiselect';
+import TextInputScreen from 'screens/theme/textInput';
 
 export const navigationRef: React.RefObject<NavigationContainerRef<any>> =
   React.createRef();
