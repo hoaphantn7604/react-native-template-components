@@ -13,11 +13,11 @@ Step 5: npm run android or npm run ios
 ```
 
 ### Demo
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/login.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/register.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/textinput/demo.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/checkboxtree/demo.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/swipeview/demo.gif)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/dropdown/demo.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/dropdown/demo2.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/1.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/2.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/3.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/4.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/5.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/6.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/7.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/8.png)
