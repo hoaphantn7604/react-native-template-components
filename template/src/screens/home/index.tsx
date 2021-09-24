@@ -1,4 +1,4 @@
-import { FlatList, Text } from 'components';
+import { FlatList, Header, Text } from 'components';
 import React from 'react';
 import { SafeAreaView, View } from 'react-native';
 import { Image } from 'react-native-element-image';
@@ -34,6 +34,7 @@ const HomeScreen: React.FC<Props> = props => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Header onPressUser={() => {}} onChangeText={e => {}} />
       <FlatList
         data={DATA}
         renderItem={_renderItemSlider}

@@ -5,6 +5,7 @@ import { globalLoading } from './GlobalLoading';
 import { globalMessage } from './GlobalMessage';
 import Modal from './Modal';
 import FlatList from './FlatList';
+import Header from './Header';
 
 export {
   Text,
@@ -12,6 +13,7 @@ export {
   Checkbox,
   Modal,
   FlatList,
+  Header,
   globalLoading,
   globalMessage,
 };
