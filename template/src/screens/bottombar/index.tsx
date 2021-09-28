@@ -68,10 +68,10 @@ const MainScreen: React.FC<Props> = _props => {
             </TouchableOpacity>
           </Animated.View>
         )}
-        tabBar={({ routeName, selectTab, navigation }) => {
+        tabBar={({ routeName, selectTab, navigate }) => {
           return (
             <TouchableOpacity
-              onPress={() => navigation(routeName)}
+              onPress={() => navigate(routeName)}
               style={{
                 flex: 1,
                 alignItems: 'center',
@@ -84,11 +84,11 @@ const MainScreen: React.FC<Props> = _props => {
         <CurvedBottomBar.Screen
           name="title1"
           position="left"
-          component={() => <HomeScreen />}
+          component={({ navigate }) => <HomeScreen />}
         />
         <CurvedBottomBar.Screen
           name="title2"
-          component={() => <SettingScreen />}
+          component={({ navigate }) => <SettingScreen />}
           position="right"
         />
       </CurvedBottomBar.Navigator>
