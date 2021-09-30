@@ -36,7 +36,6 @@ const GlobalLoading = React.forwardRef((props, ref) => {
   return (
     <Modal visible={visible} animationType={'none'} transparent>
       <StatusBar
-        translucent
         backgroundColor={'rgba(0,0,0,0.6)'}
         barStyle={'light-content'}
       />
