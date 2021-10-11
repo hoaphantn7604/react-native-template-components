@@ -61,7 +61,7 @@ const MainScreen: React.FC<Props> = _props => {
                 justifyContent: 'center',
               }}
               onPress={() => Alert.alert('Click Action')}>
-              <Ionicons name={'apps-sharp'} size={scale(25)} />
+              <Ionicons name={'apps-sharp'} color="gray" size={scale(25)} />
             </TouchableOpacity>
           </Animated.View>
         )}
