@@ -11,7 +11,7 @@ interface Props {}
 const HomeScreen: React.FC<Props> = props => {
   const _renderItemSlider = ({ item, index }: any) => {
     return (
-      <View style={styles.itemSlider}>
+      <View key={index.toString()} style={styles.itemSlider}>
         <Image style={styles.imgSlider} width={width} source={item.img} />
       </View>
     );
@@ -19,7 +19,7 @@ const HomeScreen: React.FC<Props> = props => {
 
   const _renderItem = ({ item, index }: any) => {
     return (
-      <View style={styles.item}>
+      <View key={index.toString()} style={styles.item}>
         <Image
           style={styles.img}
           width={width / 2 - scale(16)}

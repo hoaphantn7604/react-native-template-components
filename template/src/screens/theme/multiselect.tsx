@@ -25,14 +25,6 @@ const MultiSelectScreen: React.FC<Props> = _props => {
   const [selected1, setSelected1] = useState([]);
   const [selected2, setSelected2] = useState([]);
 
-  const _header = () => {
-    return (
-      <View style={styles.header}>
-        <View style={styles.pan} />
-      </View>
-    );
-  };
-
   return (
     <View style={styles.container}>
       <MultiSelect
@@ -72,8 +64,8 @@ const MultiSelectScreen: React.FC<Props> = _props => {
         style={styles.dropdown}
         search
         searchPlaceholder="Search"
-        selectedStyle={{ backgroundColor: 'white', borderColor: '#DDDDDD' }}
-        selectedTextStyle={{ color: 'gray' }}
+        selectedStyle={styles.selectedStyle}
+        selectedTextStyle={styles.selectedTextStyle}
         iconColor={COLORS.SECONDARY}
         data={data}
         labelField="label"
@@ -115,6 +107,13 @@ const styles = StyleSheet.create({
     borderBottomColor: 'gray',
     borderBottomWidth: scale(0.5),
     marginTop: scale(20),
+  },
+  selectedStyle: {
+    backgroundColor: 'white',
+    borderColor: '#DDDDDD',
+  },
+  selectedTextStyle: {
+    color: 'gray',
   },
   icon: {
     marginRight: scale(5),

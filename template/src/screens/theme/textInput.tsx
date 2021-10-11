@@ -9,11 +9,11 @@ const TextInputScreen = _props => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <TextInput
-          style={{ marginTop: scale(20) }}
-          containerStyle={styles.textinput}
-          inputStyle={{ fontSize: fontScale(16) }}
-          labelStyle={{ fontSize: fontScale(18) }}
-          textErrorStyle={{ fontSize: fontScale(16) }}
+          style={styles.input}
+          containerStyle={styles.containerInputStyle}
+          inputStyle={styles.inputStyle}
+          labelStyle={styles.labelStyle}
+          textErrorStyle={styles.textErrorStyle}
           label="Normal"
           placeholder="Placeholder"
           placeholderTextColor="gray"
@@ -25,11 +25,11 @@ const TextInputScreen = _props => {
         />
 
         <TextInput
-          style={{ marginTop: scale(20) }}
-          containerStyle={styles.textinput}
-          inputStyle={{ fontSize: fontScale(16) }}
-          labelStyle={{ fontSize: fontScale(18) }}
-          textErrorStyle={{ fontSize: fontScale(16) }}
+          style={styles.input}
+          containerStyle={styles.containerInputStyle}
+          inputStyle={styles.inputStyle}
+          labelStyle={styles.labelStyle}
+          textErrorStyle={styles.textErrorStyle}
           label="Password"
           placeholder="Placeholder"
           placeholderTextColor="gray"
@@ -41,11 +41,11 @@ const TextInputScreen = _props => {
         />
 
         <TextInput
-          style={{ marginTop: scale(20) }}
-          containerStyle={styles.textinput}
-          inputStyle={{ fontSize: fontScale(16) }}
-          labelStyle={{ fontSize: fontScale(18) }}
-          textErrorStyle={{ fontSize: fontScale(16) }}
+          style={styles.input}
+          containerStyle={styles.containerInputStyle}
+          inputStyle={styles.inputStyle}
+          labelStyle={styles.labelStyle}
+          textErrorStyle={styles.textErrorStyle}
           hashtagValue={hashtag}
           onChangeHashtag={e => {
             setHashtag(e);
@@ -68,9 +68,13 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: scale(20),
   },
-  textinput: {
+  input: { marginTop: scale(20) },
+  containerInputStyle: {
     borderBottomWidth: scale(0.5),
     height: scale(50),
     borderBottomColor: 'gray',
   },
+  inputStyle: { fontSize: fontScale(16) },
+  labelStyle: { fontSize: fontScale(18) },
+  textErrorStyle: { fontSize: fontScale(16) },
 });

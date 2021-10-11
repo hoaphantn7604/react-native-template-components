@@ -25,14 +25,6 @@ const DropdownScreen: React.FC<Props> = _props => {
   const [dropdown1, setDropdown1] = useState(null);
   const [dropdown2, setDropdown2] = useState(null);
 
-  const _header = () => {
-    return (
-      <View style={styles.header}>
-        <View style={styles.pan} />
-      </View>
-    );
-  };
-
   return (
     <View style={styles.container}>
       <Dropdown

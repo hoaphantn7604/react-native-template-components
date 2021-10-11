@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
   curtainContainer: {
     flex: 1,
-    backgroundColor: COLORS.SECONDARY,
+    backgroundColor: '#DDDDDD',
   },
   row: {
     flex: 1,
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   },
   headerBottom: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'gray',
     borderTopLeftRadius: scale(22),
     borderTopRightRadius: scale(22),
     justifyContent: 'center',

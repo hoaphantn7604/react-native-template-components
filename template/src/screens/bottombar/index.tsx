@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/core';
 import { COLORS } from 'config';
 import React from 'react';
 import {
@@ -23,8 +22,6 @@ const defaultProps = {
 
 StatusBar.setBarStyle('dark-content');
 const MainScreen: React.FC<Props> = _props => {
-  const { navigate } = useNavigation();
-
   const _renderIcon = (routeName: string, selectTab: string) => {
     let icon = '';
 
@@ -49,14 +46,14 @@ const MainScreen: React.FC<Props> = _props => {
   return (
     <View style={{ flex: 1 }}>
       <CurvedBottomBar.Navigator
-        style={{ backgroundColor: '#F5F5F5' }}
+        style={styles.bottomBar}
         strokeWidth={0.5}
         height={scale(55)}
         circleWidth={scale(55)}
         bgColor="white"
         initialRouteName="title1"
         swipeEnabled
-        renderCircle={() => (
+        renderCircle={({ selectTab, navigate }) => (
           <Animated.View style={styles.btnCircle}>
             <TouchableOpacity
               style={{
@@ -64,7 +61,7 @@ const MainScreen: React.FC<Props> = _props => {
                 justifyContent: 'center',
               }}
               onPress={() => Alert.alert('Click Action')}>
-              <Ionicons name={'apps'} size={scale(25)} />
+              <Ionicons name={'apps-sharp'} size={scale(25)} />
             </TouchableOpacity>
           </Animated.View>
         )}

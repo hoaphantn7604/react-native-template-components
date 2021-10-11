@@ -9,6 +9,9 @@ export const styles = StyleSheet.create({
   button: {
     marginVertical: scale(5),
   },
+  bottomBar: {
+    backgroundColor: '#F5F5F5',
+  },
   btnCircle: {
     width: scale(60),
     height: scale(60),
