@@ -2,7 +2,7 @@ import { COLORS } from 'config';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { Dropdown } from 'react-native-element-dropdown';
+import { Dropdown, SelectCountry } from 'react-native-element-dropdown';
 import { scale } from 'react-native-utils-scale';
 
 const data = [
@@ -16,12 +16,79 @@ const data = [
   { label: 'Item 8', value: '8' },
 ];
 
+const local_data = [
+  {
+    value: '1',
+    lable: 'Country 1',
+    image: {
+      uri: 'https://www.atlantawatershed.org/wp-content/uploads/2017/06/default-placeholder.png',
+    },
+  },
+  {
+    value: '2',
+    lable: 'Country 2',
+    image: {
+      uri: 'https://www.atlantawatershed.org/wp-content/uploads/2017/06/default-placeholder.png',
+    },
+  },
+  {
+    value: '3',
+    lable: 'Country 3',
+    image: {
+      uri: 'https://www.atlantawatershed.org/wp-content/uploads/2017/06/default-placeholder.png',
+    },
+  },
+  {
+    value: '4',
+    lable: 'Country 4',
+    image: {
+      uri: 'https://www.atlantawatershed.org/wp-content/uploads/2017/06/default-placeholder.png',
+    },
+  },
+  {
+    value: '5',
+    lable: 'Country 5',
+    image: {
+      uri: 'https://www.atlantawatershed.org/wp-content/uploads/2017/06/default-placeholder.png',
+    },
+  },
+  {
+    value: '6',
+    lable: 'Country 6',
+    image: {
+      uri: 'https://www.atlantawatershed.org/wp-content/uploads/2017/06/default-placeholder.png',
+    },
+  },
+  {
+    value: '7',
+    lable: 'Country 7',
+    image: {
+      uri: 'https://www.atlantawatershed.org/wp-content/uploads/2017/06/default-placeholder.png',
+    },
+  },
+  {
+    value: '8',
+    lable: 'Country 8',
+    image: {
+      uri: 'https://www.atlantawatershed.org/wp-content/uploads/2017/06/default-placeholder.png',
+    },
+  },
+  {
+    value: '9',
+    lable: 'Country 9',
+    image: {
+      uri: 'https://www.atlantawatershed.org/wp-content/uploads/2017/06/default-placeholder.png',
+    },
+  },
+];
+
 export interface Props {}
 
 const DropdownScreen: React.FC<Props> = _props => {
   const [dropdown, setDropdown] = useState(null);
   const [dropdown1, setDropdown1] = useState(null);
   const [dropdown2, setDropdown2] = useState(null);
+  const [country, setCountry] = useState(null);
 
   return (
     <View style={styles.container}>
@@ -56,6 +123,22 @@ const DropdownScreen: React.FC<Props> = _props => {
             size={scale(20)}
           />
         )}
+      />
+
+      <SelectCountry
+        style={styles.dropdown2}
+        selectedTextStyle={styles.selectedText}
+        search
+        value={country}
+        data={local_data}
+        valueField="value"
+        labelField="lable"
+        imageField="image"
+        placeholder="Select item"
+        searchPlaceholder="Search..."
+        onChange={e => {
+          setCountry(e.value);
+        }}
       />
 
       <Dropdown
@@ -123,5 +206,8 @@ const styles = StyleSheet.create({
     height: scale(6),
     borderRadius: scale(6),
     backgroundColor: 'white',
+  },
+  selectedText: {
+    marginLeft: scale(8),
   },
 });
