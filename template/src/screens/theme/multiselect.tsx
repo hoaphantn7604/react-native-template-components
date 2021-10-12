@@ -16,9 +16,7 @@ const data = [
   { label: 'Item 8', value: '8' },
 ];
 
-export interface Props {
-  name: string;
-}
+export interface Props {}
 
 const MultiSelectScreen: React.FC<Props> = _props => {
   const [selected, setSelected] = useState([]);

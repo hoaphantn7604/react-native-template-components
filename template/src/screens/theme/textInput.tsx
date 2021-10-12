@@ -3,7 +3,9 @@ import { StyleSheet, View, SafeAreaView } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
 import { fontScale, scale } from 'react-native-utils-scale';
 
-const TextInputScreen = _props => {
+export interface Props {}
+
+const TextInputScreen: React.FC<Props> = _props => {
   const [hashtag, setHashtag] = useState<string[]>([]);
   return (
     <SafeAreaView style={{ flex: 1 }}>

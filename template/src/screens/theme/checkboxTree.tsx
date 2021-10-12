@@ -3,10 +3,6 @@ import { StyleSheet, View } from 'react-native';
 import CheckboxTree from 'react-native-checkbox-tree';
 import { scale } from 'react-native-utils-scale';
 
-export interface Props {
-  name: string;
-}
-
 const recursiveData = [
   {
     shopReportName: 'Name 1',
@@ -75,6 +71,8 @@ const recursiveData = [
     ],
   },
 ];
+
+export interface Props {}
 
 const CheckboxTreeScreen: React.FC<Props> = _props => {
   return (

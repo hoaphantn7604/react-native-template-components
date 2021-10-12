@@ -5,13 +5,6 @@ export const styles = StyleSheet.create({
   container: { flex: 1 },
   imgBackground: { width: width, height: scale(250) },
   wrap: {
-    width: scale(105),
-    height: scale(105),
-    borderRadius: scale(52),
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white',
-    alignSelf: 'center',
     marginTop: scale(64),
   },
   avatarImg: {

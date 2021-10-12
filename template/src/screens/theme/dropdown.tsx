@@ -16,9 +16,7 @@ const data = [
   { label: 'Item 8', value: '8' },
 ];
 
-export interface Props {
-  name: string;
-}
+export interface Props {}
 
 const DropdownScreen: React.FC<Props> = _props => {
   const [dropdown, setDropdown] = useState(null);

@@ -4,9 +4,7 @@ import { Button } from 'components';
 import { Timer } from 'react-native-element-timer';
 import { scale } from 'react-native-utils-scale';
 
-export interface Props {
-  name: string;
-}
+export interface Props {}
 
 const TimerScreen: React.FC<Props> = _props => {
   const timerRef: any = useRef(null);

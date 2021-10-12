@@ -4,9 +4,7 @@ import { Countdown } from 'react-native-element-timer';
 import { Button } from 'components';
 import { scale } from 'react-native-utils-scale';
 
-export interface Props {
-  name: string;
-}
+export interface Props {}
 
 const CountdownScreen: React.FC<Props> = _props => {
   const countdownRef: any = useRef(null);
