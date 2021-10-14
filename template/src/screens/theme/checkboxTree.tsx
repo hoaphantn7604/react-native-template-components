@@ -1,7 +1,8 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import CheckboxTree from 'react-native-checkbox-tree';
 import { scale } from 'react-native-utils-scale';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const recursiveData = [
   {
@@ -75,14 +76,25 @@ const recursiveData = [
 export interface Props {}
 
 const CheckboxTreeScreen: React.FC<Props> = _props => {
+  const [data, setData] = useState<any[]>(recursiveData);
+
   return (
     <View style={styles.container}>
       <CheckboxTree
-        data={recursiveData}
-        textField="shopCode"
+        data={data}
+        textField="shopName"
         childField="childs"
         textStyle={{ color: 'black' }}
         iconColor="black"
+        iconSize={scale(26)}
+        openIcon={<AntDesign name="arrowdown" size={scale(26)} />}
+        closeIcon={<AntDesign name="arrowright" size={scale(26)} />}
+        renderItem={item => (
+          <View style={styles.wrapItem}>
+            <AntDesign style={styles.icon} name="folderopen" size={scale(20)} />
+            <Text style={{ fontSize: scale(18) }}>{item.shopName}</Text>
+          </View>
+        )}
         onSelect={item => {
           console.log(`Selected ${item.length} item`);
         }}
@@ -97,5 +109,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: scale(20),
+  },
+  wrapItem: {
+    flexDirection: 'row',
+    marginVertical: scale(8),
+  },
+  icon: {
+    marginHorizontal: scale(8),
   },
 });

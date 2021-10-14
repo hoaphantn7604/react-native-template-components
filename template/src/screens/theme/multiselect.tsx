@@ -38,7 +38,7 @@ const MultiSelectScreen: React.FC<Props> = _props => {
       />
 
       <MultiSelect
-        style={styles.dropdown2}
+        style={styles.dropdown}
         data={data}
         labelField="label"
         valueField="value"
@@ -59,7 +59,7 @@ const MultiSelectScreen: React.FC<Props> = _props => {
       />
 
       <MultiSelect
-        style={styles.dropdown}
+        style={styles.dropdown2}
         search
         searchPlaceholder="Search"
         selectedStyle={styles.selectedStyle}
@@ -95,16 +95,25 @@ const styles = StyleSheet.create({
     padding: scale(20),
   },
   dropdown: {
-    marginTop: scale(20),
-    backgroundColor: 'white',
-    borderRadius: scale(12),
-    padding: scale(12),
-  },
-  dropdown2: {
     backgroundColor: 'transparent',
     borderBottomColor: 'gray',
     borderBottomWidth: scale(0.5),
     marginTop: scale(20),
+  },
+  dropdown2: {
+    marginTop: scale(20),
+    backgroundColor: 'white',
+    borderRadius: scale(12),
+    padding: scale(12),
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
   },
   selectedStyle: {
     backgroundColor: 'white',

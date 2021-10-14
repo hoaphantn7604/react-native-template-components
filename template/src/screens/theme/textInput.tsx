@@ -27,7 +27,7 @@ const TextInputScreen: React.FC<Props> = _props => {
         />
 
         <TextInput
-          style={styles.input}
+          style={styles.input1}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
           textErrorStyle={styles.textErrorStyle}
@@ -94,27 +94,51 @@ export default TextInputScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: scale(20),
+    paddingHorizontal: scale(20),
   },
   input: {
     marginTop: scale(20),
     borderBottomWidth: scale(0.3),
     height: scale(60),
   },
-  input2: {
+  input1: {
     marginTop: scale(20),
     borderWidth: scale(0.3),
     height: scale(60),
     paddingHorizontal: scale(8),
     borderRadius: scale(8),
   },
-  input3: {
+  input2: {
     marginTop: scale(20),
-    borderWidth: scale(0.3),
     height: scale(60),
     paddingHorizontal: scale(8),
     borderRadius: scale(8),
     backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+  },
+  input3: {
+    marginTop: scale(20),
+    height: scale(60),
+    paddingHorizontal: scale(8),
+    borderRadius: scale(8),
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
   },
   inputStyle: { fontSize: fontScale(16) },
   labelStyle: { fontSize: fontScale(14) },
