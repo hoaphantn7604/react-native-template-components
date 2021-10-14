@@ -16,6 +16,7 @@ import SwipeViewScreen from 'screens/theme/swipeView';
 import MultiSelectScreen from 'screens/theme/multiselect';
 import TextInputScreen from 'screens/theme/textInput';
 import AvatarScreen from 'screens/theme/avatar';
+import CheckboxScreen from 'screens/theme/checkbox';
 
 export const navigationRef: React.RefObject<NavigationContainerRef<any>> =
   React.createRef();
@@ -48,6 +49,7 @@ function AppNavigator() {
         <Stack.Screen name="SwipeView" component={SwipeViewScreen} />
         <Stack.Screen name="TextInput" component={TextInputScreen} />
         <Stack.Screen name="Avatar" component={AvatarScreen} />
+        <Stack.Screen name="Checkbox" component={CheckboxScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

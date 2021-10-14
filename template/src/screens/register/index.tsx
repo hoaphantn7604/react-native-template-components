@@ -4,12 +4,14 @@ import { useFormik } from 'formik';
 import React from 'react';
 import { View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
+import { scale } from 'react-native-utils-scale';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { styles } from './styles';
 
 interface Props {}
 
 const LoginScrenn: React.FC<Props> = props => {
-  const { navigate } = useNavigation();
+  const { navigate, goBack } = useNavigation();
   const formik = useFormik({
     initialValues: {
       username: '',
@@ -42,6 +44,13 @@ const LoginScrenn: React.FC<Props> = props => {
   });
   return (
     <View style={styles.container}>
+      <MaterialIcons
+        style={styles.iconBack}
+        name="keyboard-backspace"
+        color="gray"
+        size={scale(35)}
+        onPress={goBack}
+      />
       <Text style={styles.title} bold fontSize={30}>
         Register
       </Text>
@@ -66,6 +75,7 @@ const LoginScrenn: React.FC<Props> = props => {
           labelStyle={styles.labelStyle}
           textErrorStyle={styles.textErrorStyle}
           value={formik.values.password}
+          textContentType="oneTimeCode"
           onChangeText={formik.handleChange('password')}
           label="Password"
           placeholder="Enter password"
@@ -80,6 +90,7 @@ const LoginScrenn: React.FC<Props> = props => {
           labelStyle={styles.labelStyle}
           textErrorStyle={styles.textErrorStyle}
           value={formik.values.confirmPassword}
+          textContentType="oneTimeCode"
           onChangeText={formik.handleChange('confirmPassword')}
           label="Re-Password"
           placeholder="Enter password"

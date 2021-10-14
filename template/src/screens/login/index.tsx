@@ -61,6 +61,7 @@ const RegisterScrenn: React.FC<Props> = props => {
           labelStyle={styles.labelStyle}
           textErrorStyle={styles.textErrorStyle}
           value={formik.values.password}
+          textContentType="oneTimeCode"
           onChangeText={formik.handleChange('password')}
           label="Password"
           placeholder="Enter password"

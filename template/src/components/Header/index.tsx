@@ -10,7 +10,7 @@ const { scale, fontScale } = useScale;
 
 const HeaderComponent: HeaderProps = props => {
   const {
-    name = 'Hoa Phan',
+    name = 'HP Theme',
     avatar = require('assets/images/icons/ic-avatar.png'),
     onPressUser,
     onChangeText,

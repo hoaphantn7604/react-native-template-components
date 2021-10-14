@@ -10,6 +10,7 @@ const FlatListComponent: PropsFlatlist = props => {
       data={data}
       keyExtractor={(e, i) => i.toString()}
       extraData={data}
+      keyboardShouldPersistTaps="handled"
       renderItem={renderItem}
       refreshControl={
         <RefreshControl

@@ -68,4 +68,10 @@ export const styles = StyleSheet.create({
     marginTop: scale(16),
     color: 'gray',
   },
+  iconBack: {
+    marginRight: scale(8),
+    position: 'absolute',
+    top: scale(40),
+    left: scale(16),
+  },
 });

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TouchableWithoutFeedback, View, Image } from 'react-native';
 import { Checkbox } from './type';
 import { scale, fontScale } from 'react-native-utils-scale';
@@ -25,12 +25,14 @@ const CheckComponent: Checkbox = props => {
     size = 25,
     type = 'checkbox',
     color,
-    check,
+    check = false,
     label,
     labelStyle,
     fontFamily,
     onPress,
   } = props;
+
+  const [value, setValue] = useState<boolean>(check);
 
   const font = () => {
     if (fontFamily) {
@@ -42,8 +44,15 @@ const CheckComponent: Checkbox = props => {
     }
   };
 
+  const onClick = () => {
+    setValue(!value);
+    if (onPress) {
+      onPress(!value);
+    }
+  };
+
   return (
-    <TouchableWithoutFeedback onPress={onPress}>
+    <TouchableWithoutFeedback onPress={onClick}>
       <View style={[style ? style : styles.container]}>
         <Image
           style={{
@@ -53,10 +62,10 @@ const CheckComponent: Checkbox = props => {
           }}
           source={
             type === 'checkbox'
-              ? check
+              ? value
                 ? checkbox_check
                 : checkbox_uncheck
-              : check
+              : value
               ? radio_check
               : radio_uncheck
           }
@@ -65,7 +74,7 @@ const CheckComponent: Checkbox = props => {
           <Text
             style={[
               styles.text,
-              { fontSize: fontScale(size - 5), color: color },
+              { fontSize: fontScale(size - scale(5)), color: color },
               labelStyle,
               font(),
             ]}>

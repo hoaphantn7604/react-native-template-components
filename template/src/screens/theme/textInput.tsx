@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, SafeAreaView } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
 import { fontScale, scale } from 'react-native-utils-scale';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export interface Props {}
 
@@ -30,6 +31,27 @@ const TextInputScreen: React.FC<Props> = _props => {
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
           textErrorStyle={styles.textErrorStyle}
+          placeholder="Placeholder"
+          placeholderTextColor="gray"
+          onChangeText={text => {
+            console.log(text);
+          }}
+          focusColor="red"
+          textError="Please enter"
+          renderLeftIcon={() => (
+            <MaterialIcons
+              style={{ marginRight: scale(8) }}
+              name="favorite-outline"
+              size={scale(20)}
+            />
+          )}
+        />
+
+        <TextInput
+          style={styles.input2}
+          inputStyle={styles.inputStyle}
+          labelStyle={styles.labelStyle}
+          textErrorStyle={styles.textErrorStyle}
           label="Password"
           placeholder="Placeholder"
           placeholderTextColor="gray"
@@ -41,7 +63,7 @@ const TextInputScreen: React.FC<Props> = _props => {
         />
 
         <TextInput
-          style={styles.input}
+          style={styles.input3}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
           textErrorStyle={styles.textErrorStyle}
@@ -49,11 +71,18 @@ const TextInputScreen: React.FC<Props> = _props => {
           onChangeHashtag={e => {
             setHashtag(e);
           }}
-          label="Hashtag"
           placeholder="Hashtag..."
           autoCorrect={false}
           placeholderTextColor="gray"
           focusColor="red"
+          renderLeftIcon={() => (
+            <MaterialIcons
+              style={{ marginRight: scale(8) }}
+              name="group-add"
+              color="gray"
+              size={scale(22)}
+            />
+          )}
         />
       </View>
     </SafeAreaView>
@@ -69,9 +98,23 @@ const styles = StyleSheet.create({
   },
   input: {
     marginTop: scale(20),
-    borderBottomWidth: scale(0.5),
+    borderBottomWidth: scale(0.3),
     height: scale(60),
-    borderBottomColor: 'gray',
+  },
+  input2: {
+    marginTop: scale(20),
+    borderWidth: scale(0.3),
+    height: scale(60),
+    paddingHorizontal: scale(8),
+    borderRadius: scale(8),
+  },
+  input3: {
+    marginTop: scale(20),
+    borderWidth: scale(0.3),
+    height: scale(60),
+    paddingHorizontal: scale(8),
+    borderRadius: scale(8),
+    backgroundColor: 'white',
   },
   inputStyle: { fontSize: fontScale(16) },
   labelStyle: { fontSize: fontScale(14) },

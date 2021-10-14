@@ -45,7 +45,7 @@ const SettingScreen: React.FC<Props> = props => {
           iconEnable
           onPressIcon={() => Alert.alert('Click')}
           nameStyle={{ fontSize: scale(20) }}
-          name="Hoa Phan"
+          name="HP Theme"
         />
       </ImageBackground>
       <ScrollView>
@@ -64,6 +64,9 @@ const SettingScreen: React.FC<Props> = props => {
           })}
           {itemMenu('iconfontdesktop', 'Avatar', () => {
             navigate('Avatar');
+          })}
+          {itemMenu('iconfontdesktop', 'Checkbox', () => {
+            navigate('Checkbox');
           })}
           {itemMenu('iconfontdesktop', 'Swipe View', () => {
             navigate('SwipeView');

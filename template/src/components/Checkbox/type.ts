@@ -10,7 +10,7 @@ interface Props {
   check?: boolean;
   size?: number;
   color?: string;
-  onPress?: () => void;
+  onPress?: (check: boolean) => void;
 }
 
 export type Checkbox = React.FC<Props>;
