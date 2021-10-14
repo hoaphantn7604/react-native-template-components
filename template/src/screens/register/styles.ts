@@ -1,28 +1,71 @@
+import { COLORS } from 'config';
 import { StyleSheet } from 'react-native';
-import { fontScale, scale } from 'react-native-utils-scale';
+import { fontScale, isIOS, scale } from 'react-native-utils-scale';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: COLORS.PRIMARY,
     justifyContent: 'center',
     padding: scale(16),
   },
+  wrapBox: {
+    backgroundColor: '#F8F8FF',
+    margin: scale(16),
+    paddingHorizontal: scale(16),
+    paddingBottom: scale(32),
+    borderRadius: scale(8),
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 3,
+  },
   title: {
     alignSelf: 'center',
-    marginBottom: scale(32),
+    marginBottom: scale(16),
+    color: 'gray',
   },
   textinput: {
-    borderBottomWidth: scale(0.5),
-    height: scale(50),
-    borderBottomColor: 'gray',
+    backgroundColor: 'white',
+    marginTop: scale(20),
+    height: scale(60),
+    paddingHorizontal: scale(8),
+    borderRadius: scale(8),
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
   },
   inputStyle: { fontSize: fontScale(16) },
-  labelStyle: { fontSize: fontScale(18) },
-  textErrorStyle: { fontSize: fontScale(16) },
+  labelStyle: { fontSize: fontScale(14) },
+  textErrorStyle: { fontSize: fontScale(14) },
   button: {
+    backgroundColor: 'white',
     marginTop: scale(32),
-    borderWidth: scale(0.5),
     height: scale(50),
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+  },
+  textOr: {
+    alignSelf: 'center',
+    marginTop: scale(16),
+    color: 'gray',
   },
 });

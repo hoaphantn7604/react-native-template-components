@@ -38,7 +38,7 @@ const MainScreen: React.FC<Props> = _props => {
       <Ionicons
         name={icon}
         size={scale(25)}
-        color={routeName === selectTab ? COLORS.PRIMARY : 'gray'}
+        color={routeName === selectTab ? 'black' : 'gray'}
       />
     );
   };

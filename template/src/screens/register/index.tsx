@@ -4,26 +4,20 @@ import { useFormik } from 'formik';
 import React from 'react';
 import { View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
-import { scale } from 'react-native-utils-scale';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { styles } from './styles';
 
 interface Props {}
 
-const RegisterScrenn: React.FC<Props> = props => {
-  const { goBack } = useNavigation();
+const LoginScrenn: React.FC<Props> = props => {
+  const { navigate } = useNavigation();
   const formik = useFormik({
     initialValues: {
-      fullname: '',
       username: '',
       password: '',
       confirmPassword: '',
     },
     validate: values => {
       const error: any = {};
-      if (values.fullname.length === 0) {
-        error.fullname = 'Please enter full name';
-      }
       if (values.username.length === 0) {
         error.username = 'Please enter username';
       }
@@ -42,99 +36,68 @@ const RegisterScrenn: React.FC<Props> = props => {
       globalLoading.show();
       setTimeout(() => {
         globalLoading.hide();
-        goBack();
+        navigate('Main');
       }, 1000);
     },
   });
   return (
     <View style={styles.container}>
-      <MaterialIcons
-        style={{
-          position: 'absolute',
-          left: scale(15),
-          top: scale(35),
-          opacity: 0.7,
-        }}
-        name="close"
-        size={scale(30)}
-        onPress={() => {
-          goBack();
-        }}
-      />
       <Text style={styles.title} bold fontSize={30}>
-        Sign up
+        Register
       </Text>
-      <TextInput
-        style={{ marginTop: scale(20) }}
-        containerStyle={styles.textinput}
-        inputStyle={styles.inputStyle}
-        labelStyle={styles.labelStyle}
-        textErrorStyle={styles.textErrorStyle}
-        value={formik.values.fullname}
-        onChangeText={formik.handleChange('fullname')}
-        label="Full name"
-        placeholder="Placeholder"
-        placeholderTextColor="gray"
-        focusColor="red"
-        textError={formik.errors.fullname}
-      />
+      <View style={styles.wrapBox}>
+        <TextInput
+          style={styles.textinput}
+          inputStyle={styles.inputStyle}
+          labelStyle={styles.labelStyle}
+          textErrorStyle={styles.textErrorStyle}
+          value={formik.values.username}
+          onChangeText={formik.handleChange('username')}
+          label="Username"
+          placeholder="Placeholder"
+          placeholderTextColor="gray"
+          focusColor="red"
+          textError={formik.errors.username}
+        />
 
-      <TextInput
-        style={{ marginTop: scale(20) }}
-        containerStyle={styles.textinput}
-        inputStyle={styles.inputStyle}
-        labelStyle={styles.labelStyle}
-        textErrorStyle={styles.textErrorStyle}
-        value={formik.values.username}
-        onChangeText={formik.handleChange('username')}
-        label="Username"
-        placeholder="Placeholder"
-        placeholderTextColor="gray"
-        focusColor="red"
-        textError={formik.errors.username}
-      />
+        <TextInput
+          style={styles.textinput}
+          inputStyle={styles.inputStyle}
+          labelStyle={styles.labelStyle}
+          textErrorStyle={styles.textErrorStyle}
+          value={formik.values.password}
+          onChangeText={formik.handleChange('password')}
+          label="Password"
+          placeholder="Enter password"
+          placeholderTextColor="gray"
+          secureTextEntry
+          focusColor="red"
+          textError={formik.errors.password}
+        />
+        <TextInput
+          style={styles.textinput}
+          inputStyle={styles.inputStyle}
+          labelStyle={styles.labelStyle}
+          textErrorStyle={styles.textErrorStyle}
+          value={formik.values.confirmPassword}
+          onChangeText={formik.handleChange('confirmPassword')}
+          label="Re-Password"
+          placeholder="Enter password"
+          placeholderTextColor="gray"
+          secureTextEntry
+          focusColor="red"
+          textError={formik.errors.confirmPassword}
+        />
 
-      <TextInput
-        style={{ marginTop: scale(50) }}
-        containerStyle={styles.textinput}
-        inputStyle={styles.inputStyle}
-        labelStyle={styles.labelStyle}
-        textErrorStyle={styles.textErrorStyle}
-        value={formik.values.password}
-        onChangeText={formik.handleChange('password')}
-        label="Password"
-        placeholder="Placeholder"
-        placeholderTextColor="gray"
-        secureTextEntry
-        focusColor="red"
-        textError={formik.errors.password}
-      />
-
-      <TextInput
-        style={{ marginTop: scale(20) }}
-        containerStyle={styles.textinput}
-        inputStyle={styles.inputStyle}
-        labelStyle={styles.labelStyle}
-        textErrorStyle={styles.textErrorStyle}
-        value={formik.values.confirmPassword}
-        onChangeText={formik.handleChange('confirmPassword')}
-        label="Confirm Password"
-        placeholder="Placeholder"
-        placeholderTextColor="gray"
-        secureTextEntry
-        focusColor="red"
-        textError={formik.errors.password}
-      />
-
-      <Button
-        style={styles.button}
-        title="Sign up"
-        border
-        fontSize={20}
-        onPress={formik.handleSubmit}
-      />
+        <Button
+          style={styles.button}
+          title="Create"
+          fontSize={20}
+          onPress={formik.handleSubmit}
+        />
+      </View>
     </View>
   );
 };
 
-export default RegisterScrenn;
+export default LoginScrenn;

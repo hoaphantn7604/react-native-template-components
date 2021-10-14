@@ -12,7 +12,6 @@ const TextInputScreen: React.FC<Props> = _props => {
       <View style={styles.container}>
         <TextInput
           style={styles.input}
-          containerStyle={styles.containerInputStyle}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
           textErrorStyle={styles.textErrorStyle}
@@ -28,7 +27,6 @@ const TextInputScreen: React.FC<Props> = _props => {
 
         <TextInput
           style={styles.input}
-          containerStyle={styles.containerInputStyle}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
           textErrorStyle={styles.textErrorStyle}
@@ -44,7 +42,6 @@ const TextInputScreen: React.FC<Props> = _props => {
 
         <TextInput
           style={styles.input}
-          containerStyle={styles.containerInputStyle}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
           textErrorStyle={styles.textErrorStyle}
@@ -70,13 +67,13 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: scale(20),
   },
-  input: { marginTop: scale(20) },
-  containerInputStyle: {
+  input: {
+    marginTop: scale(20),
     borderBottomWidth: scale(0.5),
-    height: scale(50),
+    height: scale(60),
     borderBottomColor: 'gray',
   },
   inputStyle: { fontSize: fontScale(16) },
-  labelStyle: { fontSize: fontScale(18) },
+  labelStyle: { fontSize: fontScale(14) },
   textErrorStyle: { fontSize: fontScale(16) },
 });

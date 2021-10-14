@@ -104,45 +104,49 @@ const DropdownScreen: React.FC<Props> = _props => {
         }}
       />
 
+      <View style={styles.wrap}>
+        <Dropdown
+          style={[styles.dropdown, { marginRight: scale(5) }]}
+          data={data}
+          search
+          labelField="label"
+          valueField="value"
+          placeholder="Select item"
+          searchPlaceholder="Search..."
+          value={dropdown1}
+          onChange={item => {
+            setDropdown1(item.value);
+            console.log('selected', item);
+          }}
+          renderLeftIcon={() => (
+            <AntDesign
+              style={styles.icon}
+              color="black"
+              name="Safety"
+              size={scale(20)}
+            />
+          )}
+        />
+
+        <SelectCountry
+          style={[styles.dropdown, { marginLeft: scale(5) }]}
+          selectedTextStyle={styles.selectedText}
+          search
+          value={country}
+          data={local_data}
+          valueField="value"
+          labelField="lable"
+          imageField="image"
+          placeholder="Select country"
+          searchPlaceholder="Search..."
+          onChange={e => {
+            setCountry(e.value);
+          }}
+        />
+      </View>
+
       <Dropdown
         style={styles.dropdown2}
-        data={data}
-        labelField="label"
-        valueField="value"
-        placeholder="Select item"
-        value={dropdown1}
-        onChange={item => {
-          setDropdown1(item.value);
-          console.log('selected', item);
-        }}
-        renderLeftIcon={() => (
-          <AntDesign
-            style={styles.icon}
-            color="black"
-            name="Safety"
-            size={scale(20)}
-          />
-        )}
-      />
-
-      <SelectCountry
-        style={styles.dropdown2}
-        selectedTextStyle={styles.selectedText}
-        search
-        value={country}
-        data={local_data}
-        valueField="value"
-        labelField="lable"
-        imageField="image"
-        placeholder="Select item"
-        searchPlaceholder="Search..."
-        onChange={e => {
-          setCountry(e.value);
-        }}
-      />
-
-      <Dropdown
-        style={styles.dropdown}
         search
         searchPlaceholder="Search"
         iconColor={COLORS.SECONDARY}
@@ -175,17 +179,21 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: scale(20),
   },
-  dropdown: {
-    marginTop: scale(20),
-    backgroundColor: 'white',
-    borderRadius: scale(12),
-    padding: scale(12),
+  wrap: {
+    flexDirection: 'row',
   },
-  dropdown2: {
+  dropdown: {
+    flex: 1,
     backgroundColor: 'transparent',
     borderBottomColor: 'gray',
     borderBottomWidth: scale(0.5),
     marginTop: scale(20),
+  },
+  dropdown2: {
+    marginTop: scale(20),
+    backgroundColor: 'white',
+    borderRadius: scale(12),
+    padding: scale(12),
   },
   icon: {
     marginRight: scale(5),

@@ -13,7 +13,7 @@ export type COLOR = {
 };
 
 const COLORS: COLOR = {
-  PRIMARY: '#FF3030',
+  PRIMARY: '#C6E2FF',
   SECONDARY: '#F4A460',
   BUTTON: 'black',
   BUTTON_TEXT: 'gray',

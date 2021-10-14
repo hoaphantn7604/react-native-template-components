@@ -4,12 +4,11 @@ import { useFormik } from 'formik';
 import React from 'react';
 import { View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
-import { scale } from 'react-native-utils-scale';
 import { styles } from './styles';
 
 interface Props {}
 
-const LoginScrenn: React.FC<Props> = props => {
+const RegisterScrenn: React.FC<Props> = props => {
   const { navigate } = useNavigation();
   const formik = useFormik({
     initialValues: {
@@ -41,55 +40,54 @@ const LoginScrenn: React.FC<Props> = props => {
       <Text style={styles.title} bold fontSize={30}>
         Login
       </Text>
-      <TextInput
-        style={{ marginTop: scale(20) }}
-        containerStyle={styles.textinput}
-        inputStyle={styles.inputStyle}
-        labelStyle={styles.labelStyle}
-        textErrorStyle={styles.textErrorStyle}
-        value={formik.values.username}
-        onChangeText={formik.handleChange('username')}
-        label="Username"
-        placeholder="Placeholder"
-        placeholderTextColor="gray"
-        focusColor="red"
-        textError={formik.errors.username}
-      />
+      <View style={styles.wrapBox}>
+        <TextInput
+          style={styles.textinput}
+          inputStyle={styles.inputStyle}
+          labelStyle={styles.labelStyle}
+          textErrorStyle={styles.textErrorStyle}
+          value={formik.values.username}
+          onChangeText={formik.handleChange('username')}
+          label="Username"
+          placeholder="Placeholder"
+          placeholderTextColor="gray"
+          focusColor="red"
+          textError={formik.errors.username}
+        />
 
-      <TextInput
-        style={{ marginTop: scale(20) }}
-        containerStyle={styles.textinput}
-        inputStyle={styles.inputStyle}
-        labelStyle={styles.labelStyle}
-        textErrorStyle={styles.textErrorStyle}
-        value={formik.values.password}
-        onChangeText={formik.handleChange('password')}
-        label="Password"
-        placeholder="Placeholder"
-        placeholderTextColor="gray"
-        secureTextEntry
-        focusColor="red"
-        textError={formik.errors.password}
-      />
+        <TextInput
+          style={styles.textinput}
+          inputStyle={styles.inputStyle}
+          labelStyle={styles.labelStyle}
+          textErrorStyle={styles.textErrorStyle}
+          value={formik.values.password}
+          onChangeText={formik.handleChange('password')}
+          label="Password"
+          placeholder="Enter password"
+          placeholderTextColor="gray"
+          secureTextEntry
+          focusColor="red"
+          textError={formik.errors.password}
+        />
 
-      <Button
-        style={styles.button}
-        title="Login"
-        border
-        fontSize={20}
-        onPress={formik.handleSubmit}
-      />
-      <Text style={styles.textOr} fontSize={16}>
-        Or
-      </Text>
-      <Text
-        style={styles.textOr}
-        fontSize={18}
-        onPress={() => navigate('Register')}>
-        Create new account?
-      </Text>
+        <Button
+          style={styles.button}
+          title="Login"
+          fontSize={20}
+          onPress={formik.handleSubmit}
+        />
+        <Text style={styles.textOr} fontSize={16}>
+          Or
+        </Text>
+        <Text
+          style={styles.textOr}
+          fontSize={18}
+          onPress={() => navigate('Register')}>
+          Create new account?
+        </Text>
+      </View>
     </View>
   );
 };
 
-export default LoginScrenn;
+export default RegisterScrenn;
