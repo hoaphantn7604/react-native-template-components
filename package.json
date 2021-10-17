@@ -1,8 +1,8 @@
 {
   "name": "react-native-template-components",
-  "title": "React Native UIKit",
-  "version": "1.5.3",
-  "description": "React Native UIKit",
+  "title": "A beautiful template for React Native.",
+  "version": "1.5.4",
+  "description": "A beautiful template for React Native.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +16,9 @@
     "elements",
     "components",
     "template",
-    "uikit"
+    "boilerplate",
+    "uikit",
+    "typescript"
   ],
   "author": {
     "name": "Hoa Phan",

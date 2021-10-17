@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TouchableWithoutFeedback, View, Image } from 'react-native';
 import { Checkbox } from './type';
 import { scale, fontScale } from 'react-native-utils-scale';
@@ -33,6 +33,14 @@ const CheckComponent: Checkbox = props => {
   } = props;
 
   const [value, setValue] = useState<boolean>(check);
+
+  useEffect(() => {
+    if (check) {
+      setValue(true);
+    } else {
+      setValue(false);
+    }
+  }, [check]);
 
   const font = () => {
     if (fontFamily) {

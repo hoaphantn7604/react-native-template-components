@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, SafeAreaView } from 'react-native';
-import { TextInput } from 'react-native-element-textinput';
+import {
+  TextInput,
+  HashtagInput,
+  AutoComplete,
+} from 'react-native-element-textinput';
 import { fontScale, scale } from 'react-native-utils-scale';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-export interface Props {}
+const TextInputScreen = _props => {
+  const [value1, setValue1] = useState('');
+  const [value2, setValue2] = useState('');
+  const [value3, setValue3] = useState('');
+  const [hashtag, setHashtag] = useState([]);
 
-const TextInputScreen: React.FC<Props> = _props => {
-  const [hashtag, setHashtag] = useState<string[]>([]);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <TextInput
+          value={value1}
           style={styles.input}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
@@ -20,13 +27,14 @@ const TextInputScreen: React.FC<Props> = _props => {
           placeholder="Placeholder"
           placeholderTextColor="gray"
           onChangeText={text => {
-            console.log(text);
+            setValue1(text);
           }}
           focusColor="red"
-          textError="Please enter"
+          textError={value1.length === 0 ? 'Please enter' : ''}
         />
 
         <TextInput
+          value={value2}
           style={styles.input1}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
@@ -34,20 +42,21 @@ const TextInputScreen: React.FC<Props> = _props => {
           placeholder="Placeholder"
           placeholderTextColor="gray"
           onChangeText={text => {
-            console.log(text);
+            setValue2(text);
           }}
           focusColor="red"
-          textError="Please enter"
+          textError={value2.length === 0 ? 'Please enter' : ''}
           renderLeftIcon={() => (
             <MaterialIcons
               style={{ marginRight: scale(8) }}
-              name="favorite-outline"
+              name="group-add"
               size={scale(20)}
             />
           )}
         />
 
         <TextInput
+          value={value3}
           style={styles.input2}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
@@ -58,23 +67,44 @@ const TextInputScreen: React.FC<Props> = _props => {
           secureTextEntry
           focusColor="red"
           onChangeText={text => {
-            console.log(text);
+            setValue3(text);
           }}
         />
 
-        <TextInput
+        <HashtagInput
           style={styles.input3}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
           textErrorStyle={styles.textErrorStyle}
-          hashtagValue={hashtag}
-          onChangeHashtag={e => {
+          data={hashtag}
+          onChangeValue={e => {
             setHashtag(e);
           }}
           placeholder="Hashtag..."
           autoCorrect={false}
           placeholderTextColor="gray"
           focusColor="red"
+          renderLeftIcon={() => (
+            <MaterialIcons
+              style={{ marginRight: scale(8) }}
+              name="group-add"
+              color="gray"
+              size={scale(22)}
+            />
+          )}
+        />
+
+        <AutoComplete
+          style={styles.input3}
+          inputStyle={styles.inputStyle}
+          labelStyle={styles.labelStyle}
+          textErrorStyle={styles.textErrorStyle}
+          data={['hello', 'how are you', 'complete']}
+          placeholder="AutoComplete..."
+          autoCorrect={false}
+          placeholderTextColor="gray"
+          focusColor="red"
+          onChangeText={e => {}}
           renderLeftIcon={() => (
             <MaterialIcons
               style={{ marginRight: scale(8) }}
