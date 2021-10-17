@@ -1,12 +1,5 @@
-import { COLORS } from 'config';
 import React from 'react';
-import {
-  Alert,
-  Animated,
-  StatusBar,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { Alert, Animated, TouchableOpacity, View } from 'react-native';
 import { CurvedBottomBar } from 'react-native-curved-bottom-bar';
 import { scale } from 'react-native-utils-scale';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -14,14 +7,7 @@ import HomeScreen from 'screens/home';
 import SettingScreen from 'screens/setting';
 import { styles } from './styles';
 
-export interface Props {}
-
-const defaultProps = {
-  appName: 'Wellcome hooks',
-};
-
-StatusBar.setBarStyle('dark-content');
-const MainScreen: React.FC<Props> = _props => {
+export const tabBar = () => {
   const _renderIcon = (routeName: string, selectTab: string) => {
     let icon = '';
 
@@ -40,6 +26,19 @@ const MainScreen: React.FC<Props> = _props => {
         size={scale(25)}
         color={routeName === selectTab ? 'black' : 'gray'}
       />
+    );
+  };
+  const renderTabBar = ({ routeName, selectTab, navigate }: any) => {
+    return (
+      <TouchableOpacity
+        onPress={() => navigate(routeName)}
+        style={{
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+        {_renderIcon(routeName, selectTab)}
+      </TouchableOpacity>
     );
   };
 
@@ -65,19 +64,7 @@ const MainScreen: React.FC<Props> = _props => {
             </TouchableOpacity>
           </Animated.View>
         )}
-        tabBar={({ routeName, selectTab, navigate }) => {
-          return (
-            <TouchableOpacity
-              onPress={() => navigate(routeName)}
-              style={{
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              {_renderIcon(routeName, selectTab)}
-            </TouchableOpacity>
-          );
-        }}>
+        tabBar={renderTabBar}>
         <CurvedBottomBar.Screen
           name="title1"
           position="left"
@@ -92,7 +79,3 @@ const MainScreen: React.FC<Props> = _props => {
     </View>
   );
 };
-
-MainScreen.defaultProps = defaultProps;
-
-export default MainScreen;

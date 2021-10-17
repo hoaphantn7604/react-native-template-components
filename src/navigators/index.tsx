@@ -17,6 +17,7 @@ import MultiSelectScreen from 'screens/theme/multiselect';
 import TextInputScreen from 'screens/theme/textInput';
 import AvatarScreen from 'screens/theme/avatar';
 import CheckboxScreen from 'screens/theme/checkbox';
+import { tabBar } from './bottombar';
 
 export const navigationRef: React.RefObject<NavigationContainerRef<any>> =
   React.createRef();
@@ -28,7 +29,7 @@ function AppNavigator() {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen
           name="Main"
-          component={MainScreen}
+          component={tabBar}
           options={{ headerShown: false }}
         />
         <Stack.Screen
