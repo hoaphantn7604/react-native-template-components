@@ -22,6 +22,7 @@ const TextInputScreen = _props => {
           style={styles.input}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
+          placeholderStyle={styles.placeholderStyle}
           textErrorStyle={styles.textErrorStyle}
           label="Normal"
           placeholder="Placeholder"
@@ -60,6 +61,7 @@ const TextInputScreen = _props => {
           style={styles.input2}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
+          placeholderStyle={styles.placeholderStyle}
           textErrorStyle={styles.textErrorStyle}
           label="Password"
           placeholder="Placeholder"
@@ -128,20 +130,20 @@ const styles = StyleSheet.create({
   },
   input: {
     marginTop: scale(20),
-    borderBottomWidth: scale(0.3),
-    height: scale(60),
+    borderBottomWidth: scale(0.4),
+    height: scale(55),
   },
   input1: {
     marginTop: scale(20),
-    borderWidth: scale(0.3),
-    height: scale(60),
+    borderWidth: scale(0.4),
+    height: scale(55),
     paddingHorizontal: scale(8),
     borderRadius: scale(8),
   },
   input2: {
     marginTop: scale(20),
-    height: scale(60),
-    paddingHorizontal: scale(8),
+    height: scale(55),
+    paddingHorizontal: scale(16),
     borderRadius: scale(8),
     backgroundColor: 'white',
     shadowColor: '#000',
@@ -172,5 +174,6 @@ const styles = StyleSheet.create({
   },
   inputStyle: { fontSize: fontScale(16) },
   labelStyle: { fontSize: fontScale(14) },
+  placeholderStyle: { fontSize: fontScale(16) },
   textErrorStyle: { fontSize: fontScale(16) },
 });

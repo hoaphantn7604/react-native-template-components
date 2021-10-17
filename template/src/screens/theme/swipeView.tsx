@@ -30,7 +30,7 @@ const CurtainScreen: React.FC<Props> = _props => {
         position="top"
         style={styles.swipeView}
         maxHeight={scale(200)}
-        headerStyle={{ backgroundColor: 'transparent' }}
+        headerStyle={styles.headerStyle}
         renderHeader={_renderHeaderTop}>
         <View style={styles.curtainContainer} />
       </SwipeView>
@@ -41,7 +41,7 @@ const CurtainScreen: React.FC<Props> = _props => {
         position="bottom"
         style={styles.swipeView}
         maxHeight={scale(200)}
-        headerStyle={{ backgroundColor: 'transparent' }}
+        headerStyle={styles.headerStyle}
         renderHeader={_renderHeaderBottom}>
         <View style={styles.curtainContainer}>
           <View style={styles.row}>
@@ -84,6 +84,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  headerStyle: {
+    backgroundColor: 'transparent',
+    height: scale(40),
   },
   headerBottom: {
     flex: 1,

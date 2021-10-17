@@ -45,6 +45,7 @@ const RegisterScrenn: React.FC<Props> = props => {
           style={styles.textinput}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
+          placeholderStyle={styles.placeholderStyle}
           textErrorStyle={styles.textErrorStyle}
           value={formik.values.username}
           onChangeText={formik.handleChange('username')}
@@ -59,6 +60,7 @@ const RegisterScrenn: React.FC<Props> = props => {
           style={styles.textinput}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
+          placeholderStyle={styles.placeholderStyle}
           textErrorStyle={styles.textErrorStyle}
           value={formik.values.password}
           textContentType="oneTimeCode"

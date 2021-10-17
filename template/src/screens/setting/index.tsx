@@ -40,7 +40,7 @@ const SettingScreen: React.FC<Props> = props => {
         source={defaulft_img}>
         <Avatar
           source={defaulft_avt}
-          size={120}
+          size={scale(120)}
           containerStyle={styles.wrap}
           iconEnable
           onPressIcon={() => Alert.alert('Click')}

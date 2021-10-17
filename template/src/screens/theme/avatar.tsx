@@ -13,7 +13,7 @@ const AvatarScreen: React.FC<Props> = _props => {
   return (
     <View style={styles.container}>
       <Avatar
-        size={80}
+        size={scale(80)}
         containerStyle={styles.avatar}
         source={img_avatar}
         iconEnable={false}
@@ -22,7 +22,7 @@ const AvatarScreen: React.FC<Props> = _props => {
       />
 
       <Avatar
-        size={80}
+        size={scale(80)}
         containerStyle={styles.avatar}
         source={img_avatar}
         iconEnable
@@ -31,7 +31,7 @@ const AvatarScreen: React.FC<Props> = _props => {
       />
 
       <Avatar
-        size={100}
+        size={scale(100)}
         containerStyle={styles.avatar}
         source={img_avatar}
         iconEnable
@@ -41,7 +41,7 @@ const AvatarScreen: React.FC<Props> = _props => {
       />
 
       <Avatar
-        size={150}
+        size={scale(150)}
         containerStyle={styles.avatar}
         source={img_avatar}
         iconEnable

@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
   rowMenu: {
     flexDirection: 'row',
     padding: scale(16),
-    borderBottomWidth: scale(0.3),
+    borderBottomWidth: scale(0.4),
     borderBottomColor: 'gray',
   },
   textMenu: {

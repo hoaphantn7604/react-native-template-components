@@ -95,12 +95,14 @@ const styles = StyleSheet.create({
     padding: scale(20),
   },
   dropdown: {
+    height: scale(50),
     backgroundColor: 'transparent',
     borderBottomColor: 'gray',
     borderBottomWidth: scale(0.5),
     marginTop: scale(20),
   },
   dropdown2: {
+    height: scale(50),
     marginTop: scale(20),
     backgroundColor: 'white',
     borderRadius: scale(12),

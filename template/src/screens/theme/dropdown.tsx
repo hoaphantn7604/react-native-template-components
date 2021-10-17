@@ -184,12 +184,13 @@ const styles = StyleSheet.create({
   },
   dropdown: {
     flex: 1,
-    backgroundColor: 'transparent',
+    height: scale(50),
     borderBottomColor: 'gray',
     borderBottomWidth: scale(0.5),
     marginTop: scale(20),
   },
   dropdown2: {
+    height: scale(50),
     marginTop: scale(20),
     backgroundColor: 'white',
     borderRadius: scale(12),

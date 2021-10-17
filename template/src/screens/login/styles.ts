@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
     marginTop: scale(20),
     height: scale(60),
-    paddingHorizontal: scale(8),
+    paddingHorizontal: scale(16),
     borderRadius: scale(8),
     shadowColor: '#000',
     shadowOffset: {
@@ -48,6 +48,7 @@ export const styles = StyleSheet.create({
   },
   inputStyle: { fontSize: fontScale(16) },
   labelStyle: { fontSize: fontScale(14) },
+  placeholderStyle: { fontSize: fontScale(16) },
   textErrorStyle: { fontSize: fontScale(14) },
   button: {
     backgroundColor: 'white',

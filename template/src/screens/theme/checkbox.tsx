@@ -15,6 +15,7 @@ const CheckboxScreen: React.FC<Props> = _props => {
       <View style={styles.container}>
         <Checkbox
           check={check}
+          size={24}
           label="Checkbox 1"
           onPress={e => {
             setCheck(e);
@@ -22,7 +23,7 @@ const CheckboxScreen: React.FC<Props> = _props => {
         />
         <Checkbox
           check={check2}
-          size={scale(26)}
+          size={26}
           label="Checkbox 2"
           onPress={e => {
             setCheck2(e);
@@ -32,7 +33,7 @@ const CheckboxScreen: React.FC<Props> = _props => {
         <Checkbox
           check={check3}
           type="radio"
-          size={scale(28)}
+          size={28}
           label="Checkbox 3"
           onPress={e => {
             setCheck3(e);
@@ -42,7 +43,7 @@ const CheckboxScreen: React.FC<Props> = _props => {
         <Checkbox
           check={check4}
           type="radio"
-          size={scale(30)}
+          size={30}
           label="Checkbox 4"
           onPress={e => {
             setCheck4(e);
