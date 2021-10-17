@@ -24,13 +24,15 @@ Step 5: npm run android or npm run ios
 - [react-native-checkbox-tree](https://github.com/hoaphantn7604/react-native-checkbox-tree) A simple and elegant checkbox tree for React Native.
 
 ### Demo
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/1.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/2.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/3.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/4.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/5.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/6.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/7.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/8.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo1.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo2.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo3.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo4.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/dropdown/demo.gif)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/textinput/demo.gif.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/checkboxtree/demo.png)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/swipeview/demo.gif)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/timer/timer.gif)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/timer/countdown.gif)
 
 
