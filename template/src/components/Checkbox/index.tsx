@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { TouchableWithoutFeedback, View, Image } from 'react-native';
-import { Checkbox } from './type';
+import { Checkbox } from './model';
 import { scale, fontScale } from 'react-native-utils-scale';
 import { styles } from './styles';
 import Text from '../Text';

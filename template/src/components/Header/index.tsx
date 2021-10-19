@@ -5,7 +5,7 @@ import { TextInput } from 'react-native-element-textinput';
 import { useScale } from 'react-native-utils-toolkit';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { styles } from './styles';
-import { HeaderProps } from './type';
+import { HeaderProps } from './model';
 const { scale, fontScale } = useScale;
 
 const HeaderComponent: HeaderProps = props => {

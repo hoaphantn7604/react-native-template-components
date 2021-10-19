@@ -2,7 +2,7 @@ import { COLORS } from 'config';
 import React from 'react';
 import { Text } from 'react-native';
 import { fontScale } from 'react-native-utils-scale';
-import { PropsText } from './type';
+import { PropsText } from './model';
 
 const defaultProps = {
   style: {},

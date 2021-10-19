@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal, View, TouchableWithoutFeedback } from 'react-native';
 import { height as h } from 'react-native-utils-scale';
 import VerticalSwipeView from 'react-native-vertical-swipe-view';
-import { CModal } from './type';
+import { CModal } from './model';
 
 const defaultProps = {
   visible: false,

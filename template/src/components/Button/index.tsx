@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { scale } from 'react-native-utils-scale';
 import { styles } from './styles';
-import { ButtonProps } from './type';
+import { ButtonProps } from './model';
 import Text from '../Text';
 import { COLORS } from 'config';
 

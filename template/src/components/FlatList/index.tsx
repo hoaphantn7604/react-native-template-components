@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, RefreshControl } from 'react-native';
-import { PropsFlatlist } from './type';
+import { PropsFlatlist } from './model';
 
 const FlatListComponent: PropsFlatlist = props => {
   const { data, renderItem, onRefresh, onLoadMore } = props;
