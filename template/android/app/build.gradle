@@ -81,6 +81,14 @@ project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
 ]
 
+task wrapper(type: Wrapper){
+   gradleVersion = '2.14.1'
+}
+
+task prepareKotlinBuildScriptModel {
+
+}
+
 apply from: "../../node_modules/react-native/react.gradle"
 
 /**
