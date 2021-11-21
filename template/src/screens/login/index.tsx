@@ -52,7 +52,6 @@ const RegisterScrenn: React.FC<Props> = props => {
           label="Username"
           placeholder="Placeholder"
           placeholderTextColor="gray"
-          focusColor="red"
           textError={formik.errors.username}
         />
 
@@ -69,7 +68,6 @@ const RegisterScrenn: React.FC<Props> = props => {
           placeholder="Enter password"
           placeholderTextColor="gray"
           secureTextEntry
-          focusColor="red"
           textError={formik.errors.password}
         />
 

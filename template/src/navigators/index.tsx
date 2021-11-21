@@ -13,7 +13,7 @@ import TimerScreen from 'screens/theme/timer';
 import CountdownScreen from 'screens/theme/countdown';
 import SwipeViewScreen from 'screens/theme/swipeView';
 import MultiSelectScreen from 'screens/theme/multiselect';
-import TextInputScreen from 'screens/theme/textInput';
+import TextInputScreen from 'screens/theme/textinput';
 import AvatarScreen from 'screens/theme/avatar';
 import CheckboxScreen from 'screens/theme/checkbox';
 import { tabBar } from './bottombar';
