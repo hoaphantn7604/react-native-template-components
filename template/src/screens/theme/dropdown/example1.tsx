@@ -30,7 +30,7 @@ const DropdownComponent = () => {
   };
 
   return (
-    <>
+    <View style={styles.container}>
       {renderLabel()}
       <Dropdown
         style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
@@ -55,7 +55,7 @@ const DropdownComponent = () => {
           />
         )}
       />
-    </>
+    </View>
   );
 };
 
@@ -64,6 +64,7 @@ export default DropdownComponent;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
+    paddingTop: 16,
   },
   dropdown: {
     height: 50,
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
   label: {
     position: 'absolute',
     backgroundColor: 'white',
-    left: 32,
+    left: 16,
     top: 8,
     zIndex: 999,
     paddingHorizontal: 8,
