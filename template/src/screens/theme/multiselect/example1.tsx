@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { MultiSelect } from 'react-native-element-dropdown';
+import { fontScale, scale } from 'react-native-utils-scale';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const data = [
@@ -20,16 +21,27 @@ const MultiSelectComponent = () => {
   return (
     <MultiSelect
       style={styles.dropdown}
+      placeholderStyle={styles.placeholderStyle}
+      selectedTextStyle={styles.selectedTextStyle}
+      inputSearchStyle={styles.inputSearchStyle}
+      iconStyle={styles.iconStyle}
+      search
       data={data}
       labelField="label"
       valueField="value"
       placeholder="Select item"
+      searchPlaceholder="Search..."
       value={selected}
       onChange={item => {
         setSelected(item);
       }}
       renderLeftIcon={() => (
-        <AntDesign style={styles.icon} color="black" name="Safety" size={20} />
+        <AntDesign
+          style={styles.icon}
+          color="black"
+          name="Safety"
+          size={scale(20)}
+        />
       )}
       selectedStyle={styles.selectedStyle}
     />
@@ -40,15 +52,29 @@ export default MultiSelectComponent;
 
 const styles = StyleSheet.create({
   dropdown: {
-    height: 50,
+    height: scale(50),
     backgroundColor: 'transparent',
     borderBottomColor: 'gray',
-    borderBottomWidth: 0.5,
+    borderBottomWidth: scale(0.5),
+  },
+  placeholderStyle: {
+    fontSize: fontScale(16),
+  },
+  selectedTextStyle: {
+    fontSize: fontScale(14),
+  },
+  iconStyle: {
+    width: scale(20),
+    height: scale(20),
+  },
+  inputSearchStyle: {
+    height: scale(40),
+    fontSize: fontScale(16),
   },
   icon: {
     marginRight: 5,
   },
   selectedStyle: {
-    borderRadius: 14,
+    borderRadius: scale(12),
   },
 });

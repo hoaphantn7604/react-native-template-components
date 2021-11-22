@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
+import { fontScale, scale } from 'react-native-utils-scale';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const data = [
@@ -20,8 +21,13 @@ const DropdownComponent = () => {
   return (
     <Dropdown
       style={styles.dropdown}
+      placeholderStyle={styles.placeholderStyle}
+      selectedTextStyle={styles.selectedTextStyle}
+      inputSearchStyle={styles.inputSearchStyle}
+      iconStyle={styles.iconStyle}
       data={data}
       search
+      maxHeight={scale(200)}
       labelField="label"
       valueField="value"
       placeholder="Select item"
@@ -31,7 +37,12 @@ const DropdownComponent = () => {
         setValue(item.value);
       }}
       renderLeftIcon={() => (
-        <AntDesign style={styles.icon} color="black" name="Safety" size={20} />
+        <AntDesign
+          style={styles.icon}
+          color="black"
+          name="Safety"
+          size={scale(20)}
+        />
       )}
     />
   );
@@ -41,12 +52,26 @@ export default DropdownComponent;
 
 const styles = StyleSheet.create({
   dropdown: {
-    marginTop: 36,
-    height: 50,
+    marginTop: scale(36),
+    height: scale(50),
     borderBottomColor: 'gray',
-    borderBottomWidth: 0.5,
+    borderBottomWidth: scale(0.5),
   },
   icon: {
-    marginRight: 5,
+    marginRight: scale(5),
+  },
+  placeholderStyle: {
+    fontSize: fontScale(16),
+  },
+  selectedTextStyle: {
+    fontSize: fontScale(16),
+  },
+  iconStyle: {
+    width: scale(20),
+    height: scale(20),
+  },
+  inputSearchStyle: {
+    height: scale(40),
+    fontSize: fontScale(16),
   },
 });

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { SelectCountry } from 'react-native-element-dropdown';
+import { fontScale, scale } from 'react-native-utils-scale';
 
 const local_data = [
   {
@@ -48,8 +49,13 @@ const SelectCountryScreen: React.FC<Props> = _props => {
   return (
     <SelectCountry
       style={styles.dropdown}
-      selectedTextStyle={styles.selectedText}
+      selectedTextStyle={styles.selectedTextStyle}
+      placeholderStyle={styles.placeholderStyle}
+      imageStyle={styles.imageStyle}
+      inputSearchStyle={styles.inputSearchStyle}
+      iconStyle={styles.iconStyle}
       search
+      maxHeight={scale(200)}
       value={country}
       data={local_data}
       valueField="value"
@@ -68,12 +74,28 @@ export default SelectCountryScreen;
 
 const styles = StyleSheet.create({
   dropdown: {
-    height: 50,
+    height: scale(50),
     borderBottomColor: 'gray',
-    borderBottomWidth: 0.5,
-    marginTop: 36,
+    borderBottomWidth: scale(0.5),
+    marginTop: scale(36),
   },
-  selectedText: {
-    marginLeft: 8,
+  imageStyle: {
+    width: scale(24),
+    height: scale(24),
+  },
+  placeholderStyle: {
+    fontSize: fontScale(16),
+  },
+  selectedTextStyle: {
+    fontSize: fontScale(16),
+    marginLeft: scale(8),
+  },
+  iconStyle: {
+    width: scale(20),
+    height: scale(20),
+  },
+  inputSearchStyle: {
+    height: scale(40),
+    fontSize: fontScale(16),
   },
 });

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
+import { fontScale, scale } from 'react-native-utils-scale';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const data = [
@@ -34,8 +35,13 @@ const DropdownComponent = () => {
       {renderLabel()}
       <Dropdown
         style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+        placeholderStyle={styles.placeholderStyle}
+        selectedTextStyle={styles.selectedTextStyle}
+        inputSearchStyle={styles.inputSearchStyle}
+        iconStyle={styles.iconStyle}
         data={data}
         search
+        maxHeight={scale(200)}
         labelField="label"
         valueField="value"
         placeholder={!isFocus ? 'Select item' : '...'}
@@ -45,13 +51,14 @@ const DropdownComponent = () => {
         onBlur={() => setIsFocus(false)}
         onChange={item => {
           setValue(item.value);
+          setIsFocus(false);
         }}
         renderLeftIcon={() => (
           <AntDesign
             style={styles.icon}
             color={isFocus ? 'blue' : 'black'}
             name="Safety"
-            size={20}
+            size={scale(20)}
           />
         )}
       />
@@ -64,24 +71,39 @@ export default DropdownComponent;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    paddingTop: 16,
+    paddingTop: scale(16),
   },
   dropdown: {
-    height: 50,
+    height: scale(50),
     borderColor: 'gray',
-    borderWidth: 0.5,
-    borderRadius: 8,
-    paddingHorizontal: 8,
+    borderWidth: scale(0.5),
+    borderRadius: scale(8),
+    paddingHorizontal: scale(8),
   },
   icon: {
-    marginRight: 5,
+    marginRight: scale(5),
   },
   label: {
     position: 'absolute',
     backgroundColor: 'white',
-    left: 16,
-    top: 8,
+    left: scale(16),
+    top: scale(8),
     zIndex: 999,
-    paddingHorizontal: 8,
+    paddingHorizontal: scale(8),
+    fontSize: fontScale(14),
+  },
+  placeholderStyle: {
+    fontSize: fontScale(16),
+  },
+  selectedTextStyle: {
+    fontSize: fontScale(16),
+  },
+  iconStyle: {
+    width: scale(20),
+    height: scale(20),
+  },
+  inputSearchStyle: {
+    height: scale(40),
+    fontSize: fontScale(16),
   },
 });

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
 import { MultiSelect } from 'react-native-element-dropdown';
+import { fontScale, scale } from 'react-native-utils-scale';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const data = [
@@ -20,8 +21,13 @@ const MultiSelectComponent = () => {
   const renderItem = (item: any) => {
     return (
       <View style={styles.item}>
-        <Text style={styles.textItem}>{item.label}</Text>
-        <AntDesign style={styles.icon} color="black" name="Safety" size={20} />
+        <Text style={styles.selectedTextStyle}>{item.label}</Text>
+        <AntDesign
+          style={styles.icon}
+          color="black"
+          name="Safety"
+          size={scale(20)}
+        />
       </View>
     );
   };
@@ -29,6 +35,10 @@ const MultiSelectComponent = () => {
   return (
     <MultiSelect
       style={styles.dropdown}
+      placeholderStyle={styles.placeholderStyle}
+      selectedTextStyle={styles.selectedTextStyle}
+      inputSearchStyle={styles.inputSearchStyle}
+      iconStyle={styles.iconStyle}
       data={data}
       labelField="label"
       valueField="value"
@@ -40,14 +50,19 @@ const MultiSelectComponent = () => {
         setSelected(item);
       }}
       renderLeftIcon={() => (
-        <AntDesign style={styles.icon} color="black" name="Safety" size={20} />
+        <AntDesign
+          style={styles.icon}
+          color="black"
+          name="Safety"
+          size={scale(20)}
+        />
       )}
       renderItem={renderItem}
       renderSelectedItem={(item, unSelect) => (
         <TouchableOpacity onPress={() => unSelect && unSelect(item)}>
           <View style={styles.selectedStyle}>
             <Text style={styles.textSelectedStyle}>{item.label}</Text>
-            <AntDesign color="black" name="delete" size={17} />
+            <AntDesign color="black" name="delete" size={scale(17)} />
           </View>
         </TouchableOpacity>
       )}
@@ -59,11 +74,11 @@ export default MultiSelectComponent;
 
 const styles = StyleSheet.create({
   dropdown: {
-    marginTop: 32,
-    height: 50,
+    marginTop: scale(32),
+    height: scale(50),
     backgroundColor: 'white',
-    borderRadius: 12,
-    padding: 12,
+    borderRadius: scale(12),
+    padding: scale(12),
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -74,30 +89,40 @@ const styles = StyleSheet.create({
 
     elevation: 2,
   },
+  placeholderStyle: {
+    fontSize: fontScale(16),
+  },
+  selectedTextStyle: {
+    fontSize: fontScale(14),
+  },
+  iconStyle: {
+    width: scale(20),
+    height: scale(20),
+  },
+  inputSearchStyle: {
+    height: scale(40),
+    fontSize: fontScale(16),
+  },
   icon: {
-    marginRight: 5,
+    marginRight: scale(5),
   },
   item: {
-    padding: 17,
+    padding: scale(17),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  textItem: {
-    flex: 1,
-    fontSize: 16,
   },
   selectedStyle: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 14,
+    borderRadius: scale(14),
     backgroundColor: 'white',
     shadowColor: '#000',
-    marginTop: 8,
-    marginRight: 12,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
+    marginTop: scale(8),
+    marginRight: scale(12),
+    paddingHorizontal: scale(12),
+    paddingVertical: scale(8),
     shadowOffset: {
       width: 0,
       height: 1,
@@ -108,6 +133,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   textSelectedStyle: {
-    marginRight: 5,
+    marginRight: scale(5),
+    fontSize: fontScale(16),
   },
 });

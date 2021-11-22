@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { SelectCountry } from 'react-native-element-dropdown';
+import { fontScale, scale } from 'react-native-utils-scale';
 
 const local_data = [
   {
@@ -48,10 +49,11 @@ const SelectCountryScreen: React.FC<Props> = _props => {
   return (
     <SelectCountry
       style={styles.dropdown}
-      selectedTextStyle={styles.selectedText}
-      imageStyle={styles.image}
-      maxHeight={200}
-      search={false}
+      selectedTextStyle={styles.selectedTextStyle}
+      placeholderStyle={styles.placeholderStyle}
+      imageStyle={styles.imageStyle}
+      iconStyle={styles.iconStyle}
+      maxHeight={scale(200)}
       value={country}
       data={local_data}
       valueField="value"
@@ -70,20 +72,27 @@ export default SelectCountryScreen;
 
 const styles = StyleSheet.create({
   dropdown: {
-    marginTop: 36,
-    height: 50,
-    width: 160,
+    marginTop: scale(36),
+    height: scale(50),
+    width: scale(140),
     backgroundColor: '#EEEEEE',
-    borderRadius: 22,
-    paddingHorizontal: 8,
+    borderRadius: scale(22),
+    paddingHorizontal: scale(8),
   },
-  selectedText: {
-    marginLeft: 8,
-    fontSize: 16,
+  imageStyle: {
+    width: scale(24),
+    height: scale(24),
+    borderRadius: scale(12),
   },
-  image: {
-    borderRadius: 16,
-    width: 32,
-    height: 32,
+  placeholderStyle: {
+    fontSize: fontScale(16),
+  },
+  selectedTextStyle: {
+    fontSize: fontScale(16),
+    marginLeft: scale(8),
+  },
+  iconStyle: {
+    width: scale(20),
+    height: scale(20),
   },
 });

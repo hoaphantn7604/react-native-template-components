@@ -15,7 +15,7 @@ const CountdownScreen: React.FC<Props> = _props => {
         ref={countdownRef}
         style={styles.timer}
         textStyle={styles.timerText}
-        seconds={5}
+        initialSeconds={60}
         onTimes={() => {}}
         onEnd={() => {}}
       />
