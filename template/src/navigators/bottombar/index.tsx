@@ -8,7 +8,7 @@ import SettingScreen from 'screens/setting';
 import { styles } from './styles';
 
 export const tabBar = () => {
-  const _renderIcon = (routeName: string, selectTab: string) => {
+  const _renderIcon = (routeName: string, selectedTab: string) => {
     let icon = '';
 
     switch (routeName) {
@@ -24,11 +24,11 @@ export const tabBar = () => {
       <Ionicons
         name={icon}
         size={scale(25)}
-        color={routeName === selectTab ? 'black' : 'gray'}
+        color={routeName === selectedTab ? 'black' : 'gray'}
       />
     );
   };
-  const renderTabBar = ({ routeName, selectTab, navigate }: any) => {
+  const renderTabBar = ({ routeName, selectedTab, navigate }: any) => {
     return (
       <TouchableOpacity
         onPress={() => navigate(routeName)}
@@ -37,7 +37,7 @@ export const tabBar = () => {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        {_renderIcon(routeName, selectTab)}
+        {_renderIcon(routeName, selectedTab)}
       </TouchableOpacity>
     );
   };
@@ -52,7 +52,7 @@ export const tabBar = () => {
         bgColor="white"
         initialRouteName="title1"
         swipeEnabled
-        renderCircle={({ selectTab, navigate }) => (
+        renderCircle={({ selectedTab, navigate }) => (
           <Animated.View style={styles.btnCircle}>
             <TouchableOpacity
               style={{
