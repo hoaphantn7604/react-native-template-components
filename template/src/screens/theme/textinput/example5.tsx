@@ -15,8 +15,8 @@ const TextInputComponent = () => {
         labelStyle={styles.labelStyle}
         placeholderStyle={styles.placeholderStyle}
         textErrorStyle={styles.textErrorStyle}
-        hashtagStyle={styles.hashtagStyle}
-        hashtagTextStyle={styles.hashtagTextStyle}
+        tagsStyle={styles.tagsStyle}
+        tagsTextStyle={styles.tagsTextStyle}
         label="TagsInput"
         placeholder="Tags..."
         placeholderTextColor="gray"
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   placeholderStyle: { fontSize: fontScale(16) },
   textErrorStyle: { fontSize: fontScale(16) },
-  hashtagStyle: {
+  tagsStyle: {
     borderWidth: 0,
     borderRadius: scale(16),
     padding: scale(8),
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     shadowRadius: 1.41,
     elevation: 2,
   },
-  hashtagTextStyle: {
+  tagsTextStyle: {
     fontSize: fontScale(16),
   },
 });
