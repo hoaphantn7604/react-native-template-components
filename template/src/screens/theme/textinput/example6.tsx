@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { HashtagInput } from 'react-native-element-textinput';
+import { AutoComplete } from 'react-native-element-textinput';
 import { fontScale, scale } from 'react-native-utils-scale';
 
 const TextInputComponent = () => {
-  const [value, setValue] = useState<string[]>([]);
+  const [value, setValue] = useState('');
 
   return (
     <View style={styles.container}>
-      <HashtagInput
-        data={value}
+      <AutoComplete
+        value={value}
+        data={['hello', 'how are you', 'complete']}
         style={styles.input}
         inputStyle={styles.inputStyle}
         labelStyle={styles.labelStyle}
         placeholderStyle={styles.placeholderStyle}
         textErrorStyle={styles.textErrorStyle}
-        hashtagStyle={styles.hashtagStyle}
-        hashtagTextStyle={styles.hashtagTextStyle}
-        placeholder="Hashtag..."
+        label="Auto Complete"
+        placeholder="Placeholder..."
         placeholderTextColor="gray"
-        onChangeValue={value => {
-          setValue(value);
+        onChangeText={e => {
+          setValue(e);
         }}
       />
     </View>
@@ -51,21 +51,4 @@ const styles = StyleSheet.create({
   labelStyle: { fontSize: fontScale(14) },
   placeholderStyle: { fontSize: fontScale(16) },
   textErrorStyle: { fontSize: fontScale(16) },
-  hashtagStyle: {
-    borderWidth: 0,
-    borderRadius: scale(16),
-    padding: scale(8),
-    backgroundColor: 'white',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    elevation: 2,
-  },
-  hashtagTextStyle: {
-    fontSize: fontScale(16),
-  },
 });

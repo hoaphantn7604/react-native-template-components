@@ -1,38 +1,42 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
+import { fontScale, scale } from 'react-native-utils-scale';
 
-const TextInputComponent = props => {
+const TextInputComponent = () => {
   const [value, setValue] = useState('');
 
   return (
-    <TextInput
-      value={value}
-      style={styles.input}
-      inputStyle={styles.inputStyle}
-      labelStyle={styles.labelStyle}
-      placeholderStyle={styles.placeholderStyle}
-      textErrorStyle={styles.textErrorStyle}
-      label="Password"
-      placeholder="Placeholder"
-      placeholderTextColor="gray"
-      secureTextEntry
-      onChangeText={text => {
-        setValue(text);
-      }}
-    />
+    <View style={styles.container}>
+      <TextInput
+        value={value}
+        style={styles.input}
+        inputStyle={styles.inputStyle}
+        labelStyle={styles.labelStyle}
+        placeholderStyle={styles.placeholderStyle}
+        textErrorStyle={styles.textErrorStyle}
+        label="Password"
+        placeholder="Placeholder"
+        placeholderTextColor="gray"
+        secureTextEntry
+        onChangeText={text => {
+          setValue(text);
+        }}
+      />
+    </View>
   );
 };
 
 export default TextInputComponent;
 
 const styles = StyleSheet.create({
+  container: {
+    padding: scale(16),
+  },
   input: {
-    marginTop: 36,
-    height: 55,
-    marginHorizontal: 4,
-    paddingHorizontal: 16,
-    borderRadius: 8,
+    height: scale(55),
+    paddingHorizontal: scale(12),
+    borderRadius: scale(8),
     backgroundColor: 'white',
     shadowColor: '#000',
     shadowOffset: {
@@ -43,8 +47,8 @@ const styles = StyleSheet.create({
     shadowRadius: 1.41,
     elevation: 2,
   },
-  inputStyle: { fontSize: 16 },
-  labelStyle: { fontSize: 14 },
-  placeholderStyle: { fontSize: 16 },
-  textErrorStyle: { fontSize: 16 },
+  inputStyle: { fontSize: fontScale(16) },
+  labelStyle: { fontSize: fontScale(14) },
+  placeholderStyle: { fontSize: fontScale(16) },
+  textErrorStyle: { fontSize: fontScale(16) },
 });
