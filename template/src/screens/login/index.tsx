@@ -1,4 +1,5 @@
 import { useNavigation } from '@react-navigation/core';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { Button, globalLoading, Text } from 'components';
 import { useFormik } from 'formik';
 import React from 'react';
@@ -9,7 +10,7 @@ import { styles } from './styles';
 interface Props {}
 
 const RegisterScrenn: React.FC<Props> = props => {
-  const { navigate } = useNavigation();
+  const { navigate } = useNavigation<StackNavigationProp<any>>();
   const formik = useFormik({
     initialValues: {
       username: '',

@@ -1,4 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { globalLoading, globalMessage, Modal, Text } from 'components';
 import React, { useState } from 'react';
 import {
@@ -19,7 +20,7 @@ interface Props {}
 
 const SettingScreen: React.FC<Props> = props => {
   const [visible, setVisible] = useState<boolean>(false);
-  const { navigate } = useNavigation();
+  const { navigate } = useNavigation<StackNavigationProp<any>>();
 
   const itemMenu = (icon: string, name: string, onPress: () => void) => {
     return (

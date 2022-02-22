@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import logger from 'redux-logger';
 import { rootEpic } from 'reduxCore/store/rootEpics';
 import { rootReducer } from 'reduxCore/store/rootReducers';
+import { IRootState } from 'reduxCore/root/reducer';
 
 const persistConfig = {
   key: 'root',
@@ -17,7 +18,7 @@ const persistConfig = {
   stateReconciler: autoMergeLevel2,
 };
 
-const finalReducer = persistReducer(persistConfig, rootReducer);
+const finalReducer = persistReducer<IRootState, any>(persistConfig, rootReducer);
 
 const epicMiddleware = createEpicMiddleware();
 

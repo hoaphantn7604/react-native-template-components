@@ -1,11 +1,11 @@
 import { changeLanguage } from 'shared/language';
 import { ChangeLanguage } from './action';
 
-export interface RootState {
+export interface IRootState {
   locale: string;
 }
 
-const INITIAL_STATE: RootState = {
+const INITIAL_STATE: IRootState = {
   locale: 'en',
 };
 
