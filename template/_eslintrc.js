@@ -10,5 +10,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': ['off'],
     'react-hooks/rules-of-hooks': ['off'],
     'handle-callback-err': ['off'],
+    'react/no-unstable-nested-components': ['off'],
+    '@typescript-eslint/no-shadow': ['off'],
   },
 };
