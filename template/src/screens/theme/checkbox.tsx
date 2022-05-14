@@ -1,6 +1,6 @@
 import { Checkbox } from 'components';
 import React, { useState } from 'react';
-import { Alert, SafeAreaView, StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { scale } from 'react-native-utils-scale';
 
 export interface Props {}

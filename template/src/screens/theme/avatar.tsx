@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, Image, StyleSheet, View } from 'react-native';
+import { Alert, StyleSheet, View } from 'react-native';
 import { scale } from 'react-native-utils-scale';
 import { Avatar } from 'react-native-element-image';
 

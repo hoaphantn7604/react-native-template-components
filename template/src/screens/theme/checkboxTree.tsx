@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import CheckboxTree from 'react-native-checkbox-tree';
 import { scale } from 'react-native-utils-scale';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -89,12 +89,6 @@ const CheckboxTreeScreen: React.FC<Props> = _props => {
         iconSize={scale(26)}
         openIcon={<AntDesign name="arrowdown" size={scale(26)} />}
         closeIcon={<AntDesign name="arrowright" size={scale(26)} />}
-        renderItem={item => (
-          <View style={styles.wrapItem}>
-            <AntDesign style={styles.icon} name="folderopen" size={scale(20)} />
-            <Text style={{ fontSize: scale(18) }}>{item.shopName}</Text>
-          </View>
-        )}
         onSelect={item => {
           console.log(`Selected ${item.length} item`);
         }}
