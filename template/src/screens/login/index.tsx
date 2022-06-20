@@ -9,7 +9,7 @@ import { styles } from './styles';
 
 interface Props {}
 
-const RegisterScrenn: React.FC<Props> = props => {
+const RegisterScrenn: React.FC<Props> = () => {
   const { navigate } = useNavigation<StackNavigationProp<any>>();
   const formik = useFormik({
     initialValues: {
@@ -28,7 +28,7 @@ const RegisterScrenn: React.FC<Props> = props => {
 
       return error;
     },
-    onSubmit: values => {
+    onSubmit: _values => {
       globalLoading.show();
       setTimeout(() => {
         globalLoading.hide();

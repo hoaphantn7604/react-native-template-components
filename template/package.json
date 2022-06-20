@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "*",
+    "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
     "@react-navigation/stack": "^5.14.5",
@@ -21,7 +22,6 @@
     "react-native": "0.66.2",
     "react-native-checkbox-tree": "*",
     "react-native-curved-bottom-bar": "*",
-    "react-native-pager-view": "*",
     "react-native-element-dropdown": "*",
     "react-native-element-image": "*",
     "react-native-element-textinput": "*",

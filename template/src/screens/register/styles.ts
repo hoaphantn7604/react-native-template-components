@@ -1,6 +1,6 @@
 import { COLORS } from 'config';
 import { StyleSheet } from 'react-native';
-import { fontScale, isIOS, scale } from 'react-native-utils-scale';
+import { fontScale, scale } from 'react-native-utils-scale';
 
 export const styles = StyleSheet.create({
   container: {

@@ -11,7 +11,7 @@ import { styles } from './styles';
 
 interface Props {}
 
-const LoginScrenn: React.FC<Props> = props => {
+const LoginScrenn: React.FC<Props> = () => {
   const { navigate, goBack } = useNavigation<StackNavigationProp<any>>();
   const formik = useFormik({
     initialValues: {
@@ -35,7 +35,7 @@ const LoginScrenn: React.FC<Props> = props => {
 
       return error;
     },
-    onSubmit: values => {
+    onSubmit: _values => {
       globalLoading.show();
       setTimeout(() => {
         globalLoading.hide();

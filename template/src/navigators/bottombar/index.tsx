@@ -51,8 +51,7 @@ export const tabBar = () => {
         circleWidth={scale(55)}
         bgColor="white"
         initialRouteName="title1"
-        swipeEnabled
-        renderCircle={({ selectedTab, navigate }) => (
+        renderCircle={() => (
           <Animated.View style={styles.btnCircle}>
             <TouchableOpacity
               style={{
@@ -66,14 +65,16 @@ export const tabBar = () => {
         )}
         tabBar={renderTabBar}>
         <CurvedBottomBar.Screen
+          options={{ headerShown: false }}
           name="title1"
-          position="left"
-          component={({ navigate }) => <HomeScreen />}
+          position="LEFT"
+          component={() => <HomeScreen />}
         />
         <CurvedBottomBar.Screen
+          options={{ headerShown: false }}
           name="title2"
-          component={({ navigate }) => <SettingScreen />}
-          position="right"
+          component={() => <SettingScreen />}
+          position="RIGHT"
         />
       </CurvedBottomBar.Navigator>
     </View>

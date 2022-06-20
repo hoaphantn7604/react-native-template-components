@@ -8,7 +8,7 @@ import { styles } from './styles';
 
 interface Props {}
 
-const HomeScreen: React.FC<Props> = props => {
+const HomeScreen: React.FC<Props> = () => {
   const _renderItemSlider = ({ item, index }: any) => {
     return (
       <View key={index.toString()} style={styles.itemSlider}>
