@@ -28,6 +28,7 @@
     "react-native-element-timer": "*",
     "react-native-indicators": "*",
     "react-native-safe-area-context": "^3.3.0",
+    "react-native-background-timer": "^2.4.1",
     "react-native-screens": "^3.6.0",
     "react-native-svg": "*",
     "react-native-utils-scale": "*",
