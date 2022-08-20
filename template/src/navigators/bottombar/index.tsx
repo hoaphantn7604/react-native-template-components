@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alert, Animated, TouchableOpacity, View } from 'react-native';
 import { CurvedBottomBar } from 'react-native-curved-bottom-bar';
-import { scale } from 'react-native-utils-scale';
+import { scale } from 'react-native-size-scaling';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from 'screens/home';
 import SettingScreen from 'screens/setting';

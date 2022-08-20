@@ -1,7 +1,7 @@
 import { COLORS } from 'config';
 import React from 'react';
 import { Text } from 'react-native';
-import { fontScale } from 'react-native-utils-scale';
+import { scale } from 'react-native-size-scaling';
 import { PropsText } from './model';
 
 const defaultProps = {
@@ -24,7 +24,7 @@ const TextComponent: PropsText = props => {
       {...props}
       style={[
         {
-          fontSize: fontScale(FONTSIZE),
+          fontSize: scale(FONTSIZE),
           color: !color ? COLORS.TEXT : color,
         },
         bold && { fontWeight: 'bold' },

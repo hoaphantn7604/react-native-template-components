@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import CheckboxTree from 'react-native-checkbox-tree';
-import { scale } from 'react-native-utils-scale';
+import { scale } from 'react-native-size-scaling';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const recursiveData = [
@@ -76,7 +76,7 @@ const recursiveData = [
 export interface Props {}
 
 const CheckboxTreeScreen: React.FC<Props> = _props => {
-  const [data, setData] = useState<any[]>(recursiveData);
+  const [data] = useState<any[]>(recursiveData);
 
   return (
     <View style={styles.container}>

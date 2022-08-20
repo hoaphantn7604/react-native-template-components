@@ -1,5 +1,4 @@
-import { StyleSheet } from 'react-native';
-import { isTablet, scale, width } from 'react-native-utils-scale';
+import { StyleSheet } from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,24 +11,24 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   boxContent: {
-    width: width / (isTablet ? 1.5 : 1.3),
+    width: '80%',
     backgroundColor: 'white',
-    borderRadius: scale(10),
+    borderRadius: 10,
     alignItems: 'center',
   },
   content: {
     alignItems: 'center',
-    padding: scale(16),
+    padding: 16,
     justifyContent: 'center',
   },
   title: {
-    marginVertical: scale(16),
+    marginVertical: 16,
   },
   message: {
-    marginBottom: scale(16),
+    marginBottom: 16,
   },
   button: {
-    width: scale(80),
-    height: scale(40),
+    width: 80,
+    height: 40,
   },
 });

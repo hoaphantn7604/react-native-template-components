@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { StyleSheet } from 'react-native';
 import { MultiSelect } from 'react-native-element-dropdown';
-import { fontScale, scale } from 'react-native-utils-scale';
+import { StyleSheet, scale } from 'react-native-size-scaling';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const data = [
@@ -52,29 +51,29 @@ export default MultiSelectComponent;
 
 const styles = StyleSheet.create({
   dropdown: {
-    height: scale(50),
+    height: 50,
     backgroundColor: 'transparent',
     borderBottomColor: 'gray',
-    borderBottomWidth: scale(0.5),
+    borderBottomWidth: 0.5,
   },
   placeholderStyle: {
-    fontSize: fontScale(16),
+    fontSize: 16,
   },
   selectedTextStyle: {
-    fontSize: fontScale(14),
+    fontSize: 14,
   },
   iconStyle: {
-    width: scale(20),
-    height: scale(20),
+    width: 20,
+    height: 20,
   },
   inputSearchStyle: {
-    height: scale(40),
-    fontSize: fontScale(16),
+    height: 40,
+    fontSize: 16,
   },
   icon: {
     marginRight: 5,
   },
   selectedStyle: {
-    borderRadius: scale(12),
+    borderRadius: 12,
   },
 });

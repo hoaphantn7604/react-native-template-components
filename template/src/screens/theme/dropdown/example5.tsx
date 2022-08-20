@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { StyleSheet } from 'react-native';
 import { SelectCountry } from 'react-native-element-dropdown';
-import { fontScale, scale } from 'react-native-utils-scale';
+import { StyleSheet, scale } from 'react-native-size-scaling';
 
 const local_data = [
   {
@@ -72,27 +71,27 @@ export default SelectCountryScreen;
 
 const styles = StyleSheet.create({
   dropdown: {
-    marginTop: scale(36),
-    height: scale(50),
-    width: scale(140),
+    marginTop: 36,
+    height: 50,
+    width: 140,
     backgroundColor: '#EEEEEE',
-    borderRadius: scale(22),
-    paddingHorizontal: scale(8),
+    borderRadius: 22,
+    paddingHorizontal: 8,
   },
   imageStyle: {
-    width: scale(24),
-    height: scale(24),
-    borderRadius: scale(12),
+    width: 24,
+    height: 24,
+    borderRadius: 12,
   },
   placeholderStyle: {
-    fontSize: fontScale(16),
+    fontSize: 16,
   },
   selectedTextStyle: {
-    fontSize: fontScale(16),
-    marginLeft: scale(8),
+    fontSize: 16,
+    marginLeft: 8,
   },
   iconStyle: {
-    width: scale(20),
-    height: scale(20),
+    width: 20,
+    height: 20,
   },
 });

@@ -1,20 +1,20 @@
 import { COLORS } from 'config';
-import { StyleSheet } from 'react-native';
-import { fontScale, scale } from 'react-native-utils-scale';
+
+import { StyleSheet } from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.PRIMARY,
     justifyContent: 'center',
-    padding: scale(16),
+    padding: 16,
   },
   wrapBox: {
     backgroundColor: '#F8F8FF',
-    margin: scale(16),
-    paddingHorizontal: scale(16),
-    paddingBottom: scale(32),
-    borderRadius: scale(8),
+    margin: 16,
+    paddingHorizontal: 16,
+    paddingBottom: 32,
+    borderRadius: 8,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -27,15 +27,15 @@ export const styles = StyleSheet.create({
   },
   title: {
     alignSelf: 'center',
-    marginBottom: scale(16),
+    marginBottom: 16,
     color: 'gray',
   },
   textinput: {
     backgroundColor: 'white',
-    marginTop: scale(20),
-    height: scale(60),
-    paddingHorizontal: scale(16),
-    borderRadius: scale(8),
+    marginTop: 20,
+    height: 60,
+    paddingHorizontal: 16,
+    borderRadius: 8,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -46,14 +46,14 @@ export const styles = StyleSheet.create({
 
     elevation: 2,
   },
-  inputStyle: { fontSize: fontScale(16) },
-  labelStyle: { fontSize: fontScale(14) },
-  placeholderStyle: { fontSize: fontScale(16) },
-  textErrorStyle: { fontSize: fontScale(14) },
+  inputStyle: { fontSize: 16 },
+  labelStyle: { fontSize: 14 },
+  placeholderStyle: { fontSize: 16 },
+  textErrorStyle: { fontSize: 14 },
   button: {
     backgroundColor: 'white',
-    marginTop: scale(32),
-    height: scale(50),
+    marginTop: 32,
+    height: 50,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -66,13 +66,13 @@ export const styles = StyleSheet.create({
   },
   textOr: {
     alignSelf: 'center',
-    marginTop: scale(16),
+    marginTop: 16,
     color: 'gray',
   },
   iconBack: {
-    marginRight: scale(8),
+    marginRight: 8,
     position: 'absolute',
-    top: scale(40),
-    left: scale(16),
+    top: 40,
+    left: 16,
   },
 });

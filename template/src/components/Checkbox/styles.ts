@@ -1,13 +1,12 @@
-import { StyleSheet } from 'react-native';
-import { scale } from 'react-native-utils-scale';
+import { StyleSheet } from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
-    padding: scale(5),
+    padding: 5,
     flexDirection: 'row',
     alignItems: 'center',
   },
   text: {
-    marginLeft: scale(10),
+    marginLeft: 10,
   },
 });

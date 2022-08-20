@@ -1,7 +1,4 @@
-import { StyleSheet } from 'react-native';
-import { useScale } from 'react-native-utils-scale';
-
-const { scale } = useScale;
+import { StyleSheet } from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
@@ -11,19 +8,19 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: scale(10),
+    padding: 10,
   },
   header: {
     width: '100%',
     backgroundColor: 'gray',
-    height: scale(40),
+    height: 40,
   },
   pan: {
-    width: scale(40),
-    height: scale(5),
-    borderRadius: scale(5),
+    width: 40,
+    height: 5,
+    borderRadius: 5,
     backgroundColor: 'white',
     alignSelf: 'center',
-    marginTop: scale(12),
+    marginTop: 12,
   },
 });

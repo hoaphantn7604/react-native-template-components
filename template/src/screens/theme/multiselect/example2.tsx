@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 import { MultiSelect } from 'react-native-element-dropdown';
-import { fontScale, scale } from 'react-native-utils-scale';
+import { StyleSheet, scale } from 'react-native-size-scaling';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const data = [
@@ -74,11 +74,11 @@ export default MultiSelectComponent;
 
 const styles = StyleSheet.create({
   dropdown: {
-    marginTop: scale(32),
-    height: scale(50),
+    marginTop: 32,
+    height: 50,
     backgroundColor: 'white',
-    borderRadius: scale(12),
-    padding: scale(12),
+    borderRadius: 12,
+    padding: 12,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -90,24 +90,24 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   placeholderStyle: {
-    fontSize: fontScale(16),
+    fontSize: 16,
   },
   selectedTextStyle: {
-    fontSize: fontScale(14),
+    fontSize: 14,
   },
   iconStyle: {
-    width: scale(20),
-    height: scale(20),
+    width: 20,
+    height: 20,
   },
   inputSearchStyle: {
-    height: scale(40),
-    fontSize: fontScale(16),
+    height: 40,
+    fontSize: 16,
   },
   icon: {
-    marginRight: scale(5),
+    marginRight: 5,
   },
   item: {
-    padding: scale(17),
+    padding: 17,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -116,13 +116,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: scale(14),
+    borderRadius: 14,
     backgroundColor: 'white',
     shadowColor: '#000',
-    marginTop: scale(8),
-    marginRight: scale(12),
-    paddingHorizontal: scale(12),
-    paddingVertical: scale(8),
+    marginTop: 8,
+    marginRight: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
     shadowOffset: {
       width: 0,
       height: 1,
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   textSelectedStyle: {
-    marginRight: scale(5),
-    fontSize: fontScale(16),
+    marginRight: 5,
+    fontSize: 16,
   },
 });

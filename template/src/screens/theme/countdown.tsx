@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { Countdown } from 'react-native-element-timer';
 import { Button } from 'components';
-import { scale } from 'react-native-utils-scale';
+import { scale, StyleSheet } from 'react-native-size-scaling';
 
 export interface Props {}
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TouchableWithoutFeedback, View, Image } from 'react-native';
 import { Checkbox } from './model';
-import { scale, fontScale } from 'react-native-utils-scale';
+import { scale } from 'react-native-size-scaling';
 import { styles } from './styles';
 import Text from '../Text';
 
@@ -82,7 +82,7 @@ const CheckComponent: Checkbox = props => {
           <Text
             style={[
               styles.text,
-              { fontSize: fontScale(size - scale(5)), color: color },
+              { fontSize: scale(size - scale(5)), color: color },
               labelStyle,
               font(),
             ]}>

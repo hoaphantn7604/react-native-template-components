@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { scale } from 'react-native-utils-scale';
+import { scale } from 'react-native-size-scaling';
 import Example1 from './example1';
 import Example2 from './example2';
 import Example3 from './example3';

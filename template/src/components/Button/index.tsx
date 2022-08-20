@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { scale } from 'react-native-utils-scale';
+import { scale } from 'react-native-size-scaling';
 import { styles } from './styles';
 import { ButtonProps } from './model';
 import Text from '../Text';

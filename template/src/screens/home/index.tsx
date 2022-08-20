@@ -1,10 +1,12 @@
 import { FlatList, Header, Text } from 'components';
 import React from 'react';
-import { SafeAreaView, View } from 'react-native';
+import { SafeAreaView, View, Dimensions } from 'react-native';
 import { Image } from 'react-native-element-image';
-import { scale, width } from 'react-native-utils-scale';
+import { scale } from 'react-native-size-scaling';
 import { DATA } from './constant';
 import { styles } from './styles';
+
+const { width } = Dimensions.get('window');
 
 interface Props {}
 
@@ -34,7 +36,7 @@ const HomeScreen: React.FC<Props> = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header onPressUser={() => {}} onChangeText={e => {}} />
+      <Header onPressUser={() => {}} onChangeText={_e => {}} />
       <FlatList
         data={DATA}
         renderItem={_renderItemSlider}

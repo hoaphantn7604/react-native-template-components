@@ -18,7 +18,10 @@ const persistConfig = {
   stateReconciler: autoMergeLevel2,
 };
 
-const finalReducer = persistReducer<IRootState, any>(persistConfig, rootReducer);
+const finalReducer = persistReducer<IRootState, any>(
+  persistConfig,
+  rootReducer,
+);
 
 const epicMiddleware = createEpicMiddleware();
 

@@ -1,9 +1,9 @@
 import { COLORS } from 'config';
 import React from 'react';
-import { StyleSheet, View, SafeAreaView } from 'react-native';
+import { View, SafeAreaView } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import SwipeView from 'react-native-vertical-swipe-view';
-import { scale } from 'react-native-utils-scale';
+import { scale, StyleSheet } from 'react-native-size-scaling';
 
 export interface Props {}
 
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: scale(20),
+    padding: 20,
   },
   headerTop: {
     flex: 1,
@@ -87,24 +87,24 @@ const styles = StyleSheet.create({
   },
   headerStyle: {
     backgroundColor: 'transparent',
-    height: scale(40),
+    height: 40,
   },
   headerBottom: {
     flex: 1,
     backgroundColor: 'gray',
-    borderTopLeftRadius: scale(22),
-    borderTopRightRadius: scale(22),
+    borderTopLeftRadius: 22,
+    borderTopRightRadius: 22,
     justifyContent: 'center',
     alignItems: 'center',
   },
   lineTop: {
-    width: scale(40),
-    height: scale(6),
+    width: 40,
+    height: 6,
     backgroundColor: COLORS.SECONDARY,
   },
   lineBottom: {
-    width: scale(40),
-    height: scale(6),
+    width: 40,
+    height: 6,
     backgroundColor: 'white',
   },
 });

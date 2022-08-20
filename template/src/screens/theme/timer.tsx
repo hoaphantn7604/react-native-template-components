@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { Button } from 'components';
 import { Timer } from 'react-native-element-timer';
-import { scale } from 'react-native-utils-scale';
+import { StyleSheet } from 'react-native-size-scaling';
 
 export interface Props {}
 
@@ -15,8 +15,8 @@ const TimerScreen: React.FC<Props> = _props => {
         ref={timerRef}
         style={styles.timer}
         textStyle={styles.timerText}
-        onTimes={e => {}}
-        onEnd={e => {}}
+        onTimes={_e => {}}
+        onEnd={_e => {}}
       />
       <Button
         style={styles.button}
@@ -60,18 +60,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    padding: scale(20),
+    padding: 20,
   },
   timer: {
-    marginVertical: scale(20),
+    marginVertical: 20,
   },
   timerText: {
-    fontSize: scale(22),
+    fontSize: 22,
   },
   button: {
-    marginVertical: scale(5),
+    marginVertical: 5,
     backgroundColor: 'white',
-    borderRadius: scale(24),
-    width: scale(100),
+    borderRadius: 24,
+    width: 100,
   },
 });

@@ -1,6 +1,5 @@
 import React, { useImperativeHandle, useState } from 'react';
-import { Modal, StatusBar, View } from 'react-native';
-import { UIActivityIndicator } from 'react-native-indicators';
+import { Modal, StatusBar, View, ActivityIndicator } from 'react-native';
 import { styles } from './styles';
 
 export const globalLoadingRef = React.createRef<any>();
@@ -40,7 +39,7 @@ const GlobalLoading = React.forwardRef((props, ref) => {
         barStyle={'light-content'}
       />
       <View style={styles.main}>
-        <UIActivityIndicator color="white" size={50} />
+        <ActivityIndicator color="white" size="large" />
       </View>
     </Modal>
   );

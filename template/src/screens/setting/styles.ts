@@ -1,30 +1,29 @@
-import { StyleSheet } from 'react-native';
-import { scale, width } from 'react-native-utils-scale';
+import { StyleSheet } from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: { flex: 1 },
-  imgBackground: { width: width, height: scale(250) },
+  imgBackground: { width: '100%', height: 250 },
   wrap: {
-    marginTop: scale(64),
+    marginTop: 64,
   },
   avatarImg: {
-    borderRadius: scale(50),
+    borderRadius: 50,
   },
   name: {
-    marginTop: scale(16),
+    marginTop: 16,
     alignSelf: 'center',
   },
   wrapMenu: {
     flex: 1,
-    marginBottom: scale(55),
+    marginBottom: 55,
   },
   rowMenu: {
     flexDirection: 'row',
-    padding: scale(16),
-    borderBottomWidth: scale(0.4),
+    padding: 16,
+    borderBottomWidth: 0.4,
     borderBottomColor: 'gray',
   },
   textMenu: {
-    marginHorizontal: scale(8),
+    marginHorizontal: 8,
   },
 });

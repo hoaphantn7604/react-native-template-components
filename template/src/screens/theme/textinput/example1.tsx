@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
-import { fontScale, scale } from 'react-native-utils-scale';
+import { StyleSheet } from 'react-native-size-scaling';
 
 const TextInputComponent = () => {
   const [value, setValue] = useState('');
@@ -31,24 +31,24 @@ export default TextInputComponent;
 
 const styles = StyleSheet.create({
   container: {
-    padding: scale(16),
+    padding: 16,
   },
   input: {
-    height: scale(55),
-    paddingHorizontal: scale(12),
-    borderRadius: scale(8),
-    borderWidth: scale(0.5),
+    height: 55,
+    paddingHorizontal: 12,
+    borderRadius: 8,
+    borderWidth: 0.5,
     borderColor: '#DDDDDD',
   },
-  inputStyle: { fontSize: fontScale(16) },
+  inputStyle: { fontSize: 16 },
   labelStyle: {
-    fontSize: fontScale(14),
+    fontSize: 14,
     position: 'absolute',
-    top: fontScale(-10),
+    top: -10,
     backgroundColor: 'white',
-    paddingHorizontal: scale(4),
-    marginLeft: scale(-4),
+    paddingHorizontal: 4,
+    marginLeft: -4,
   },
-  placeholderStyle: { fontSize: fontScale(16) },
-  textErrorStyle: { fontSize: fontScale(16) },
+  placeholderStyle: { fontSize: 16 },
+  textErrorStyle: { fontSize: 16 },
 });

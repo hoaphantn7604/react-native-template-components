@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { TagsInput } from 'react-native-element-textinput';
-import { fontScale, scale } from 'react-native-utils-scale';
+import { StyleSheet } from 'react-native-size-scaling';
 
 const TextInputComponent = () => {
   const [value, setValue] = useState<string[]>([]);
@@ -32,11 +32,11 @@ export default TextInputComponent;
 
 const styles = StyleSheet.create({
   container: {
-    padding: scale(16),
+    padding: 16,
   },
   input: {
-    paddingHorizontal: scale(12),
-    borderRadius: scale(8),
+    paddingHorizontal: 12,
+    borderRadius: 8,
     backgroundColor: 'white',
     shadowColor: '#000',
     shadowOffset: {
@@ -48,23 +48,23 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   inputStyle: {
-    fontSize: fontScale(16),
-    minWidth: scale(80),
+    fontSize: 16,
+    minWidth: 80,
   },
   labelStyle: {
-    fontSize: fontScale(14),
+    fontSize: 14,
     position: 'absolute',
-    top: scale(-10),
+    top: -10,
     backgroundColor: 'white',
-    paddingHorizontal: scale(4),
-    marginLeft: scale(-4),
+    paddingHorizontal: 4,
+    marginLeft: -4,
   },
-  placeholderStyle: { fontSize: fontScale(16) },
-  textErrorStyle: { fontSize: fontScale(16) },
+  placeholderStyle: { fontSize: 16 },
+  textErrorStyle: { fontSize: 16 },
   tagsStyle: {
     borderWidth: 0,
-    borderRadius: scale(16),
-    padding: scale(8),
+    borderRadius: 16,
+    padding: 8,
     backgroundColor: 'white',
     shadowColor: '#000',
     shadowOffset: {
@@ -76,6 +76,6 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   tagsTextStyle: {
-    fontSize: fontScale(16),
+    fontSize: 16,
   },
 });

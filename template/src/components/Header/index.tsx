@@ -2,11 +2,10 @@ import { Text } from 'components';
 import React from 'react';
 import { Image, TouchableWithoutFeedback, View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
-import { useScale } from 'react-native-utils-toolkit';
+import { scale } from 'react-native-size-scaling';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { styles } from './styles';
 import { HeaderProps } from './model';
-const { scale, fontScale } = useScale;
 
 const HeaderComponent: HeaderProps = props => {
   const {
@@ -31,9 +30,9 @@ const HeaderComponent: HeaderProps = props => {
       <View style={{ flex: 1 }}>
         <TextInput
           style={styles.input}
-          inputStyle={{ fontSize: fontScale(16) }}
-          labelStyle={{ fontSize: fontScale(18) }}
-          textErrorStyle={{ fontSize: fontScale(16) }}
+          inputStyle={{ fontSize: scale(16) }}
+          labelStyle={{ fontSize: scale(18) }}
+          textErrorStyle={{ fontSize: scale(16) }}
           onChangeText={onChangeText}
           placeholder="Search..."
           renderRightIcon={() => (

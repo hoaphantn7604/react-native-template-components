@@ -1,21 +1,20 @@
-import { StyleSheet } from 'react-native';
-import { scale } from 'react-native-utils-scale';
+import { StyleSheet } from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: scale(40),
+    height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: scale(5),
-    paddingHorizontal: scale(10),
+    borderRadius: 5,
+    paddingHorizontal: 10,
     flexDirection: 'row',
   },
   text: {
     color: 'white',
-    fontSize: scale(16),
+    fontSize: 16,
     fontWeight: 'bold',
-    marginLeft: scale(5),
+    marginLeft: 5,
     textAlign: 'center',
   },
 });

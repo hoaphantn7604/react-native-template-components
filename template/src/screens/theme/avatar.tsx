@@ -1,6 +1,6 @@
 import React from 'react';
 import { Alert, StyleSheet, View } from 'react-native';
-import { scale } from 'react-native-utils-scale';
+import { scale } from 'react-native-size-scaling';
 import { Avatar } from 'react-native-element-image';
 
 const img_avatar = require('assets/images/icons/ic-avatar.png');

@@ -11,7 +11,7 @@ import {
   View,
 } from 'react-native';
 import { Avatar } from 'react-native-element-image';
-import { scale } from 'react-native-utils-scale';
+import { scale } from 'react-native-size-scaling';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { defaulft_avt, defaulft_img } from './constant';
 import { styles } from './styles';

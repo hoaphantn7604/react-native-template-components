@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
-import { fontScale, scale } from 'react-native-utils-scale';
+import { StyleSheet, scale } from 'react-native-size-scaling';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const data = [
@@ -71,39 +71,39 @@ export default DropdownComponent;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    paddingTop: scale(16),
+    paddingTop: 16,
   },
   dropdown: {
-    height: scale(50),
+    height: 50,
     borderColor: 'gray',
-    borderWidth: scale(0.5),
-    borderRadius: scale(8),
-    paddingHorizontal: scale(8),
+    borderWidth: 0.5,
+    borderRadius: 8,
+    paddingHorizontal: 8,
   },
   icon: {
-    marginRight: scale(5),
+    marginRight: 5,
   },
   label: {
     position: 'absolute',
     backgroundColor: 'white',
-    left: scale(16),
-    top: scale(8),
+    left: 16,
+    top: 8,
     zIndex: 999,
-    paddingHorizontal: scale(8),
-    fontSize: fontScale(14),
+    paddingHorizontal: 8,
+    fontSize: 14,
   },
   placeholderStyle: {
-    fontSize: fontScale(16),
+    fontSize: 16,
   },
   selectedTextStyle: {
-    fontSize: fontScale(16),
+    fontSize: 16,
   },
   iconStyle: {
-    width: scale(20),
-    height: scale(20),
+    width: 20,
+    height: 20,
   },
   inputSearchStyle: {
-    height: scale(40),
-    fontSize: fontScale(16),
+    height: 40,
+    fontSize: 16,
   },
 });

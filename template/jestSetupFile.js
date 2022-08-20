@@ -13,13 +13,3 @@ jest.mock('@react-navigation/native', () => {
     }),
   };
 });
-
-jest.mock('react-native-utils-scale', () => {
-  const UtilsToolkit = require('react-native-utils-scale/mock');
-  return UtilsToolkit;
-});
-
-jest.mock('react-native-utils-toolkit', () => {
-  const UtilsToolkit = require('react-native-utils-toolkit/mock');
-  return UtilsToolkit;
-});
