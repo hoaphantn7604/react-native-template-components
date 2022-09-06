@@ -11,8 +11,6 @@ npx react-native init MyApp --template react-native-template-components
 #### Redux, Redux Observable
 #### I18Next
 
-<br><p><a href="https://www.buymeacoffee.com/hoaphantn"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="fateh999" /></a></p><br><br><br>
-
 
 ### Demo
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo1.png)
@@ -27,3 +25,9 @@ npx react-native init MyApp --template react-native-template-components
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/timer/countdown.gif)
 
 
+## Donate
+
+Support maintainers with a donation and help them continue with activities.
+Buy me a coffee and you can request quick processing of issues.
+
+<br><p><a href="https://www.buymeacoffee.com/hoaphantn"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="fateh999" /></a></p><br><br><br>
