@@ -3,14 +3,14 @@ A beautiful template for React Native, Support scaling size.
 ```js
 npx react-native init MyApp --template react-native-template-components
 ```
+## Features
 
-#### React 18.0.0
-#### React Native 0.69.4
-#### React Navigation V6
-#### React Native Vector Icons
-#### Redux, Redux Observable
-#### I18Next
-
+- React 18.1.0</br>
+- React Native 0.70.1</br>
+- React Navigation V6</br>
+- React Native Vector Icons</br>
+- Redux, Redux Observable</br>
+- I18Next</br>
 
 ### Demo
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo1.png)
