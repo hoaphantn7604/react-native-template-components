@@ -5,6 +5,7 @@ import { Image } from 'react-native-element-image';
 import { scale } from 'react-native-size-scaling';
 import { DATA } from './constant';
 import { styles } from './styles';
+import { ScrollView } from 'react-native-virtualized-view';
 
 const { width } = Dimensions.get('window');
 
@@ -14,7 +15,12 @@ const HomeScreen: React.FC<Props> = () => {
   const _renderItemSlider = ({ item, index }: any) => {
     return (
       <View key={index.toString()} style={styles.itemSlider}>
-        <Image style={styles.imgSlider} width={width} source={item.img} />
+        <Image
+          style={styles.imgSlider}
+          width={width}
+          height={150}
+          source={item.img}
+        />
       </View>
     );
   };
@@ -24,7 +30,7 @@ const HomeScreen: React.FC<Props> = () => {
       <View key={index.toString()} style={styles.item}>
         <Image
           style={styles.img}
-          width={width / 2 - scale(16)}
+          width={width / 2 - scale(24)}
           source={item.img}
         />
         <Text style={styles.text} fontSize={14} bold>
@@ -37,17 +43,19 @@ const HomeScreen: React.FC<Props> = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Header onPressUser={() => {}} onChangeText={_e => {}} />
-      <FlatList
-        data={DATA}
-        renderItem={_renderItemSlider}
-        horizontal
-        pagingEnabled
-        showsHorizontalScrollIndicator={false}
-      />
-      <Text style={styles.text} bold fontSize={16}>
-        -------0-------
-      </Text>
-      <FlatList data={DATA} renderItem={_renderItem} numColumns={2} />
+      <ScrollView>
+        <FlatList
+          data={DATA}
+          renderItem={_renderItemSlider}
+          horizontal
+          pagingEnabled
+          showsHorizontalScrollIndicator={false}
+        />
+        <Text style={styles.text} bold fontSize={16}>
+          -------0-------
+        </Text>
+        <FlatList data={DATA} renderItem={_renderItem} numColumns={2} />
+      </ScrollView>
     </SafeAreaView>
   );
 };

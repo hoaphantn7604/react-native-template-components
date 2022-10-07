@@ -33,6 +33,7 @@
     "react-native-svg": "^13.0.0",
     "react-native-vector-icons": "*",
     "react-native-vertical-swipe-view": "*",
+    "react-native-virtualized-view": "^1.0.0",
     "react-redux": "*",
     "redux": "*",
     "redux-logger": "*",

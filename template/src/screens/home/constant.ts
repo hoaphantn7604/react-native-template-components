@@ -11,5 +11,5 @@ export const DATA = [
   { id: 7, title: 'Product name 7', img: defaulft_img },
   { id: 8, title: 'Product name 8', img: defaulft_img_2 },
   { id: 9, title: 'Product name 9', img: defaulft_img },
-  { id: 10, title: 'Product name 10', img: defaulft_img },
+  { id: 10, title: 'Product name 10', img: defaulft_img_2 },
 ];
