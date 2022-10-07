@@ -13,7 +13,7 @@ import {
 import { Avatar } from 'react-native-element-image';
 import { scale } from 'react-native-size-scaling';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { defaulft_avt, defaulft_img } from './constant';
+import { avatar, background_profile } from './constant';
 import { styles } from './styles';
 
 interface Props {}
@@ -38,18 +38,18 @@ const SettingScreen: React.FC<Props> = () => {
       <ImageBackground
         style={styles.imgBackground}
         imageStyle={styles.imgBackground}
-        source={defaulft_img}>
+        source={background_profile}>
         <Avatar
-          source={defaulft_avt}
+          source={avatar}
           size={scale(120)}
           containerStyle={styles.wrap}
           iconEnable
           onPressIcon={() => Alert.alert('Click')}
-          nameStyle={{ fontSize: scale(20) }}
+          nameStyle={{ fontSize: scale(20), color: 'white' }}
           name="HP Theme"
         />
       </ImageBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.wrapMenu}>
           {itemMenu('iconfontdesktop', 'Checkbox Tree', () => {
             navigate('CheckboxTree');
