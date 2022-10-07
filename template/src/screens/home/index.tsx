@@ -3,7 +3,7 @@ import React from 'react';
 import { SafeAreaView, View, Dimensions } from 'react-native';
 import { Image } from 'react-native-element-image';
 import { scale } from 'react-native-size-scaling';
-import { DATA } from './constant';
+import { BANNER, DATA } from './constant';
 import { styles } from './styles';
 import { ScrollView } from 'react-native-virtualized-view';
 
@@ -32,6 +32,7 @@ const HomeScreen: React.FC<Props> = () => {
           style={styles.img}
           width={width / 2 - scale(24)}
           source={item.img}
+          resizeMode="cover"
         />
         <Text style={styles.text} fontSize={14} bold>
           {item.title}
@@ -45,7 +46,7 @@ const HomeScreen: React.FC<Props> = () => {
       <Header onPressUser={() => {}} onChangeText={_e => {}} />
       <ScrollView>
         <FlatList
-          data={DATA}
+          data={BANNER}
           renderItem={_renderItemSlider}
           horizontal
           pagingEnabled

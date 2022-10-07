@@ -6,9 +6,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  imgSlider: {
-    borderRadius: 8,
-  },
+  imgSlider: {},
   item: {
     backgroundColor: '#F8F8FF',
     padding: 8,
