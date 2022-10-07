@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, Animated, TouchableOpacity, View } from 'react-native';
+import { Linking, TouchableOpacity, View } from 'react-native';
 import { CurvedBottomBar } from 'react-native-curved-bottom-bar';
 import { scale } from 'react-native-size-scaling';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -42,26 +42,32 @@ export const tabBar = () => {
     );
   };
 
+  const linkChanelYoutube = () => {
+    Linking.openURL('https://www.youtube.com/channel/UClwDARgTpIwOOugYtgEW1Uw');
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <CurvedBottomBar.Navigator
         style={styles.bottomBar}
-        strokeWidth={0.5}
-        height={scale(55)}
-        circleWidth={scale(55)}
+        strokeWidth={2}
+        strokeColor={'#DDDDDD'}
+        height={55}
+        circleWidth={55}
         bgColor="white"
         initialRouteName="title1"
+        borderTopLeftRight
         renderCircle={() => (
-          <Animated.View style={styles.btnCircle}>
+          <View style={styles.btnCircle}>
             <TouchableOpacity
               style={{
                 flex: 1,
                 justifyContent: 'center',
               }}
-              onPress={() => Alert.alert('Click Action')}>
-              <Ionicons name={'apps-sharp'} color="gray" size={scale(25)} />
+              onPress={linkChanelYoutube}>
+              <Ionicons name={'logo-youtube'} color="red" size={scale(25)} />
             </TouchableOpacity>
-          </Animated.View>
+          </View>
         )}
         tabBar={renderTabBar}>
         <CurvedBottomBar.Screen

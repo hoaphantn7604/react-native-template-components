@@ -19,7 +19,7 @@
     "i18next": "*",
     "react": "18.1.0",
     "react-i18next": "*",
-    "react-native": "0.70.1",
+    "react-native": "0.70.2",
     "react-native-background-timer": "^2.4.1",
     "react-native-checkbox-tree": "*",
     "react-native-curved-bottom-bar": "*",

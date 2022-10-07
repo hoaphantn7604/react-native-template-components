@@ -46,7 +46,7 @@ const SettingScreen: React.FC<Props> = () => {
           iconEnable
           onPressIcon={() => Alert.alert('Click')}
           nameStyle={{ fontSize: scale(20), color: 'white' }}
-          name="HP Theme"
+          name="Hoà Phan Dev"
         />
       </ImageBackground>
       <ScrollView showsVerticalScrollIndicator={false}>

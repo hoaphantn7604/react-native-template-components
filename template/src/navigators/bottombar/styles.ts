@@ -8,9 +8,7 @@ export const styles = StyleSheet.create({
   button: {
     marginVertical: 5,
   },
-  bottomBar: {
-    backgroundColor: '#F5F5F5',
-  },
+  bottomBar: {},
   btnCircle: {
     width: 60,
     height: 60,

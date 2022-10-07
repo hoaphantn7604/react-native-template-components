@@ -9,7 +9,7 @@ import { HeaderProps } from './model';
 
 const HeaderComponent: HeaderProps = props => {
   const {
-    name = 'HP Theme',
+    name = 'Hoà Phan Dev',
     avatar = require('assets/images/icons/ic-avatar.png'),
     onPressUser,
     onChangeText,
