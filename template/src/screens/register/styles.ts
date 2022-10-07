@@ -1,11 +1,8 @@
-import { COLORS } from 'config';
-
 import { StyleSheet } from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.PRIMARY,
     justifyContent: 'center',
     padding: 16,
   },
@@ -27,7 +24,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     alignSelf: 'center',
-    marginBottom: 16,
+    marginVertical: 12,
     color: 'gray',
   },
   textinput: {
@@ -50,10 +47,13 @@ export const styles = StyleSheet.create({
   labelStyle: { fontSize: 14 },
   placeholderStyle: { fontSize: 16 },
   textErrorStyle: { fontSize: 14 },
+  wrapButton: {
+    paddingHorizontal: 16,
+  },
   button: {
     backgroundColor: 'white',
     marginTop: 32,
-    height: 50,
+    height: 55,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

@@ -3,11 +3,13 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { Button, globalLoading, Text } from 'components';
 import { useFormik } from 'formik';
 import React from 'react';
-import { View } from 'react-native';
+import { ImageBackground, View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
 import { scale } from 'react-native-size-scaling';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { styles } from './styles';
+
+const IMG_BACKGROUND = require('assets/images/pictures/background.jpg');
 
 interface Props {}
 
@@ -43,8 +45,12 @@ const LoginScrenn: React.FC<Props> = () => {
       }, 1000);
     },
   });
+
   return (
-    <View style={styles.container}>
+    <ImageBackground
+      style={styles.container}
+      source={IMG_BACKGROUND}
+      resizeMode="cover">
       <MaterialIcons
         style={styles.iconBack}
         name="keyboard-backspace"
@@ -52,10 +58,11 @@ const LoginScrenn: React.FC<Props> = () => {
         size={scale(35)}
         onPress={goBack}
       />
-      <Text style={styles.title} bold fontSize={30}>
-        Register
-      </Text>
+
       <View style={styles.wrapBox}>
+        <Text style={styles.title} bold fontSize={30}>
+          Register
+        </Text>
         <TextInput
           style={styles.textinput}
           inputStyle={styles.inputStyle}
@@ -100,7 +107,9 @@ const LoginScrenn: React.FC<Props> = () => {
           secureTextEntry
           textError={formik.errors.confirmPassword}
         />
+      </View>
 
+      <View style={styles.wrapButton}>
         <Button
           style={styles.button}
           title="Create"
@@ -108,7 +117,7 @@ const LoginScrenn: React.FC<Props> = () => {
           onPress={formik.handleSubmit}
         />
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 

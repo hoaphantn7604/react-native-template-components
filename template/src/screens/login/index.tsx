@@ -3,14 +3,17 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { Button, globalLoading, Text } from 'components';
 import { useFormik } from 'formik';
 import React from 'react';
-import { View } from 'react-native';
+import { ImageBackground, View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
 import { styles } from './styles';
+
+const IMG_BACKGROUND = require('assets/images/pictures/background.jpg');
 
 interface Props {}
 
 const RegisterScrenn: React.FC<Props> = () => {
   const { navigate } = useNavigation<StackNavigationProp<any>>();
+
   const formik = useFormik({
     initialValues: {
       username: '',
@@ -36,12 +39,16 @@ const RegisterScrenn: React.FC<Props> = () => {
       }, 1000);
     },
   });
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title} bold fontSize={30}>
-        Login
-      </Text>
+    <ImageBackground
+      style={styles.container}
+      source={IMG_BACKGROUND}
+      resizeMode="cover">
       <View style={styles.wrapBox}>
+        <Text style={styles.title} bold fontSize={30}>
+          Login
+        </Text>
         <TextInput
           style={styles.textinput}
           inputStyle={styles.inputStyle}
@@ -88,7 +95,7 @@ const RegisterScrenn: React.FC<Props> = () => {
           Create new account?
         </Text>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 
