@@ -13,16 +13,7 @@ npx react-native init MyApp --template react-native-template-components
 - I18Next</br>
 
 ### Demo
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo1.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo2.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo3.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo4.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/dropdown/demo.gif)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/textinput/demo.png)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/checkboxtree/demo1.gif)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/swipeview/demo.gif)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/timer/timer.gif)
-![](https://github.com/hoaphantn7604/file-upload/blob/master/document/timer/countdown.gif)
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/react_native_template_boilerplate.jpg)
 
 
 ## Donate
