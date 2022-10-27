@@ -1,10 +1,8 @@
-import { combineReducers } from 'redux';
-import Root from 'reduxCore/root/reducer';
+import { combineReducers } from '@reduxjs/toolkit';
+import mainSlice from 'reduxCore/main/slice';
 
-export interface RootState {
-  Root: ReturnType<typeof Root>;
-}
+export type RootReducer = ReturnType<typeof rootReducer>;
 
 export const rootReducer = combineReducers({
-  Root,
+  main: mainSlice,
 });

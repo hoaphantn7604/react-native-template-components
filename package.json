@@ -18,7 +18,9 @@
     "template",
     "boilerplate",
     "uikit",
-    "typescript"
+    "typescript",
+    "redux-toolkit",
+    "redux-saga"
   ],
   "author": {
     "name": "Hoa Phan",

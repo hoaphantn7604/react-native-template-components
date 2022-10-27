@@ -14,7 +14,7 @@ export interface Props {
   name?: string;
 }
 
-const GlobalMessage = React.forwardRef((props, ref) => {
+const GlobalMessage = React.forwardRef((_props, ref) => {
   const [visible, setVisible] = useState<boolean>(false);
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');

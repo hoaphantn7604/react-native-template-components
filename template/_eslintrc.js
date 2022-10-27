@@ -7,5 +7,6 @@ module.exports = {
     'react/no-unstable-nested-components': ['off'],
     'react-native/no-inline-styles': ['off'],
     '@typescript-eslint/no-shadow': ['off'],
+    'no-shadow': ['off'],
   },
 };
