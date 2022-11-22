@@ -5,7 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import createSagaMiddleware from 'redux-saga';
 
 import logger from 'redux-logger';
-import { RootReducer, rootReducer } from 'reduxCore/store/rootReducers';
+import { RootReducer, rootReducer } from '@reduxCore/store/rootReducers';
 import rootSaga from './rootSagas';
 
 const persistConfig = {

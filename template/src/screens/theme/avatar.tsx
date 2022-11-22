@@ -3,11 +3,9 @@ import { Alert, StyleSheet, View } from 'react-native';
 import { scale } from 'react-native-size-scaling';
 import { Avatar } from 'react-native-element-image';
 
-const img_avatar = require('assets/images/icons/ic-avatar.png');
+const img_avatar = require('@assets/images/icons/ic-avatar.png');
 
-export interface Props {
-  name: string;
-}
+export interface Props {}
 
 const AvatarScreen: React.FC<Props> = _props => {
   return (

@@ -4,18 +4,18 @@ import {
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import LoginScreen from 'screens/login';
-import RegisterScreen from 'screens/register';
+import LoginScreen from '@screens/login';
+import RegisterScreen from '@screens/register';
 
-import DropdownScreen from 'screens/theme/dropdown';
-import CheckboxTreeScreen from 'screens/theme/checkboxTree';
-import TimerScreen from 'screens/theme/timer';
-import CountdownScreen from 'screens/theme/countdown';
-import SwipeViewScreen from 'screens/theme/swipeView';
-import MultiSelectScreen from 'screens/theme/multiselect';
-import TextInputScreen from 'screens/theme/textinput';
-import AvatarScreen from 'screens/theme/avatar';
-import CheckboxScreen from 'screens/theme/checkbox';
+import DropdownScreen from '@screens/theme/dropdown';
+import CheckboxTreeScreen from '@screens/theme/checkboxTree';
+import TimerScreen from '@screens/theme/timer';
+import CountdownScreen from '@screens/theme/countdown';
+import SwipeViewScreen from '@screens/theme/swipeView';
+import MultiSelectScreen from '@screens/theme/multiselect';
+import TextInputScreen from '@screens/theme/textinput';
+import AvatarScreen from '@screens/theme/avatar';
+import CheckboxScreen from '@screens/theme/checkbox';
 import { tabBar } from './bottombar';
 
 export const navigationRef: React.RefObject<NavigationContainerRef<any>> =

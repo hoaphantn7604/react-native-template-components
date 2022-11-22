@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, LogBox, StatusBar } from 'react-native';
-import AppWithNavigationState from 'navigators';
-import {} from 'components';
-import GlobalLoading, { globalLoadingRef } from 'components/GlobalLoading';
-import GlobalMessage, { globalMessageRef } from 'components/GlobalMessage';
+import AppWithNavigationState from '@navigators';
+import {} from '@components';
+import GlobalLoading, { globalLoadingRef } from '@components/GlobalLoading';
+import GlobalMessage, { globalMessageRef } from '@components/GlobalMessage';
 import { I18nextProvider } from 'react-i18next';
-import i18next from 'shared/language';
+import i18next from '@shared/language';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { store, persistor } from 'reduxCore/store';
+import { store, persistor } from '@reduxCore/store';
 
 LogBox.ignoreAllLogs(true);
 StatusBar.setBarStyle('dark-content');

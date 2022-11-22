@@ -1,8 +1,8 @@
-const product_1 = require('assets/images/pictures/product-1.jpg');
-const product_2 = require('assets/images/pictures/product-2.jpg');
+const product_1 = require('@assets/images/pictures/product-1.jpg');
+const product_2 = require('@assets/images/pictures/product-2.jpg');
 
-const banner_1 = require('assets/images/pictures/banner-1.jpg');
-const banner_2 = require('assets/images/pictures/banner-2.jpg');
+const banner_1 = require('@assets/images/pictures/banner-1.jpg');
+const banner_2 = require('@assets/images/pictures/banner-2.jpg');
 
 export const DATA = [
   { id: 1, title: 'Product name 1', img: product_1 },

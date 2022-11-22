@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { globalLoading, globalMessage, Modal, Text } from 'components';
+import { globalLoading, globalMessage, Modal, Text } from '@components';
 import React, { useState } from 'react';
 import {
   Alert,

@@ -6,7 +6,7 @@ npx react-native init MyApp --template react-native-template-components
 ## Features
 
 - React 18.1.0</br>
-- React Native 0.70.1</br>
+- React Native 0.70.6</br>
 - React Navigation V6</br>
 - React Native Vector Icons</br>
 - Redux Toolkit, Redux Saga</br>

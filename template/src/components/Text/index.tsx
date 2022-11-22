@@ -1,4 +1,4 @@
-import { COLORS } from 'config';
+import { COLORS } from '@config';
 import React from 'react';
 import { Text } from 'react-native';
 import { scale } from 'react-native-size-scaling';

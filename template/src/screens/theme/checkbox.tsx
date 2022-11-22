@@ -1,4 +1,4 @@
-import { Checkbox } from 'components';
+import { Checkbox } from '@components';
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { scale } from 'react-native-size-scaling';

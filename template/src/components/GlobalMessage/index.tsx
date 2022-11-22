@@ -1,4 +1,4 @@
-import { Button, Text } from 'components';
+import { Button, Text } from '@components';
 import React, { useImperativeHandle, useState } from 'react';
 import { Modal, StatusBar, TouchableWithoutFeedback, View } from 'react-native';
 import { styles } from './styles';

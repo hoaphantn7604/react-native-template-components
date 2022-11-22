@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { View } from 'react-native';
 import { Countdown } from 'react-native-element-timer';
-import { Button } from 'components';
+import { Button } from '@components';
 import { scale, StyleSheet } from 'react-native-size-scaling';
 
 export interface Props {}

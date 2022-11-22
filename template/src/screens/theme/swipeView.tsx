@@ -1,4 +1,4 @@
-import { COLORS } from 'config';
+import { COLORS } from '@config';
 import React from 'react';
 import { View, SafeAreaView } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';

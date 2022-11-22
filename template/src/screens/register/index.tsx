@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/core';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { Button, globalLoading, Text } from 'components';
+import { Button, globalLoading, Text } from '@components';
 import { useFormik } from 'formik';
 import React from 'react';
 import { ImageBackground, View } from 'react-native';
@@ -9,7 +9,7 @@ import { scale } from 'react-native-size-scaling';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { styles } from './styles';
 
-const IMG_BACKGROUND = require('assets/images/pictures/background.jpg');
+const IMG_BACKGROUND = require('@assets/images/pictures/background.jpg');
 
 interface Props {}
 

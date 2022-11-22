@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/core';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { Button, globalLoading, Text } from 'components';
+import { Button, globalLoading, Text } from '@components';
 import { useFormik } from 'formik';
 import React, { useEffect } from 'react';
 import { ImageBackground, View } from 'react-native';
@@ -11,10 +11,10 @@ import {
   changeLanguageAction,
   selectMain,
   todoRequestAction,
-} from 'reduxCore/main/slice';
+} from '@reduxCore/main/slice';
 import { styles } from './styles';
 
-const IMG_BACKGROUND = require('assets/images/pictures/background.jpg');
+const IMG_BACKGROUND = require('@assets/images/pictures/background.jpg');
 
 interface Props {}
 

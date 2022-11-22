@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { View } from 'react-native';
-import { Button } from 'components';
+import { Button } from '@components';
 import { Timer } from 'react-native-element-timer';
 import { StyleSheet } from 'react-native-size-scaling';
 

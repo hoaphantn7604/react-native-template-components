@@ -1,4 +1,4 @@
-import { FlatList, Header, Text } from 'components';
+import { FlatList, Header, Text } from '@components';
 import React from 'react';
 import { SafeAreaView, View, Dimensions } from 'react-native';
 import { Image } from 'react-native-element-image';

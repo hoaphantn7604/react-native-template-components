@@ -1,5 +1,5 @@
 import { StackActions } from '@react-navigation/native';
-import { navigationRef } from 'navigators';
+import { navigationRef } from '@navigators';
 
 export enum NAVIGATION_TYPE {
   NAVIGATE = 0,

@@ -1,4 +1,4 @@
-import { Text } from 'components';
+import { Text } from '@components';
 import React from 'react';
 import { Image, TouchableWithoutFeedback, View } from 'react-native';
 import { TextInput } from 'react-native-element-textinput';
@@ -10,7 +10,7 @@ import { HeaderProps } from './model';
 const HeaderComponent: HeaderProps = props => {
   const {
     name = 'Hoà Phan Dev',
-    avatar = require('assets/images/icons/ic-avatar.png'),
+    avatar = require('@assets/images/icons/ic-avatar.png'),
     onPressUser,
     onChangeText,
   } = props;
