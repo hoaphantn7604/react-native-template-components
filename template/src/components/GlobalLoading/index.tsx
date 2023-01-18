@@ -1,6 +1,6 @@
-import React, { useImperativeHandle, useState } from 'react';
-import { Modal, StatusBar, View, ActivityIndicator } from 'react-native';
-import { styles } from './styles';
+import React, {useImperativeHandle, useState} from 'react';
+import {Modal, StatusBar, View, ActivityIndicator} from 'react-native';
+import {styles} from './styles';
 
 export const globalLoadingRef = React.createRef<any>();
 
@@ -13,15 +13,11 @@ export const globalLoading = {
   },
 };
 
-export interface Props {
-  name?: string;
-}
-
-const GlobalLoading = React.forwardRef((props, ref) => {
+const GlobalLoading = React.forwardRef((_props, ref) => {
   const [visible, setVisible] = useState<boolean>(false);
 
   useImperativeHandle(ref, () => {
-    return { show: show, hide: hide };
+    return {show: show, hide: hide};
   });
 
   const show = () => {

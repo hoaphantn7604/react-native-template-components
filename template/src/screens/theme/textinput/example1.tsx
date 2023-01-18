@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { View } from 'react-native';
-import { TextInput } from 'react-native-element-textinput';
-import { StyleSheet } from 'react-native-size-scaling';
+import React, {useState} from 'react';
+import {View} from 'react-native';
+import {TextInput} from 'react-native-element-textinput';
+import {StyleSheet} from 'react-native-size-scaling';
 
 const TextInputComponent = () => {
   const [value, setValue] = useState('');
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: '#DDDDDD',
   },
-  inputStyle: { fontSize: 16 },
+  inputStyle: {fontSize: 16},
   labelStyle: {
     fontSize: 14,
     position: 'absolute',
@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
     marginLeft: -4,
   },
-  placeholderStyle: { fontSize: 16 },
-  textErrorStyle: { fontSize: 16 },
+  placeholderStyle: {fontSize: 16},
+  textErrorStyle: {fontSize: 16},
 });

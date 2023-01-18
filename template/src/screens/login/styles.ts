@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native-size-scaling';
+import {StyleSheet} from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
@@ -43,10 +43,10 @@ export const styles = StyleSheet.create({
 
     elevation: 2,
   },
-  inputStyle: { fontSize: 16 },
-  labelStyle: { fontSize: 14 },
-  placeholderStyle: { fontSize: 16 },
-  textErrorStyle: { fontSize: 14 },
+  inputStyle: {fontSize: 16},
+  labelStyle: {fontSize: 14},
+  placeholderStyle: {fontSize: 16},
+  textErrorStyle: {fontSize: 14},
   button: {
     backgroundColor: 'white',
     marginTop: 32,
@@ -65,5 +65,28 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: 16,
     color: 'gray',
+  },
+  dropdown: {
+    height: 50,
+    borderBottomColor: 'gray',
+    borderBottomWidth: 0.5,
+    marginTop: 36,
+  },
+  selectedTextStyle: {
+    fontSize: 16,
+    marginLeft: 8,
+  },
+  iconStyle: {
+    width: 20,
+    height: 20,
+  },
+  imageStyle: {
+    width: 24,
+    height: 24,
+  },
+  locale: {
+    position: 'absolute',
+    right: 30,
+    top: 50,
   },
 });

@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
-import { View } from 'react-native';
-import { Countdown } from 'react-native-element-timer';
-import { Button } from '@components';
-import { scale, StyleSheet } from 'react-native-size-scaling';
+import React, {useRef} from 'react';
+import {View} from 'react-native';
+import {Countdown} from 'react-native-element-timer';
+import {Button} from '@components';
+import {scale, StyleSheet} from 'react-native-size-scaling';
 
-export interface Props {}
+export interface IProps {}
 
-const CountdownScreen: React.FC<Props> = _props => {
+const CountdownScreen: React.FC<IProps> = _props => {
   const countdownRef: any = useRef(null);
 
   return (

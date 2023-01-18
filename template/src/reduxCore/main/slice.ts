@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 export interface IRootState {
   locale: string;
@@ -18,7 +18,7 @@ export const mainSlice = createSlice({
   reducers: {
     changeLanguageAction: (
       state: IRootState,
-      action: PayloadAction<string>,
+      action: PayloadAction<'vi' | 'en'>,
     ) => {
       state.locale = action.payload;
     },
@@ -40,5 +40,5 @@ export const {
   todoRequestAction,
   todoSuccessRequestAction,
 } = mainSlice.actions;
-export const selectMain = (state: { main: any }) => state.main;
+export const selectMain = (state: {main: any}) => state.main;
 export default mainSlice.reducer;

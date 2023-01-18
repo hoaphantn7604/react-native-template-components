@@ -1,7 +1,7 @@
-import { useNavigation } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { globalLoading, globalMessage, Modal, Text } from '@components';
-import React, { useState } from 'react';
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {globalLoading, globalMessage, Modal, Text} from '@components';
+import React, {useState} from 'react';
 import {
   Alert,
   ImageBackground,
@@ -10,17 +10,17 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { Avatar } from 'react-native-element-image';
-import { scale } from 'react-native-size-scaling';
+import {Avatar} from 'react-native-element-image';
+import {scale} from 'react-native-size-scaling';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { avatar, background_profile } from './constant';
-import { styles } from './styles';
+import {avatar, background_profile} from './constant';
+import {styles} from './styles';
 
-interface Props {}
+interface IProps {}
 
-const SettingScreen: React.FC<Props> = () => {
+const SettingScreen: React.FC<IProps> = _props => {
   const [visible, setVisible] = useState<boolean>(false);
-  const { navigate } = useNavigation<StackNavigationProp<any>>();
+  const {navigate} = useNavigation<StackNavigationProp<any>>();
 
   const itemMenu = (icon: string, name: string, onPress: () => void) => {
     return (
@@ -45,7 +45,7 @@ const SettingScreen: React.FC<Props> = () => {
           containerStyle={styles.wrap}
           iconEnable
           onPressIcon={() => Alert.alert('Click')}
-          nameStyle={{ fontSize: scale(20), color: 'white' }}
+          nameStyle={styles.name}
           name="Hoà Phan Dev"
         />
       </ImageBackground>

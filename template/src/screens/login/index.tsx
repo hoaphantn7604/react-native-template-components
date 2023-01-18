@@ -1,48 +1,48 @@
-import { useNavigation } from '@react-navigation/core';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { Button, globalLoading, Text } from '@components';
-import { useFormik } from 'formik';
-import React, { useEffect } from 'react';
-import { ImageBackground, View } from 'react-native';
-import { TextInput } from 'react-native-element-textinput';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import {
-  changeLanguageAction,
-  selectMain,
-  todoRequestAction,
-} from '@reduxCore/main/slice';
-import { styles } from './styles';
+import {Button, globalLoading, Text} from '@components';
+import {useNavigation} from '@react-navigation/core';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {useFormik} from 'formik';
+import React, {useEffect} from 'react';
+import {ImageBackground, View} from 'react-native';
+import {TextInput} from 'react-native-element-textinput';
+import {useDispatch, useSelector} from 'react-redux';
+
+import SelectLocalComponent from '@components/SelectLocal';
+import {changeLanguageAction, selectMain} from '@reduxCore/main/slice';
+import {changeLanguage, t} from '@utils/locales/i18n';
+import {styles} from './styles';
 
 const IMG_BACKGROUND = require('@assets/images/pictures/background.jpg');
 
-interface Props {}
+interface IFormErrors {
+  username?: string;
+  password?: string;
+}
 
-const RegisterScrenn: React.FC<Props> = () => {
-  const { navigate } = useNavigation<StackNavigationProp<any>>();
-  const { locale } = useSelector(selectMain);
+interface IProps {}
+
+const RegisterScrenn: React.FC<IProps> = _props => {
+  const {navigate} = useNavigation<StackNavigationProp<any>>();
   const dispatch = useDispatch();
+  const {locale} = useSelector(selectMain);
 
   useEffect(() => {
-    dispatch(changeLanguageAction('vn'));
-    dispatch(todoRequestAction());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    changeLanguage(locale);
+  }, [locale]);
 
   const formik = useFormik({
     initialValues: {
       username: '',
       password: '',
-      locale: locale,
     },
     validate: values => {
-      const error: any = {};
+      const error: IFormErrors = {};
       if (values.username.length === 0) {
-        error.username = 'Please enter username';
+        error.username = t('errors:usernameMessage');
       }
 
       if (values.password.length === 0) {
-        error.password = 'Please enter password';
+        error.password = t('errors:passwordMessage');
       }
 
       return error;
@@ -56,14 +56,24 @@ const RegisterScrenn: React.FC<Props> = () => {
     },
   });
 
+  const onChangeLanguage = (lang: 'vi' | 'en') => {
+    changeLanguage(lang);
+    dispatch(changeLanguageAction(lang));
+  };
+
   return (
     <ImageBackground
       style={styles.container}
       source={IMG_BACKGROUND}
       resizeMode="cover">
+      <SelectLocalComponent
+        style={styles.locale}
+        locale={locale}
+        onChange={onChangeLanguage}
+      />
       <View style={styles.wrapBox}>
         <Text style={styles.title} bold fontSize={30}>
-          Login
+          {t('login:title')}
         </Text>
         <TextInput
           style={styles.textinput}
@@ -73,13 +83,14 @@ const RegisterScrenn: React.FC<Props> = () => {
           textErrorStyle={styles.textErrorStyle}
           value={formik.values.username}
           onChangeText={formik.handleChange('username')}
-          label="Username"
-          placeholder="Placeholder"
+          label={t('login:username')}
+          placeholder={t('login:username')}
           placeholderTextColor="gray"
           textError={formik.errors.username}
         />
 
         <TextInput
+          mode="password"
           style={styles.textinput}
           inputStyle={styles.inputStyle}
           labelStyle={styles.labelStyle}
@@ -88,27 +99,26 @@ const RegisterScrenn: React.FC<Props> = () => {
           value={formik.values.password}
           textContentType="oneTimeCode"
           onChangeText={formik.handleChange('password')}
-          label="Password"
-          placeholder="Enter password"
+          label={t('login:password')}
+          placeholder={t('login:password')}
           placeholderTextColor="gray"
-          secureTextEntry
           textError={formik.errors.password}
         />
 
         <Button
           style={styles.button}
-          title="Login"
+          title={t('login:btnLogin')}
           fontSize={20}
           onPress={formik.handleSubmit}
         />
         <Text style={styles.textOr} fontSize={16}>
-          Or
+          {t('login:or')}
         </Text>
         <Text
           style={styles.textOr}
           fontSize={18}
           onPress={() => navigate('Register')}>
-          Create new account?
+          {t('login:btnRegister')}
         </Text>
       </View>
     </ImageBackground>

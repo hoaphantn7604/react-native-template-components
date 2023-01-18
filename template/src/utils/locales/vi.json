@@ -1,0 +1,29 @@
+{
+  "common": {
+    "yes": "Có",
+    "no": "Không",
+    "welcome": "Chào mừng!"
+  },
+  "login": {
+    "title": "Đăng nhập",
+    "username": "Tài khoản",
+    "password": "Mật khẩu",
+    "btnLogin": "Đăng nhập",
+    "or": "Hoặc",
+    "btnRegister": "Tạo tài khoản?"
+  },
+  "register": {
+    "title": "Đăng ký",
+    "username": "Tài khoản",
+    "password": "Mật khẩu",
+    "rePassword": "Nhập lại mật khẩu",
+    "create": "Tạo"
+  },
+  "home": {
+    "search": "Tìm kiếm..."
+  },
+  "errors": {
+    "usernameMessage": "Vui lòng nhập tên đăng nhập",
+    "passwordMessage": "Vui lòng nhập mật khẩu"
+  }
+}

@@ -1,7 +1,7 @@
-import { Button, Text } from '@components';
-import React, { useImperativeHandle, useState } from 'react';
-import { Modal, StatusBar, TouchableWithoutFeedback, View } from 'react-native';
-import { styles } from './styles';
+import {Button, Text} from '@components';
+import React, {useImperativeHandle, useState} from 'react';
+import {Modal, StatusBar, TouchableWithoutFeedback, View} from 'react-native';
+import {styles} from './styles';
 
 export const globalMessageRef = React.createRef<any>();
 export const globalMessage = {
@@ -10,17 +10,13 @@ export const globalMessage = {
   },
 };
 
-export interface Props {
-  name?: string;
-}
-
 const GlobalMessage = React.forwardRef((_props, ref) => {
   const [visible, setVisible] = useState<boolean>(false);
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');
 
   useImperativeHandle(ref, () => {
-    return { show: show };
+    return {show: show};
   });
 
   const show = (title: string, content: string) => {
@@ -53,7 +49,7 @@ const GlobalMessage = React.forwardRef((_props, ref) => {
                 <Text
                   fontSize={15}
                   color={'black'}
-                  style={{ textAlign: 'center' }}>
+                  style={{textAlign: 'center'}}>
                   {content}
                 </Text>
               </View>

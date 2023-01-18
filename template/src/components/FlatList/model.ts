@@ -1,9 +1,10 @@
 import React from 'react';
-import { FlatListProps } from 'react-native';
+import {FlatListProps} from 'react-native';
 
-interface Props extends FlatListProps<any> {
+interface IProps extends FlatListProps<any> {
+  keyExtractorField: string;
   onRefresh?: () => void;
   onLoadMore?: () => void;
 }
 
-export type PropsFlatlist = React.FC<Props>;
+export type FlatlistProps = React.FC<IProps>;

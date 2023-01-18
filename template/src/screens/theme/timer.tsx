@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
-import { View } from 'react-native';
-import { Button } from '@components';
-import { Timer } from 'react-native-element-timer';
-import { StyleSheet } from 'react-native-size-scaling';
+import React, {useRef} from 'react';
+import {View} from 'react-native';
+import {Button} from '@components';
+import {Timer} from 'react-native-element-timer';
+import {StyleSheet} from 'react-native-size-scaling';
 
-export interface Props {}
+export interface IProps {}
 
-const TimerScreen: React.FC<Props> = _props => {
+const TimerScreen: React.FC<IProps> = _props => {
   const timerRef: any = useRef(null);
 
   return (

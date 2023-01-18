@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { ScrollView } from 'react-native-virtualized-view';
+import {StyleSheet, View} from 'react-native';
+import {ScrollView} from 'react-native-virtualized-view';
 import Example1 from './example1';
 import Example2 from './example2';
 import Example3 from './example3';

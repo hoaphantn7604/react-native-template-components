@@ -1,14 +1,14 @@
 import React from 'react';
-import { ViewStyle } from 'react-native';
+import {StyleProp, ViewStyle} from 'react-native';
 
-interface Props {
+interface IProps {
   title?: string;
   textColor?: string;
   bgColor?: string;
-  style?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
   fontSize?: number | any;
   onPress?: () => void;
   border?: boolean;
 }
 
-export type ButtonProps = React.FC<Props>;
+export type ButtonProps = React.FC<IProps>;

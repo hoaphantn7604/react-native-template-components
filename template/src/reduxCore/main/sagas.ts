@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { put, takeLatest, call } from 'typed-redux-saga';
-import { todoRequestAction, todoSuccessRequestAction } from './slice';
+import {put, takeLatest, call} from 'typed-redux-saga';
+import {todoRequestAction, todoSuccessRequestAction} from './slice';
 
 const fetchTodoSaga = () => {
   return axios.get('https://jsonplaceholder.typicode.com/posts');
@@ -8,7 +8,7 @@ const fetchTodoSaga = () => {
 
 function* todoRequestSaga() {
   const response = yield* call(fetchTodoSaga);
-  const { data } = response;
+  const {data} = response;
 
   yield put(todoSuccessRequestAction(data));
 }

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { View } from 'react-native';
-import { TagsInput } from 'react-native-element-textinput';
-import { StyleSheet } from 'react-native-size-scaling';
+import React, {useState} from 'react';
+import {View} from 'react-native';
+import {TagsInput} from 'react-native-element-textinput';
+import {StyleSheet} from 'react-native-size-scaling';
 
 const TextInputComponent = () => {
   const [value, setValue] = useState<string[]>([]);
@@ -59,8 +59,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
     marginLeft: -4,
   },
-  placeholderStyle: { fontSize: 16 },
-  textErrorStyle: { fontSize: 16 },
+  placeholderStyle: {fontSize: 16},
+  textErrorStyle: {fontSize: 16},
   tagsStyle: {
     borderWidth: 0,
     borderRadius: 16,

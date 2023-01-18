@@ -2,7 +2,7 @@ import {
   NavigationContainer,
   NavigationContainerRef,
 } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import LoginScreen from '@screens/login';
 import RegisterScreen from '@screens/register';
@@ -16,7 +16,7 @@ import MultiSelectScreen from '@screens/theme/multiselect';
 import TextInputScreen from '@screens/theme/textinput';
 import AvatarScreen from '@screens/theme/avatar';
 import CheckboxScreen from '@screens/theme/checkbox';
-import { tabBar } from './bottombar';
+import {tabBar} from './bottombar';
 
 export const navigationRef: React.RefObject<NavigationContainerRef<any>> =
   React.createRef();
@@ -29,17 +29,17 @@ function AppNavigator() {
         <Stack.Screen
           name="Main"
           component={tabBar}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Login"
           component={LoginScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Register"
           component={RegisterScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen name="Dropdown" component={DropdownScreen} />
         <Stack.Screen name="MultiSelect" component={MultiSelectScreen} />

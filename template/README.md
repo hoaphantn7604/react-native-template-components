@@ -1,5 +1,5 @@
 ## Getting started
-```javascript
+```js
 yarn install
 or
 npm install

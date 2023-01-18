@@ -1,10 +1,10 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
-import { scale } from 'react-native-size-scaling';
-import { styles } from './styles';
-import { ButtonProps } from './model';
+import {TouchableOpacity} from 'react-native';
+import {scale} from 'react-native-size-scaling';
+import {styles} from './styles';
+import {ButtonProps} from './model';
 import Text from '../Text';
-import { COLORS } from '@config';
+import {COLORS} from '@config';
 
 const defaultProps = {
   bgColor: '',
@@ -43,7 +43,7 @@ const ButtonComponent: ButtonProps = props => {
             {
               color: textColor === '' ? COLORS.BUTTON_TEXT : textColor,
             },
-            fontSize && { fontSize: scale(fontSize) },
+            fontSize && {fontSize: scale(fontSize)},
           ]}>
           {title}
         </Text>
@@ -55,14 +55,14 @@ const ButtonComponent: ButtonProps = props => {
       onPress={onPress}
       style={[
         styles.container,
-        { backgroundColor: bgColor === '' ? COLORS.BUTTON : bgColor },
+        {backgroundColor: bgColor === '' ? COLORS.BUTTON : bgColor},
         style,
       ]}>
       <Text
         style={[
           styles.text,
-          { color: textColor === '' ? COLORS.BUTTON_TEXT : textColor },
-          fontSize && { fontSize: scale(fontSize) },
+          {color: textColor === '' ? COLORS.BUTTON_TEXT : textColor},
+          fontSize && {fontSize: scale(fontSize)},
         ]}>
         {title}
       </Text>

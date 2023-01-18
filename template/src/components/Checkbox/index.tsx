@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { TouchableWithoutFeedback, View, Image } from 'react-native';
-import { Checkbox } from './model';
-import { scale } from 'react-native-size-scaling';
-import { styles } from './styles';
+import React, {useEffect, useState} from 'react';
+import {TouchableWithoutFeedback, View, Image} from 'react-native';
+import {CheckboxProps} from './model';
+import {scale} from 'react-native-size-scaling';
+import {styles} from './styles';
 import Text from '../Text';
 
 const checkbox_check = require('./icon/checkbox-check.png');
@@ -19,7 +19,7 @@ const defaultProps = {
   onPress: () => {},
 };
 
-const CheckComponent: Checkbox = props => {
+const CheckComponent: CheckboxProps = props => {
   const {
     style,
     size = 25,
@@ -82,7 +82,7 @@ const CheckComponent: Checkbox = props => {
           <Text
             style={[
               styles.text,
-              { fontSize: scale(size - scale(5)), color: color },
+              {fontSize: scale(size - scale(5)), color: color},
               labelStyle,
               font(),
             ]}>

@@ -1,16 +1,10 @@
-import { StyleSheet } from 'react-native-size-scaling';
+import {StyleSheet} from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
-  container: { flex: 1 },
-  itemSlider: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  imgSlider: {},
+  container: {flex: 1},
   item: {
     backgroundColor: '#F8F8FF',
     padding: 8,
-    margin: 4,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
@@ -30,5 +24,12 @@ export const styles = StyleSheet.create({
   text: {
     marginVertical: 8,
     alignSelf: 'center',
+  },
+  list: {
+    padding: 8,
+    rowGap: 16,
+  },
+  columnWrapperStyle: {
+    columnGap: 16,
   },
 });

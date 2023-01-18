@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import {StyleProp, TextStyle, ViewStyle} from 'react-native';
 
-interface Props {
+interface IProps {
   style?: StyleProp<ViewStyle>;
   labelStyle?: StyleProp<TextStyle>;
   fontFamily?: string;
@@ -13,4 +13,4 @@ interface Props {
   onPress?: (check: boolean) => void;
 }
 
-export type Checkbox = React.FC<Props>;
+export type CheckboxProps = React.FC<IProps>;

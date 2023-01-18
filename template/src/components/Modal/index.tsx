@@ -1,7 +1,7 @@
 import React from 'react';
-import { Modal, View, TouchableWithoutFeedback } from 'react-native';
+import {Modal, View, TouchableWithoutFeedback} from 'react-native';
 import VerticalSwipeView from 'react-native-vertical-swipe-view';
-import { CModal } from './model';
+import {CModalProps} from './model';
 
 const defaultProps = {
   visible: false,
@@ -12,7 +12,7 @@ const defaultProps = {
   backgroundColor: 'white',
 };
 
-const ModalComponent: CModal = props => {
+const ModalComponent: CModalProps = props => {
   const {
     visible,
     maxHeight = 400,
@@ -24,7 +24,7 @@ const ModalComponent: CModal = props => {
   } = props;
 
   return (
-    <Modal {...props} visible={visible} style={{ flex: 1 }}>
+    <Modal {...props} visible={visible} style={{flex: 1}}>
       <View
         style={[
           {
@@ -35,7 +35,7 @@ const ModalComponent: CModal = props => {
           style,
         ]}>
         <TouchableWithoutFeedback onPress={onRequestClose}>
-          <View style={{ flex: 1 }} />
+          <View style={{flex: 1}} />
         </TouchableWithoutFeedback>
         <VerticalSwipeView
           position="bottom"

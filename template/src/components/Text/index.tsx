@@ -1,8 +1,8 @@
-import { COLORS } from '@config';
+import {COLORS} from '@config';
 import React from 'react';
-import { Text } from 'react-native';
-import { scale } from 'react-native-size-scaling';
-import { PropsText } from './model';
+import {Text} from 'react-native';
+import {scale} from 'react-native-size-scaling';
+import {TextProps} from './model';
 
 const defaultProps = {
   style: {},
@@ -11,8 +11,8 @@ const defaultProps = {
   color: undefined,
 };
 
-const TextComponent: PropsText = props => {
-  const { fontSize, bold, color, style, children } = props;
+const TextComponent: TextProps = props => {
+  const {fontSize, bold, color, style, children} = props;
 
   let FONTSIZE: number = 14;
   if (fontSize) {
@@ -27,7 +27,7 @@ const TextComponent: PropsText = props => {
           fontSize: scale(FONTSIZE),
           color: !color ? COLORS.TEXT : color,
         },
-        bold && { fontWeight: 'bold' },
+        bold && {fontWeight: 'bold'},
         style,
       ]}>
       {children}

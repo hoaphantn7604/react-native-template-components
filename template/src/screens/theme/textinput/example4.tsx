@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { View } from 'react-native';
-import { HashtagInput } from 'react-native-element-textinput';
-import { StyleSheet } from 'react-native-size-scaling';
+import React, {useState} from 'react';
+import {View} from 'react-native';
+import {HashtagInput} from 'react-native-element-textinput';
+import {StyleSheet} from 'react-native-size-scaling';
 
 const TextInputComponent = () => {
   const [value, setValue] = useState<string[]>([]);
@@ -47,10 +47,10 @@ const styles = StyleSheet.create({
     shadowRadius: 1.41,
     elevation: 2,
   },
-  inputStyle: { fontSize: 16 },
-  labelStyle: { fontSize: 14 },
-  placeholderStyle: { fontSize: 16 },
-  textErrorStyle: { fontSize: 16 },
+  inputStyle: {fontSize: 16},
+  labelStyle: {fontSize: 14},
+  placeholderStyle: {fontSize: 16},
+  textErrorStyle: {fontSize: 16},
   hashtagStyle: {
     borderWidth: 0,
     borderRadius: 16,

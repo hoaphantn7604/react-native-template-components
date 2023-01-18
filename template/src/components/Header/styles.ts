@@ -1,9 +1,9 @@
-import { StyleSheet } from 'react-native-size-scaling';
+import {StyleSheet} from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
     marginTop: 20,
-    height: 55,
+    height: 60,
     flexDirection: 'row',
     width: '100%',
     paddingHorizontal: 8,
@@ -35,5 +35,5 @@ export const styles = StyleSheet.create({
     height: 30,
     borderRadius: 15,
   },
-  name: { marginLeft: 8, maxWidth: 150 },
+  name: {marginLeft: 8, maxWidth: 150},
 });

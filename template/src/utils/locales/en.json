@@ -1,0 +1,29 @@
+{
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "welcome": "Welcome"
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "btnLogin": "Login",
+    "or": "Or",
+    "btnRegister": "Create new account?"
+  },
+  "register": {
+    "title": "Register",
+    "username": "Username",
+    "password": "Password",
+    "rePassword": "Re-Password",
+    "create": "Create"
+  },
+  "home": {
+    "search": "Search..."
+  },
+  "errors": {
+    "usernameMessage": "Please enter username",
+    "passwordMessage": "Please enter password"
+  }
+}

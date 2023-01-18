@@ -22,4 +22,4 @@ const COLORS: COLOR = {
   HEADER_BG: 'black',
 };
 
-export { APP_NAME, BASE_URL, URL_IMAGE, COLORS };
+export {APP_NAME, BASE_URL, URL_IMAGE, COLORS};

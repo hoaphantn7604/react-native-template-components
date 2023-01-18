@@ -1,13 +1,13 @@
 import React from 'react';
-import { Alert, StyleSheet, View } from 'react-native';
-import { scale } from 'react-native-size-scaling';
-import { Avatar } from 'react-native-element-image';
+import {Alert, StyleSheet, View} from 'react-native';
+import {scale} from 'react-native-size-scaling';
+import {Avatar} from 'react-native-element-image';
 
 const img_avatar = require('@assets/images/icons/ic-avatar.png');
 
-export interface Props {}
+export interface IProps {}
 
-const AvatarScreen: React.FC<Props> = _props => {
+const AvatarScreen: React.FC<IProps> = _props => {
   return (
     <View style={styles.container}>
       <Avatar
@@ -16,7 +16,7 @@ const AvatarScreen: React.FC<Props> = _props => {
         source={img_avatar}
         iconEnable={false}
         onPressIcon={() => Alert.alert('Click')}
-        nameStyle={{ fontSize: scale(20) }}
+        nameStyle={{fontSize: scale(20)}}
       />
 
       <Avatar
@@ -25,7 +25,7 @@ const AvatarScreen: React.FC<Props> = _props => {
         source={img_avatar}
         iconEnable
         onPressIcon={() => Alert.alert('Click')}
-        nameStyle={{ fontSize: scale(20) }}
+        nameStyle={{fontSize: scale(20)}}
       />
 
       <Avatar
@@ -35,7 +35,7 @@ const AvatarScreen: React.FC<Props> = _props => {
         iconEnable
         onPressIcon={() => Alert.alert('Click')}
         name="User name"
-        nameStyle={{ fontSize: scale(20) }}
+        nameStyle={{fontSize: scale(20)}}
       />
 
       <Avatar
@@ -45,7 +45,7 @@ const AvatarScreen: React.FC<Props> = _props => {
         iconEnable
         onPressIcon={() => Alert.alert('click')}
         name="User name"
-        nameStyle={{ fontSize: scale(30) }}
+        nameStyle={{fontSize: scale(30)}}
       />
     </View>
   );
@@ -59,5 +59,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: scale(20),
   },
-  avatar: { marginTop: scale(10) },
+  avatar: {marginTop: scale(10)},
 });

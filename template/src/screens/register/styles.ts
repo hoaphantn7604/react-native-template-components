@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native-size-scaling';
+import {StyleSheet} from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
@@ -43,10 +43,10 @@ export const styles = StyleSheet.create({
 
     elevation: 2,
   },
-  inputStyle: { fontSize: 16 },
-  labelStyle: { fontSize: 14 },
-  placeholderStyle: { fontSize: 16 },
-  textErrorStyle: { fontSize: 14 },
+  inputStyle: {fontSize: 16},
+  labelStyle: {fontSize: 14},
+  placeholderStyle: {fontSize: 16},
+  textErrorStyle: {fontSize: 14},
   wrapButton: {
     paddingHorizontal: 16,
   },

@@ -1,17 +1,17 @@
-import { Checkbox } from '@components';
-import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, View } from 'react-native';
-import { scale } from 'react-native-size-scaling';
+import {Checkbox} from '@components';
+import React, {useState} from 'react';
+import {SafeAreaView, StyleSheet, View} from 'react-native';
+import {scale} from 'react-native-size-scaling';
 
-export interface Props {}
+export interface IProps {}
 
-const CheckboxScreen: React.FC<Props> = _props => {
+const CheckboxScreen: React.FC<IProps> = _props => {
   const [check, setCheck] = useState<boolean>(false);
   const [check2, setCheck2] = useState<boolean>(false);
   const [check3, setCheck3] = useState<boolean>(false);
   const [check4, setCheck4] = useState<boolean>(false);
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
         <Checkbox
           check={check}

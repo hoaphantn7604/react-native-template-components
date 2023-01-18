@@ -1,13 +1,13 @@
-import { COLORS } from '@config';
+import {COLORS} from '@config';
 import React from 'react';
-import { View, SafeAreaView } from 'react-native';
+import {View, SafeAreaView} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import SwipeView from 'react-native-vertical-swipe-view';
-import { scale, StyleSheet } from 'react-native-size-scaling';
+import {scale, StyleSheet} from 'react-native-size-scaling';
 
-export interface Props {}
+export interface IProps {}
 
-const CurtainScreen: React.FC<Props> = _props => {
+const CurtainScreen: React.FC<IProps> = _props => {
   const _renderHeaderTop = () => {
     return (
       <View style={styles.headerTop}>
@@ -35,7 +35,7 @@ const CurtainScreen: React.FC<Props> = _props => {
         <View style={styles.curtainContainer} />
       </SwipeView>
 
-      <View style={{ flex: 1 }} />
+      <View style={{flex: 1}} />
 
       <SwipeView
         position="bottom"

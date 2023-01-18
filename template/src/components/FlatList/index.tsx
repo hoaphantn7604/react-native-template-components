@@ -1,14 +1,14 @@
 import React from 'react';
-import { FlatList, RefreshControl } from 'react-native';
-import { PropsFlatlist } from './model';
+import {FlatList, RefreshControl} from 'react-native';
+import {FlatlistProps} from './model';
 
-const FlatListComponent: PropsFlatlist = props => {
-  const { data, renderItem, onRefresh, onLoadMore } = props;
+const FlatListComponent: FlatlistProps = props => {
+  const {data, keyExtractorField, renderItem, onRefresh, onLoadMore} = props;
   return (
     <FlatList
       {...props}
       data={data}
-      keyExtractor={(e, i) => i.toString()}
+      keyExtractor={e => e[keyExtractorField].toString()}
       extraData={data}
       keyboardShouldPersistTaps="handled"
       renderItem={renderItem}

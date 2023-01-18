@@ -1,8 +1,7 @@
-/* eslint-disable no-undef */
 import React from 'react';
-import { StyleProp, ModalProps, ViewStyle } from 'react-native';
+import {StyleProp, ModalProps, ViewStyle} from 'react-native';
 
-export interface Props extends ModalProps {
+export interface IProps extends ModalProps {
   visible: boolean;
   style?: StyleProp<ViewStyle>;
   headerStyle?: StyleProp<ViewStyle>;
@@ -20,4 +19,4 @@ export interface Props extends ModalProps {
   renderHeader?: () => JSX.Element;
 }
 
-export type CModal = React.FC<Props>;
+export type CModalProps = React.FC<IProps>;

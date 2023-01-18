@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { SelectCountry } from 'react-native-element-dropdown';
-import { StyleSheet, scale } from 'react-native-size-scaling';
+import React, {useState} from 'react';
+import {SelectCountry} from 'react-native-element-dropdown';
+import {StyleSheet, scale} from 'react-native-size-scaling';
 
 const local_data = [
   {
