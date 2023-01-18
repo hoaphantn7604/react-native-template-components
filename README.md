@@ -1,4 +1,3 @@
-### My Channel ✨
 [<img src="https://github.com/hoaphantn7604/file-upload/blob/master/document/template/react_native_template_boilerplate.jpg">](https://www.youtube.com/channel/UClwDARgTpIwOOugYtgEW1Uw?sub_confirmation=1)
 
 A beautiful template for React Native, Support scaling size.
