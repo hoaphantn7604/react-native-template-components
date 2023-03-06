@@ -16,7 +16,7 @@ const data = [
 ];
 
 const DropdownComponent = () => {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState<string>();
 
   return (
     <Dropdown

@@ -6,6 +6,7 @@ import {globalMessage} from './GlobalMessage';
 import Modal from './Modal';
 import FlatList from './FlatList';
 import Header from './Header';
+import ImageViewer from './ImageViewer';
 
 export {
   Text,
@@ -16,4 +17,5 @@ export {
   Header,
   globalLoading,
   globalMessage,
+  ImageViewer,
 };

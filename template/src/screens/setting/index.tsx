@@ -13,8 +13,8 @@ import {
 import {Avatar} from 'react-native-element-image';
 import {scale} from 'react-native-size-scaling';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {avatar, background_profile} from './constant';
 import {styles} from './styles';
+import {IMAGES} from '@assets/images';
 
 interface IProps {}
 
@@ -38,15 +38,15 @@ const SettingScreen: React.FC<IProps> = _props => {
       <ImageBackground
         style={styles.imgBackground}
         imageStyle={styles.imgBackground}
-        source={background_profile}>
+        source={IMAGES.avatarProfile}>
         <Avatar
-          source={avatar}
+          source={IMAGES.avatar}
           size={scale(120)}
           containerStyle={styles.wrap}
           iconEnable
           onPressIcon={() => Alert.alert('Click')}
           nameStyle={styles.name}
-          name="Hoà Phan Dev"
+          name="User Name"
         />
       </ImageBackground>
       <ScrollView showsVerticalScrollIndicator={false}>

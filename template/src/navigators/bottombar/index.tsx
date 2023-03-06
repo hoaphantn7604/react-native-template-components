@@ -3,6 +3,7 @@ import {Linking, TouchableOpacity, View} from 'react-native';
 import {CurvedBottomBar} from 'react-native-curved-bottom-bar';
 import {scale} from 'react-native-size-scaling';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import HomeScreen from '@screens/home';
 import SettingScreen from '@screens/setting';
 import {styles} from './styles';
@@ -24,7 +25,7 @@ export const tabBar = () => {
       <Ionicons
         name={icon}
         size={scale(25)}
-        color={routeName === selectedTab ? 'black' : 'gray'}
+        color={routeName === selectedTab ? 'white' : '#8DEEEE'}
       />
     );
   };
@@ -42,47 +43,45 @@ export const tabBar = () => {
     );
   };
 
-  const linkChanelYoutube = () => {
-    Linking.openURL('https://www.youtube.com/channel/UClwDARgTpIwOOugYtgEW1Uw');
+  const linkChanelGithub = () => {
+    Linking.openURL(
+      'https://github.com/hoaphantn7604/react-native-template-components',
+    );
   };
 
   return (
-    <View style={{flex: 1}}>
-      <CurvedBottomBar.Navigator
-        style={styles.bottomBar}
-        strokeWidth={2}
-        strokeColor={'#DDDDDD'}
-        height={55}
-        circleWidth={55}
-        bgColor="white"
-        initialRouteName="title1"
-        borderTopLeftRight
-        renderCircle={() => (
-          <View style={styles.btnCircle}>
-            <TouchableOpacity
-              style={{
-                flex: 1,
-                justifyContent: 'center',
-              }}
-              onPress={linkChanelYoutube}>
-              <Ionicons name={'logo-youtube'} color="red" size={scale(25)} />
-            </TouchableOpacity>
-          </View>
-        )}
-        tabBar={renderTabBar}>
-        <CurvedBottomBar.Screen
-          options={{headerShown: false}}
-          name="title1"
-          position="LEFT"
-          component={() => <HomeScreen />}
-        />
-        <CurvedBottomBar.Screen
-          options={{headerShown: false}}
-          name="title2"
-          component={() => <SettingScreen />}
-          position="RIGHT"
-        />
-      </CurvedBottomBar.Navigator>
-    </View>
+    <CurvedBottomBar.Navigator
+      style={styles.bottomBar}
+      height={55}
+      circleWidth={50}
+      bgColor="#79CDCD"
+      initialRouteName="title1"
+      borderTopLeftRight
+      renderCircle={() => (
+        <View style={styles.btnCircle}>
+          <TouchableOpacity
+            style={{
+              flex: 1,
+              justifyContent: 'center',
+            }}
+            onPress={linkChanelGithub}>
+            <FontAwesome name={'github-alt'} color="white" size={scale(25)} />
+          </TouchableOpacity>
+        </View>
+      )}
+      tabBar={renderTabBar}>
+      <CurvedBottomBar.Screen
+        options={{headerShown: false}}
+        name="title1"
+        position="LEFT"
+        component={() => <HomeScreen />}
+      />
+      <CurvedBottomBar.Screen
+        options={{headerShown: false}}
+        name="title2"
+        component={() => <SettingScreen />}
+        position="RIGHT"
+      />
+    </CurvedBottomBar.Navigator>
   );
 };

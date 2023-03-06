@@ -4,15 +4,8 @@ import {Text} from 'react-native';
 import {scale} from 'react-native-size-scaling';
 import {TextProps} from './model';
 
-const defaultProps = {
-  style: {},
-  fontSize: undefined,
-  bold: false,
-  color: undefined,
-};
-
 const TextComponent: TextProps = props => {
-  const {fontSize, bold, color, style, children} = props;
+  const {fontSize, bold = false, color, style, children} = props;
 
   let FONTSIZE: number = 14;
   if (fontSize) {
@@ -34,7 +27,5 @@ const TextComponent: TextProps = props => {
     </Text>
   );
 };
-
-TextComponent.defaultProps = defaultProps;
 
 export default TextComponent;

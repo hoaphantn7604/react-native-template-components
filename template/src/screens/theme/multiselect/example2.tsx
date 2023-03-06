@@ -16,21 +16,7 @@ const data = [
 ];
 
 const MultiSelectComponent = () => {
-  const [selected, setSelected] = useState([]);
-
-  const renderItem = (item: any) => {
-    return (
-      <View style={styles.item}>
-        <Text style={styles.selectedTextStyle}>{item.label}</Text>
-        <AntDesign
-          style={styles.icon}
-          color="black"
-          name="Safety"
-          size={scale(20)}
-        />
-      </View>
-    );
-  };
+  const [selected, setSelected] = useState<string[]>([]);
 
   return (
     <MultiSelect
@@ -46,6 +32,7 @@ const MultiSelectComponent = () => {
       value={selected}
       search
       searchPlaceholder="Search..."
+      inside
       onChange={item => {
         setSelected(item);
       }}
@@ -57,12 +44,22 @@ const MultiSelectComponent = () => {
           size={scale(20)}
         />
       )}
-      renderItem={renderItem}
+      renderItem={item => (
+        <View style={styles.item}>
+          <Text style={styles.selectedTextStyle}>{item.label}</Text>
+          <AntDesign
+            style={styles.icon}
+            color="black"
+            name="Safety"
+            size={scale(20)}
+          />
+        </View>
+      )}
       renderSelectedItem={(item, unSelect) => (
         <TouchableOpacity onPress={() => unSelect && unSelect(item)}>
           <View style={styles.selectedStyle}>
             <Text style={styles.textSelectedStyle}>{item.label}</Text>
-            <AntDesign color="black" name="delete" size={scale(17)} />
+            <AntDesign color="black" name="delete" size={scale(14)} />
           </View>
         </TouchableOpacity>
       )}
@@ -75,7 +72,6 @@ export default MultiSelectComponent;
 const styles = StyleSheet.create({
   dropdown: {
     marginTop: 32,
-    height: 50,
     backgroundColor: 'white',
     borderRadius: 12,
     padding: 12,
@@ -121,7 +117,7 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     marginTop: 8,
     marginRight: 12,
-    paddingHorizontal: 12,
+    paddingHorizontal: 8,
     paddingVertical: 8,
     shadowOffset: {
       width: 0,

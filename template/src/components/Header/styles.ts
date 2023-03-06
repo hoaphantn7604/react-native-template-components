@@ -2,16 +2,15 @@ import {StyleSheet} from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
+    marginVertical: 10,
     height: 60,
     flexDirection: 'row',
     width: '100%',
     paddingHorizontal: 8,
     alignItems: 'center',
-    backgroundColor: '#DDDDDD',
   },
   input: {
-    backgroundColor: '#EEEEEE',
+    backgroundColor: 'white',
     paddingLeft: 16,
     paddingRight: 8,
     marginHorizontal: 8,

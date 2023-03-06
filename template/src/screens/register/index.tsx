@@ -9,8 +9,7 @@ import {scale} from 'react-native-size-scaling';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {styles} from './styles';
 import {t} from '@utils/locales/i18n';
-
-const IMG_BACKGROUND = require('@assets/images/pictures/background.jpg');
+import {IMAGES} from '@assets/images';
 
 interface IProps {}
 
@@ -50,7 +49,7 @@ const LoginScrenn: React.FC<IProps> = () => {
   return (
     <ImageBackground
       style={styles.container}
-      source={IMG_BACKGROUND}
+      source={IMAGES.background}
       resizeMode="cover">
       <MaterialIcons
         style={styles.iconBack}

@@ -10,26 +10,17 @@ const checkbox_uncheck = require('./icon/checkbox-uncheck.png');
 const radio_check = require('./icon/radio-check.png');
 const radio_uncheck = require('./icon/radio-uncheck.png');
 
-const defaultProps = {
-  check: false,
-  style: undefined,
-  labelStyle: {},
-  color: 'black',
-  label: undefined,
-  onPress: () => {},
-};
-
 const CheckComponent: CheckboxProps = props => {
   const {
     style,
     size = 25,
     type = 'checkbox',
-    color,
+    color = 'black',
     check = false,
     label,
     labelStyle,
     fontFamily,
-    onPress,
+    onPress = () => {},
   } = props;
 
   const [value, setValue] = useState<boolean>(check);
@@ -93,7 +84,5 @@ const CheckComponent: CheckboxProps = props => {
     </TouchableWithoutFeedback>
   );
 };
-
-CheckComponent.defaultProps = defaultProps;
 
 export default CheckComponent;

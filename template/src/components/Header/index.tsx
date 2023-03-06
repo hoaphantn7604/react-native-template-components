@@ -10,7 +10,7 @@ import {t} from '@utils/locales/i18n';
 
 const HeaderComponent: HeaderProps = props => {
   const {
-    name = 'Hoà Phan Dev',
+    name = 'User Name',
     avatar = require('@assets/images/icons/ic-avatar.png'),
     onPressUser,
     onChangeText,

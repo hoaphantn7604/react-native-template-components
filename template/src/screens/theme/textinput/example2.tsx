@@ -4,7 +4,7 @@ import {TextInput} from 'react-native-element-textinput';
 import {StyleSheet} from 'react-native-size-scaling';
 
 const TextInputComponent = () => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState<string>('');
 
   return (
     <View style={styles.container}>

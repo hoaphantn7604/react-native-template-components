@@ -73,11 +73,18 @@ const recursiveData = [
   },
 ];
 
+interface IData {
+  shopReportName: string;
+  shopCode: string;
+  shopType: string;
+  shopId: number;
+  shopName: string;
+  childs: any[];
+}
 export interface IProps {}
 
 const CheckboxTreeScreen: React.FC<IProps> = _props => {
-  const [data] = useState<any[]>(recursiveData);
-
+  const [data] = useState<IData[]>(recursiveData);
   return (
     <View style={styles.container}>
       <CheckboxTree

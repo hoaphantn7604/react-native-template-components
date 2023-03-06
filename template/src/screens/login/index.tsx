@@ -11,8 +11,7 @@ import SelectLocalComponent from '@components/SelectLocal';
 import {changeLanguageAction, selectMain} from '@reduxCore/main/slice';
 import {changeLanguage, t} from '@utils/locales/i18n';
 import {styles} from './styles';
-
-const IMG_BACKGROUND = require('@assets/images/pictures/background.jpg');
+import {IMAGES} from '@assets/images';
 
 interface IFormErrors {
   username?: string;
@@ -64,7 +63,7 @@ const RegisterScrenn: React.FC<IProps> = _props => {
   return (
     <ImageBackground
       style={styles.container}
-      source={IMG_BACKGROUND}
+      source={IMAGES.background}
       resizeMode="cover">
       <SelectLocalComponent
         style={styles.locale}

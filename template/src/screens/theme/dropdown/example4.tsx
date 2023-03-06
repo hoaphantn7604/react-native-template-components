@@ -43,7 +43,7 @@ const local_data = [
 export interface Props {}
 
 const SelectCountryScreen: React.FC<Props> = _props => {
-  const [country, setCountry] = useState('1');
+  const [country, setCountry] = useState<string>('1');
 
   return (
     <SelectCountry

@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     borderRadius: 35,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#79CDCD',
     padding: 10,
     shadowColor: '#000',
     shadowOffset: {

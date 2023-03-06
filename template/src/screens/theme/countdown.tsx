@@ -3,11 +3,12 @@ import {View} from 'react-native';
 import {Countdown} from 'react-native-element-timer';
 import {Button} from '@components';
 import {scale, StyleSheet} from 'react-native-size-scaling';
+import {ICountdownRef} from 'react-native-element-timer/lib/typescript/CountDown/model';
 
 export interface IProps {}
 
 const CountdownScreen: React.FC<IProps> = _props => {
-  const countdownRef: any = useRef(null);
+  const countdownRef = useRef<ICountdownRef>();
 
   return (
     <View style={styles.container}>
@@ -24,7 +25,7 @@ const CountdownScreen: React.FC<IProps> = _props => {
         title={'Start'}
         border
         onPress={() => {
-          countdownRef.current.start();
+          countdownRef?.current?.start();
         }}
       />
       <Button
@@ -32,7 +33,7 @@ const CountdownScreen: React.FC<IProps> = _props => {
         title={'Pause'}
         border
         onPress={() => {
-          countdownRef.current.pause();
+          countdownRef?.current?.pause();
         }}
       />
       <Button
@@ -40,7 +41,7 @@ const CountdownScreen: React.FC<IProps> = _props => {
         title={'Resume'}
         border
         onPress={() => {
-          countdownRef.current.resume();
+          countdownRef?.current?.resume();
         }}
       />
       <Button
@@ -48,7 +49,7 @@ const CountdownScreen: React.FC<IProps> = _props => {
         title={'Stop'}
         border
         onPress={() => {
-          countdownRef.current.stop();
+          countdownRef?.current?.stop();
         }}
       />
     </View>

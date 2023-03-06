@@ -1,4 +1,4 @@
-import {FlatList, Header, Text} from '@components';
+import {FlatList, Header, ImageViewer, Text} from '@components';
 import React, {useCallback, useState} from 'react';
 import {
   SafeAreaView,
@@ -7,6 +7,7 @@ import {
   ImageSourcePropType,
   NativeSyntheticEvent,
   NativeScrollEvent,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import {Image} from 'react-native-element-image';
 import {scale} from 'react-native-size-scaling';
@@ -25,26 +26,42 @@ interface IProps {}
 
 const HomeScreen: React.FC<IProps> = _props => {
   const [paging, setPaging] = useState(1);
+  const [visible, setVisible] = useState(false);
+  const [uri, setUri] = useState<ImageSourcePropType>();
+
+  const onViewImage = (image: ImageSourcePropType) => {
+    setUri(image);
+    setVisible(true);
+  };
 
   const _renderItemSlider = ({item}: {item: IData}) => {
     return (
-      <Image width={width} height={250} source={item.img} resizeMode="cover" />
+      <TouchableWithoutFeedback onPress={() => onViewImage(item.img)}>
+        <Image
+          width={width}
+          height={280}
+          source={item.img}
+          resizeMode="cover"
+        />
+      </TouchableWithoutFeedback>
     );
   };
 
   const _renderItem = ({item}: {item: IData}) => {
     return (
-      <View style={styles.item}>
-        <Image
-          style={styles.img}
-          width={width / 2 - scale(32)}
-          source={item.img}
-          resizeMode="cover"
-        />
-        <Text style={styles.text} fontSize={14} bold>
-          {item.title}
-        </Text>
-      </View>
+      <TouchableWithoutFeedback onPress={() => onViewImage(item.img)}>
+        <View style={styles.item}>
+          <Image
+            style={styles.img}
+            width={width / 2 - scale(32)}
+            source={item.img}
+            resizeMode="cover"
+          />
+          <Text style={styles.text} fontSize={14} bold>
+            {item.title}
+          </Text>
+        </View>
+      </TouchableWithoutFeedback>
     );
   };
 
@@ -81,6 +98,11 @@ const HomeScreen: React.FC<IProps> = _props => {
         data={DATA}
         renderItem={_renderItem}
         numColumns={2}
+      />
+      <ImageViewer
+        visible={visible}
+        uri={uri}
+        onRequestClose={() => setVisible(false)}
       />
     </SafeAreaView>
   );

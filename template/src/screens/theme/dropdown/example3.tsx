@@ -16,23 +16,7 @@ const data = [
 ];
 
 const DropdownComponent = () => {
-  const [value, setValue] = useState(null);
-
-  const renderItem = (item: any) => {
-    return (
-      <View style={styles.item}>
-        <Text style={styles.textItem}>{item.label}</Text>
-        {item.value === value && (
-          <AntDesign
-            style={styles.icon}
-            color="black"
-            name="Safety"
-            size={scale(20)}
-          />
-        )}
-      </View>
-    );
-  };
+  const [value, setValue] = useState<string>();
 
   return (
     <Dropdown
@@ -60,7 +44,19 @@ const DropdownComponent = () => {
           size={scale(20)}
         />
       )}
-      renderItem={renderItem}
+      renderItem={item => (
+        <View style={styles.item}>
+          <Text style={styles.textItem}>{item.label}</Text>
+          {item.value === value && (
+            <AntDesign
+              style={styles.icon}
+              color="black"
+              name="Safety"
+              size={scale(20)}
+            />
+          )}
+        </View>
+      )}
     />
   );
 };

@@ -6,15 +6,6 @@ import {ButtonProps} from './model';
 import Text from '../Text';
 import {COLORS} from '@config';
 
-const defaultProps = {
-  bgColor: '',
-  style: {},
-  textColor: '',
-  fontSize: null,
-  border: false,
-  onPress: () => {},
-};
-
 const ButtonComponent: ButtonProps = props => {
   const {
     fontSize,
@@ -22,7 +13,7 @@ const ButtonComponent: ButtonProps = props => {
     style,
     textColor,
     title,
-    onPress,
+    onPress = () => {},
     border = false,
   } = props;
   if (border) {
@@ -69,7 +60,5 @@ const ButtonComponent: ButtonProps = props => {
     </TouchableOpacity>
   );
 };
-
-ButtonComponent.defaultProps = defaultProps;
 
 export default ButtonComponent;

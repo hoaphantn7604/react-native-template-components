@@ -2,7 +2,10 @@ import {scale, StyleSheet} from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {flex: 1},
-  imgBackground: {width: '100%', height: 250},
+  imgBackground: {
+    width: '100%',
+    height: 250,
+  },
   wrap: {
     marginTop: 64,
   },
