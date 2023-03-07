@@ -27,6 +27,6 @@ Assuming you have all the requirements installed, you can run the project by run
 - `yarn start` to start the metro bundler, in a dedicated terminal
 - `yarn <platform>` to run the *platform* application (remember to start a simulator or connect a device)
 
-
-### My Channel ✨
+</br>
+</br>
 [<img src="https://github.com/hoaphantn7604/file-upload/blob/master/document/profile/hoa_phan_dev_banner.png">](https://github.com/hoaphantn7604)
