@@ -8,7 +8,7 @@ Building a mobile application from scratch can be a time-consuming process and i
 
 ## Video demo
 
-[<img src="https://github.com/hoaphantn7604/file-upload/blob/master/document/template/react-native-template-thumbnail.png">](https://youtu.be/OpODCA3GuDE)
+<a href="https://youtu.be/OpODCA3GuDE"><img src="https://github.com/hoaphantn7604/file-upload/blob/master/document/template/react-native-template-thumbnail.png" width="840" height="530" alt="Documatic screen cast"></a>
 
 ## Requirements
 
