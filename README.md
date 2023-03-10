@@ -1,6 +1,4 @@
-<div align="center">
-    <img src="https://github.com/hoaphantn7604/file-upload/blob/master/document/template/react_native_template_boilerplate.jpg" alt="Logo" width="100%">
-</div>
+<a href="https://github.com/hoaphantn7604/file-upload/blob/master/document/template/react_native_template_boilerplate.jpg" target="_blank"><img src="https://github.com/hoaphantn7604/file-upload/blob/master/document/template/react_native_template_boilerplate.jpg" width="840" height="530" alt="Documatic screen cast"></a>
 
 # React Native Template Components
 
@@ -8,7 +6,7 @@ Building a mobile application from scratch can be a time-consuming process and i
 
 ## Video demo
 
-<a href="https://youtu.be/OpODCA3GuDE"><img src="https://github.com/hoaphantn7604/file-upload/blob/master/document/template/react-native-template-thumbnail.png" width="840" height="530" alt="Documatic screen cast"></a>
+<a href="https://youtu.be/OpODCA3GuDE" target="_blank"><img src="https://github.com/hoaphantn7604/file-upload/blob/master/document/template/react-native-template-thumbnail.png" width="840" height="530" alt="Documatic screen cast"></a>
 
 ## Requirements
 
